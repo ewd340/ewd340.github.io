@@ -1,5 +1,7 @@
 # Bash
 
+Original content by: [Nikita](https://wiki.nikiv.dev/)
+
 It's useful to use [ShellCheck](https://www.shellcheck.net) to check any shell code you write.
 
 ## Notes
