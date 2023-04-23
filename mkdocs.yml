@@ -1,0 +1,54 @@
+site_name: EWD340's Home Page
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.path
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: green
+      accent: deep orange 
+    - scheme: slate 
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode    
+      primary: deep orange
+      accent: green
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/ewd340
+    - icon: fontawesome/brands/reddit
+      link: https://reddit.com/u/ewd340
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
