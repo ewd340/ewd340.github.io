@@ -1,8 +1,6 @@
----
-title: Programming Languages 
----
-
 # Programming languages
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 There is a [great article](https://briansteffens.github.io/2017/02/20/from-math-to-machine.html) that goes over how one program can be written in different languages from the most abstract level of Math to Haskell to C to Assembly to actual machine code.
 
