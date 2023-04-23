@@ -2,7 +2,7 @@ site_name: EWD340's Home Page
 theme:
   name: material
   features:
-    - navigation.instant
+    #- navigation.instant
     - navigation.path
     - navigation.top
     - toc.integrate
