@@ -1,8 +1,6 @@
----
-title: Scheme
----
-
 # [Scheme](https://call-cc.org/)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [The Little Typer](https://thelittletyper.com/) is a [nice book](https://thatgeoguy.ca/blog/2021/03/07/review-the-little-typer/). [Scheme Primer](https://spritely.institute/static/papers/scheme-primer.html) is nice summary.
 

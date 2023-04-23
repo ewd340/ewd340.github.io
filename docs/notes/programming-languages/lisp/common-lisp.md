@@ -1,5 +1,7 @@
 # Common Lisp
 
+Original content by: [Nikita](https://wiki.nikiv.dev/)
+
 ## OSS tools in Common Lisp
 
 - [MathB.in](https://mathb.in/) - Share Mathematics with LaTeX and Markdown. ([Code](https://github.com/susam/mathb))

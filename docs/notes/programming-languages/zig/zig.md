@@ -1,8 +1,6 @@
----
-title: Zig
----
-
 # [Zig](https://ziglang.org/)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [Ziglings](https://github.com/ratfactor/ziglings) is nice for learning.
 

@@ -1,8 +1,6 @@
----
-title: Python
----
-
 # [Python](https://www.python.org)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [Memray](https://github.com/bloomberg/memray) is useful python memory profiler. [Minimum Viable Python](https://snarky.ca/mvpy-minimum-viable-python/) is a good overview.
 

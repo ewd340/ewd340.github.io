@@ -1,8 +1,6 @@
----
-title: Language Server Protocol
----
-
 # [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [Langoustine](https://github.com/neandertech/langoustine) with its [VSCode extension](https://github.com/neandertech/langoustine-vscode) seem nice for writing new LSPs.
 

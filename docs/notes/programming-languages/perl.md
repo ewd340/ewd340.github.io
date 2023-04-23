@@ -1,8 +1,6 @@
----
-title: Perl
----
-
 # [Perl](https://www.perl.org/)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [Higher-Order Perl](https://hop.perl.plover.com/) is a nice book.
 

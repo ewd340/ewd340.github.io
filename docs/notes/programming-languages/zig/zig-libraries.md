@@ -1,5 +1,7 @@
 # Zig libraries
 
+Original content by: [Nikita](https://wiki.nikiv.dev/)
+
 ## CLI
 
 - [SimArgs](https://github.com/jiacai2050/simargs) - Simple, opinionated, struct-based argument parser in Zig.

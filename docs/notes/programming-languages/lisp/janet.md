@@ -1,8 +1,6 @@
----
-title: Janet
----
-
 # [Janet](https://janet-lang.org/)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 ## Built with Janet
 

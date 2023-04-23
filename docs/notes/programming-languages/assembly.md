@@ -1,6 +1,6 @@
-Original content by: [Nikita](https://wiki.nikiv.dev/)
-
 # [Assembly](http://en.wikipedia.org/wiki/Assembly_language)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [Gentle Introduction to Assembly Language Programming](https://github.com/pkivolowitz/asm_book) is nice.
 

@@ -1,8 +1,6 @@
----
-title: Django
----
-
 # [Django](https://www.djangoproject.com/)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 ## OSS Django Apps
 

@@ -1,5 +1,7 @@
 # Lisp
 
+Original content by: [Nikita](https://wiki.nikiv.dev/)
+
 [SICP](http://sarabander.github.io/sicp/html/index.xhtml) and [Practical Common Lisp](http://www.gigamonkeys.com/book/) are great books. [Intuition for Lisp Syntax](https://stopa.io/post/265) is a nice read too.
 
 [Carp](https://github.com/carp-lang/Carp) & [Bass](https://bass-lang.org/) are interesting.

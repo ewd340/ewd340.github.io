@@ -1,8 +1,6 @@
----
-title: Lua
----
-
 # [Lua](https://www.lua.org)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [Fennel](https://github.com/bakpakin/Fennel) is interesting.
 

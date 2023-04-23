@@ -1,5 +1,7 @@
 # C
 
+Original content by: [Nikita](https://wiki.nikiv.dev/)
+
 [Everything I wish I knew when learning C](https://tmewett.com/c-tips/) is nice read.
 
 [Zig](../zig/zig.md). 

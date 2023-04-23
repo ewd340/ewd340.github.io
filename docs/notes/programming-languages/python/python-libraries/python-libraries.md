@@ -1,5 +1,7 @@
 # Python libraries
 
+Original content by: [Nikita](https://wiki.nikiv.dev/)
+
 [atoti](https://github.com/atoti/project-template), [Cookiecutter Poetry](https://github.com/fpgmaas/cookiecutter-poetry) & [AllenAI](https://github.com/allenai/python-package-template) templates seem nice. [Robyn](https://github.com/sansyrox/robyn) seems like a nice web library.
 
 Like idea of using Python as glue language for compiled modules like [Rust](https://github.com/sansyrox/robyn) or [Zig](https://github.com/adamserafini/zaml).

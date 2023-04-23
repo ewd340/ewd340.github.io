@@ -1,8 +1,6 @@
----
-title: Standard ML
----
-
 # [Standard ML](https://en.wikipedia.org/wiki/Standard_ML)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [CakeML](https://cakeml.org/) is neat.
 

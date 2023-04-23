@@ -1,8 +1,6 @@
----
-title: Carp
----
-
 # Carp
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 ## Links
 

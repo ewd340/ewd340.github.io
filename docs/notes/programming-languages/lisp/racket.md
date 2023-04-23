@@ -1,8 +1,6 @@
----
-title: Racket
----
-
 # [Racket](https://racket-lang.org/)
+
+Original content by: [Nikita](https://wiki.nikiv.dev/)
 
 [Beautiful Racket](https://beautifulracket.com/) & [Teach Yourself Racket](https://cs.uwaterloo.ca/~plragde/flaneries/TYR/) are great intros.
 

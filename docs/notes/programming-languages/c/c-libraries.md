@@ -1,5 +1,7 @@
 # C libraries
 
+Original content by: [Nikita](https://wiki.nikiv.dev/)
+
 ## Web
 
 - [IWNET](https://github.com/Softmotions/iwnet) - Pure C Asynchronous HTTP library with websockets, SSL, routing.
