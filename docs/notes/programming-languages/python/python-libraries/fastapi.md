@@ -1,3 +1,7 @@
+---
+title: FastAPI
+---
+
 # [FastAPI](https://fastapi.tiangolo.com/)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

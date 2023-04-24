@@ -1,3 +1,7 @@
+---
+title: Dask
+---
+
 # [Dask](https://dask.org/)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

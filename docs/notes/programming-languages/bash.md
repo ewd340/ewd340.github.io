@@ -1,3 +1,7 @@
+---
+title: Bash
+---
+
 # Bash
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

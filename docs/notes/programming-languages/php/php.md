@@ -1,3 +1,7 @@
+---
+title: PHP
+---
+
 # [PHP](https://www.php.net/)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

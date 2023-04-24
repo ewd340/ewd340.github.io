@@ -1,3 +1,7 @@
+---
+title: C
+---
+
 # C
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

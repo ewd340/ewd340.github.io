@@ -1,3 +1,7 @@
+---
+title: Python libraries
+---
+
 # Python libraries
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

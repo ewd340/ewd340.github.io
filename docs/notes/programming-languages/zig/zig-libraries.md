@@ -1,3 +1,7 @@
+---
+title: Zig libraries
+---
+
 # Zig libraries
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

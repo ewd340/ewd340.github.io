@@ -1,3 +1,7 @@
+---
+title: Scheme
+---
+
 # [Scheme](https://call-cc.org/)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

@@ -1,3 +1,7 @@
+---
+title: Lua
+---
+
 # [Lua](https://www.lua.org)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

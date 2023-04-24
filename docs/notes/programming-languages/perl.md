@@ -1,3 +1,7 @@
+---
+title: Perl
+---
+
 # [Perl](https://www.perl.org/)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

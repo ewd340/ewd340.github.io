@@ -1,3 +1,7 @@
+---
+title: Racket
+---
+
 # [Racket](https://racket-lang.org/)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

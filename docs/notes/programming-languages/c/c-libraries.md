@@ -1,3 +1,7 @@
+---
+title: C libraries
+---
+
 # C libraries
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

@@ -1,3 +1,7 @@
+---
+title: NumPy
+---
+
 # [NumPy](https://www.numpy.org/)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)

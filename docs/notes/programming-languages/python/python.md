@@ -1,3 +1,7 @@
+---
+title: Python
+---
+
 # [Python](https://www.python.org)
 
 Original content by: [Nikita](https://wiki.nikiv.dev/)
