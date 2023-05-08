@@ -249,3 +249,5 @@ Original content by: [Nikita](https://wiki.nikiv.dev/)
 - [Writing a simple Lisp interpreter in Rust (2023)](https://david-delassus.medium.com/writing-a-simple-lisp-interpreter-in-rust-91dd32ea4d8f) ([HN](https://news.ycombinator.com/item?id=35003306))
 - [Dak](https://www.daklang.com/) - Lisp like language that transpiles to JavaScript.
 - [Modern Macros (2023)](https://www.youtube.com/watch?v=YMUCpx6vhZM) ([Lobsters](https://lobste.rs/s/c8nqjz/padl_23_modern_macros))
+- [Erik Naggum's Ideas and Principles](http://naggum.no/erik/index.html)
+- [Erik Naggum's archives](https://www.xach.com/naggum/articles/)
