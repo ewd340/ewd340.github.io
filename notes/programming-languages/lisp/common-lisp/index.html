@@ -1,0 +1,1268 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../carp/">
+      
+      
+        <link rel="next" href="../janet/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Common Lisp - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#common-lisp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Common Lisp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Common Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Common Lisp
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#oss-tools-in-common-lisp" class="md-nav__link">
+    OSS tools in Common Lisp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="common-lisp">Common Lisp</h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<h2 id="oss-tools-in-common-lisp">OSS tools in Common Lisp</h2>
+<ul>
+<li><a href="https://mathb.in/">MathB.in</a> - Share Mathematics with LaTeX and Markdown. (<a href="https://github.com/susam/mathb">Code</a>)</li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://stevelosh.com/blog/2018/08/a-road-to-common-lisp/">A Road to Common Lisp (2018)</a></li>
+<li><a href="https://www.youtube.com/watch?v=mbdXeRBbgDM">C. Schafmeister “Lessons Learned Implementing Common Lisp with LLVM” (2018)</a></li>
+<li><a href="https://github.com/robert-strandh/SICL">SICL</a> - Fresh implementation of Common Lisp.</li>
+<li><a href="https://github.com/lisp-tips/lisp-tips">Common Lisp tips</a></li>
+<li><a href="https://github.com/eratosthenesia/lispc">LISP/c (Lispy)</a> - Lisp(ish) to C Converter (designed for CLISP).</li>
+<li><a href="http://funcall.blogspot.com/2020/01/cons-cells-vs-linked-lists.html">Cons cells vs. Linked Lists (2020)</a></li>
+<li><a href="http://www.paulgraham.com/acl.html?viewfullsite=1">ANSI Common Lisp</a> - Combines an introduction to Lisp programming, and a convenient, up-to-date reference manual for ANSI Common Lisp (<a href="https://news.ycombinator.com/item?id=22083507">HN</a>).</li>
+<li><a href="https://ambrevar.xyz/modern-common-lisp/">Modern, functional Common Lisp: Myths and tips (2020)</a> (<a href="https://news.ycombinator.com/item?id=22412148">HN</a>)</li>
+<li><a href="https://sulami.github.io/posts/common-lisp-restarts/">Restarts in Common Lisp (2020)</a> (<a href="https://news.ycombinator.com/item?id=22747932">HN</a>)</li>
+<li><a href="https://github.com/cxxxr/valtan">Valtan</a> - Common Lisp to JavaScript compiler. (<a href="https://news.ycombinator.com/item?id=22769346">HN</a>)</li>
+<li><a href="https://leanpub.com/lovinglisp">Loving Common Lisp, or the Savvy Programmer's Secret Weapon</a> (<a href="https://github.com/mark-watson/loving-common-lisp">Code</a>)</li>
+<li><a href="https://github.com/rongarret/ergolib">ergolib</a> - Library designed to make programming in Common Lisp easier.</li>
+<li><a href="http://www.flownet.com/ron/packages.pdf">Complete Idiot’s Guide to Common Lisp Packages (2003)</a></li>
+<li><a href="https://github.com/TomLisankie/Learning-Lisp">Learn Common Lisp in one month intervals</a></li>
+<li><a href="https://common-lisp.net/project/parenscript/">Parenscript</a> - Translator from an extended subset of Common Lisp to JavaScript.</li>
+<li><a href="https://github.com/slime/slime">Slime</a> - Superior Lisp Interaction Mode for Emacs.</li>
+<li><a href="https://github.com/marcoheisig/Petalisp">Petalisp</a> - Elegant High Performance Computing.</li>
+<li><a href="https://google.github.io/styleguide/lispguide.xml">Google Common Lisp Style Guide</a> (<a href="https://news.ycombinator.com/item?id=23761346">HN</a>)</li>
+<li><a href="https://github.com/komi1230/kai">Kai</a> - High-level plotter library for Common Lisp. (<a href="https://news.ycombinator.com/item?id=23757545">HN</a>)</li>
+<li><a href="https://lispcookbook.github.io/cl-cookbook/gui.html">Common Lisp GUI Toolkits</a></li>
+<li><a href="https://www.cs.cmu.edu/~dst/LispBook/book.pdf">Common Lisp: A Gentle Introduction to Symbolic Computation</a></li>
+<li><a href="https://www.apress.com/us/book/9781484261330">The Common Lisp Condition System Book (2020)</a> (<a href="https://news.ycombinator.com/item?id=23843525">HN</a>) (<a href="https://news.ycombinator.com/item?id=24867548">HN 2</a>)</li>
+<li><a href="https://cs.gmu.edu/~sean/lisp/LispTutorial.html">Lisp Quickstart</a> (<a href="https://lobste.rs/s/gb566t/lisp_quickstart">Lobsters</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=Wa81OJnlsoI">Creating a Common Lisp implementation (2020)</a> (<a href="https://news.ycombinator.com/item?id=24276881">HN</a>)</li>
+<li><a href="https://github.com/clasp-developers/clasp">Clasp</a> - Common Lisp implementation that seamlessly interoperates with C++ libraries and programs using LLVM for compilation to native code. (<a href="https://www.youtube.com/watch?v=8X69_42Mj-g">Clasp: Common Lisp using LLVM and C++ for Molecular Metaprogramming (2015)</a>) (<a href="https://news.ycombinator.com/item?id=32737634">HN</a>)</li>
+<li><a href="https://github.com/takagi/cl-cuda">Cl-Cuda</a> - Library to use NVIDIA CUDA in Common Lisp programs.</li>
+<li><a href="https://common-lisp.net/project/iterate/">iterate</a> - Extensible iteration construct for Common Lisp.</li>
+<li><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a> - Public Domain Common Lisp R&amp;D.</li>
+<li><a href="https://gist.github.com/digikar99/a1925ad3249a431c9eecf09af2fdef8a">Opinionated Common Lisp Resources 2020</a></li>
+<li><a href="https://github.com/CodyReichert/awesome-cl">Awesome Common Lisp</a></li>
+<li><a href="https://nyxt.atlas.engineer/article/continuous-testing-and-packaging.org">Modern CI testing and packaging for Common Lisp</a></li>
+<li><a href="https://github.com/jrm-code-project/LISP-Machine">Archive of Lisp Machine</a> (<a href="https://news.ycombinator.com/item?id=25147970">HN</a>)</li>
+<li><a href="https://github.com/littledivy/lisp-ast">Common LISP Parser &amp; AST Viewer</a></li>
+<li><a href="https://tailrecursion.com/~alan/Lisp/CommonLispIteration.html">Common Lisp Iteration (2020)</a></li>
+<li><a href="https://github.com/joaotavora/sly">SLY</a> - Sylvester the Cat's Common Lisp IDE.</li>
+<li><a href="https://github.com/ashok-khanna/common-lisp-by-example/blob/main/Common%20Lisp%20by%20Example.pdf">Common Lisp by Example</a></li>
+<li><a href="https://github.com/susam/emacs4cl">Emacs For Common Lisp</a> - Tiny ~/.emacs for Common Lisp programming explained line-by-line.</li>
+<li><a href="https://portacle.github.io/">Portacle</a> - Portable Common Lisp Development Environment.</li>
+<li><a href="https://github.com/makuto/cakelisp">Cakelisp</a> - Performance-oriented Lisp-like language where I can have my cake, and eat it too. The goal is a metaprogrammable, hot-reloadable, non-garbage-collected language ideal for high performance, iteratively-developed programs (especially games).</li>
+<li><a href="https://github.com/guicho271828/trivia">Trivia</a> - Pattern Matcher Compatible with Optima.</li>
+<li><a href="https://github.com/damelang/nile">Nile</a> - Programming Language for Declarative Stream Processing in Media Applications.</li>
+<li><a href="https://github.com/brown/protobuf">Common Lisp implementation of Google's protocol buffers</a></li>
+<li><a href="https://malisper.me/category/debugging-common-lisp/">Debugging Lisp (2015)</a> (<a href="https://news.ycombinator.com/item?id=25661701">HN</a>)</li>
+<li><a href="https://github.com/fiddlerwoaroof/data-lens">data-lens</a> - Functional utilities for Common Lisp.</li>
+<li><a href="https://github.com/fukamachi/docker-cl-example/">docker-cl-example</a> - Example projects to run/develop Common Lisp web application on Docker container.</li>
+<li><a href="https://github.com/rabbibotton/clog">CLOG</a> - Common Lisp Omnificent GUI.</li>
+<li><a href="http://lisper.ru/">Lisper.ru</a> - Russian Common Lisp Community. (<a href="https://github.com/archimag/rulisp">Code</a>)</li>
+<li><a href="https://lisp-journey.gitlab.io/blog/state-of-the-common-lisp-ecosystem-2020/">State of the Common Lisp ecosystem, 2020</a> (<a href="https://news.ycombinator.com/item?id=26065511">HN</a>)</li>
+<li><a href="https://github.com/stylewarning/coalton">Coalton</a> - Dialect of ML embedded in Common Lisp.</li>
+<li><a href="https://stevelosh.com/blog/2021/03/small-common-lisp-cli-programs/">Writing Small CLI Programs in Common Lisp (2021)</a> (<a href="https://news.ycombinator.com/item?id=26493588">HN</a>)</li>
+<li><a href="https://github.com/slyrus/opticl">opticl</a> - Image processing library for Common Lisp.</li>
+<li><a href="http://random-state.net/features-of-common-lisp.html">Features of Common Lisp (2008)</a> (<a href="https://lobste.rs/s/qqelbo/features_common_lisp_2008">Lobsters</a>)</li>
+<li><a href="https://lisp-journey.gitlab.io/pythonvslisp/">Python vs Common Lisp, workflow and ecosystem (2019)</a> (<a href="https://news.ycombinator.com/item?id=27011942">HN</a>)</li>
+<li><a href="https://github.com/koji-kojiro/cl-repl">CL-REPL</a> - Full-featured REPL implementation designed to work with Roswell.</li>
+<li><a href="https://sabracrolleton.github.io/testing-framework">Comparison of Common Lisp Testing Frameworks</a></li>
+<li><a href="https://github.com/jscl-project/jscl">JSCL</a> - Common Lisp to JavaScript compiler.</li>
+<li><a href="https://github.com/borodust/cl-bodge">cl-bodge</a> - Feature-rich game framework for Common Lisp. (<a href="https://borodust.org/projects/cl-bodge/">Web</a>) (<a href="https://news.ycombinator.com/item?id=27621014">HN</a>)</li>
+<li><a href="https://github.com/sjl/temperance">Temperance</a> - Logic programming library for Common Lisp.</li>
+<li><a href="https://notes.eatonphil.com/practical-common-lisp-on-the-jvm.html">Practical? Common Lisp on the JVM: A quick intro to ABCL for modern web apps (2021)</a></li>
+<li><a href="http://weitz.de/cl-recipes/">Common Lisp Recipes</a></li>
+<li><a href="https://www.apress.com/gp/book/9781484261330">The Common Lisp Condition System - Beyond Exception Handling with Control Flow Mechanisms (2020)</a></li>
+<li><a href="https://github.com/coalton-lang/coalton">Coalton</a> - Efficient, statically typed functional programming language that supercharges Common Lisp. (<a href="https://coalton-lang.github.io/20211010-introducing-coalton/">Article</a>)</li>
+<li><a href="https://coalton-lang.github.io/20220827-numbers/">Numbers in a Nutshell, an Update (2022)</a></li>
+<li><a href="https://susam.in/maze/building-common-lisp-executables.html">Building Common Lisp Executables (2018)</a></li>
+<li><a href="https://renato.athaydes.com/posts/revenge_of_lisp.html">Learning Common Lisp to beat Java and Rust on a phone encoding problem</a> (<a href="https://news.ycombinator.com/item?id=28721403">HN</a>)</li>
+<li><a href="https://github.com/Shirakumo/radiance">Radiance</a> - Common Lisp web application environment. (<a href="https://shirakumo.github.io/radiance/">Web</a>)</li>
+<li><a href="https://renato.athaydes.com/posts/revenge_of_lisp-part-2.html">Optimising Common Lisp to try and beat Java and Rust on phone encoding 2/2 (2021)</a> (<a href="https://news.ycombinator.com/item?id=28825307">HN</a>)</li>
+<li><a href="https://github.com/edicl/drakma">DRAKMA</a> - HTTP client written in Common Lisp.</li>
+<li><a href="https://lisp-journey.gitlab.io/blog/lisp-interview-kina/">Kina Knowledge, using Common Lisp extensively in their document processing stack (2021)</a> (<a href="https://news.ycombinator.com/item?id=28961987">HN</a>)</li>
+<li><a href="https://github.com/roswell/roswell">Roswell</a> - Common Lisp environment setup Utility.</li>
+<li><a href="https://write.as/loke/common-lisp-code-optimisation">Common Lisp code optimisation (2020)</a> (<a href="https://news.ycombinator.com/item?id=29140521">HN</a>)</li>
+<li><a href="https://github.com/fukamachi/dexador">Dexador</a> - Fast HTTP client for Common Lisp.</li>
+<li><a href="https://blog.matthewdmiller.net/learn-common-lisp-by-example-gtk-gui-with-sbcl">Learn Common Lisp by Example: GTK GUI with SBCL (2021)</a></li>
+<li><a href="https://github.com/vydd/sketch">Sketch</a> - Common Lisp environment for the creation of electronic art, visual design.</li>
+<li><a href="https://cdagostino.io/posts/2018-03-28-one-year-common-lisp-developer-part-1-the-good.html">Lessons learned after working one year as a Common Lisp Developer (2018)</a> (<a href="https://news.ycombinator.com/item?id=29494255">HN</a>)</li>
+<li><a href="https://coalton-lang.github.io/20211212-typeclasses/">One Reason Typeclasses Are Useful (2021)</a> (<a href="https://news.ycombinator.com/item?id=29532917">HN</a>)</li>
+<li><a href="https://github.com/cbaggers/cepl">CEPL</a> - Lispy and REPL-friendly Common Lisp library for working with OpenGL. (<a href="https://news.ycombinator.com/item?id=29535450">HN</a>)</li>
+<li><a href="https://github.com/orthecreedence/wookie">Wookie</a> - Asynchronous HTTP server written in common lisp.</li>
+<li><a href="https://blog.matthewdmiller.net/learn-common-lisp-by-example-qt-gui-with-eql5">Learn Common Lisp by Example: Qt GUI with EQL5 (2021)</a></li>
+<li><a href="https://github.com/marcoheisig/cl4py">cl4py</a> - Common Lisp for Python.</li>
+<li><a href="https://github.com/marcoheisig/fast-generic-functions">Fast Generic Functions</a> - Seal your generic functions for an extra boost in performance.</li>
+<li><a href="https://github.com/marcoheisig/sb-simd">sb-simd</a> - Convenient SIMD interface for SBCL.</li>
+<li><a href="https://github.com/marcoheisig/cl-mpi">cl-mpi</a> - MPI bindings for Common Lisp with many useful extras.</li>
+<li><a href="https://blog.veitheller.de/Building_Setf.html">Building Setf (2022)</a></li>
+<li><a href="https://www.grammarly.com/blog/engineering/running-lisp-in-production/">Running Lisp in Production (2020)</a> (<a href="https://news.ycombinator.com/item?id=30172641">HN</a>)</li>
+<li><a href="https://github.com/s-expressionists/Cleavir">Cleavir</a> - Implementation-independent framework for creating Common Lisp compilers.</li>
+<li><a href="https://github.com/cffi/cffi">CFFI</a> - Common Foreign Function Interface, purports to be a portable FFI for Common Lisp.</li>
+<li><a href="https://github.com/s-expressionists/Eclector">Eclector</a> - Portable and extensible Common Lisp Reader.</li>
+<li><a href="https://github.com/ruricolist/cloture">Cloture</a> - Clojure in Common Lisp. (<a href="https://news.ycombinator.com/item?id=31655574">HN</a>)</li>
+<li><a href="https://github.com/cl21/cl21">CL21</a> - Common Lisp in the 21st Century.</li>
+<li><a href="https://github.com/Harleqin/arrows">Arrows</a> - Implements threading macros, inspired by Clojure.</li>
+<li><a href="https://github.com/mdbergmann/cl-gserver">cl-gserver</a> - Actor framework featuring actors and agents for easy access to state and asynchronous operations.</li>
+<li><a href="https://github.com/pkhuong/Xecto">Xecto</a> - Regular array parallelism in CL.</li>
+<li><a href="https://sabracrolleton.github.io/logging-comparison.html">Comparison of Common Lisp Logging Libraries</a></li>
+<li><a href="https://github.com/ashok-khanna/lisp-notes">Common Lisp Cheat Sheet</a></li>
+<li><a href="https://github.com/akapav/js">CL-JavaScript</a> - JavaScript compiler for Common Lisp.</li>
+<li><a href="https://github.com/Shirakumo/alloy">Alloy</a> - User interface toolkit.</li>
+<li><a href="https://mstmetent.blogspot.com/2022/04/using-lisp-libraries-from-other.html">Using SBCL Common Lisp as a Dynamic Library (2022)</a> (<a href="https://news.ycombinator.com/item?id=31054796">HN</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=XFc513MJjos">How to create a new Common Lisp project (with project generator) (2022)</a></li>
+<li><a href="https://lisp-journey.gitlab.io/resources/">Common Lisp Resources (2022)</a> (<a href="https://news.ycombinator.com/item?id=31120359">HN</a>)</li>
+<li><a href="https://github.com/rabbibotton/clog/blob/main/LEARN.md">Tutorial Series to learn Common Lisp quickly</a> (<a href="https://news.ycombinator.com/item?id=31178737">HN</a>)</li>
+<li><a href="https://github.com/Shirakumo/trial">Trial</a> - Game engine written in Common Lisp.</li>
+<li><a href="https://github.com/justinmeiners/srcweave">srcweave</a> - Literate programming system for any language.</li>
+<li><a href="https://github.com/lem-project/lem">Lem</a> - Common Lisp editor/IDE with high expansibility.</li>
+<li><a href="https://github.com/nptcl/npt">Npt</a> - ANSI Common Lisp Programming Language.</li>
+<li><a href="https://www.reddit.com/r/lisp/comments/uqgeit/common_lisp_intermediate_book_recommendation/">Common Lisp intermediate book recommendation (2022)</a></li>
+<li><a href="https://github.com/sjl/cl-losh">cl-losh</a> - Common Lisp utilities I use a lot.</li>
+<li><a href="https://github.com/ruricolist/serapeum">Serapeum</a> - Conservative library of Common Lisp utilities.</li>
+<li><a href="https://alexandria.common-lisp.dev/">Alexandria</a> - Reduce duplication of effort and improve portability of Common Lisp code.</li>
+<li><a href="https://github.com/ruricolist/overlord">Overlord</a> - Build system in Common Lisp.</li>
+<li><a href="https://github.com/orthecreedence/cl-async">cl-async</a> - Asynchronous IO library for Common Lisp.</li>
+<li><a href="https://github.com/fukamachi/woo">Woo</a> - Fast non-blocking HTTP server on top of libev. Written in Common Lisp.</li>
+<li><a href="https://github.com/ruricolist/cmd">cmd</a> - Utility for running external programs.</li>
+<li><a href="https://github.com/fukamachi/rove">Rove</a> - Unit testing framework for Common Lisp applications.</li>
+<li><a href="https://github.com/inaimathi/cl-notebook">cl-notebook</a> - Notebook-style in-browser editor for Common Lisp.</li>
+<li><a href="https://github.com/kaveh808/kons-9">kons-9</a> - Common Lisp 3D graphics code. (<a href="https://news.ycombinator.com/item?id=32337538">HN</a>)</li>
+<li><a href="https://github.com/BnMcGn/snakes">Snakes</a> - Python-like generators for Common Lisp.</li>
+<li><a href="https://github.com/quil-lang/magicl">MAGICL</a> - Matrix Algebra proGrams In Common Lisp.</li>
+<li><a href="https://github.com/zkat/sheeple">Sheeple</a> - Dynamic, CLOS-like, Delegative Prototype-based Object-Oriented Programming Framework.</li>
+<li><a href="https://github.com/tfeb/dsm">Destructuring match in Common Lisp</a></li>
+<li><a href="https://github.com/qitab/grpc">gRPC Client Library in Common Lisp</a></li>
+<li><a href="https://github.com/franzinc/aserve">AllegroServe</a> - Web server written in Common Lisp. (<a href="https://news.ycombinator.com/item?id=32361882">HN</a>)</li>
+<li><a href="https://lisper.in/reader-macros">Reader Macros in Common Lisp (2014)</a></li>
+<li><a href="https://github.com/death/cl-tree-sitter">cl-tree-sitter</a> - Use tree-sitter via Common Lisp.</li>
+<li><a href="https://github.com/vindarel/cl-cookieproject">Cookiecutter template for Common Lisp projects</a></li>
+<li><a href="https://github.com/vindarel/cl-str">cl-str</a> - Modern, simple and consistent Common Lisp string manipulation library.</li>
+<li><a href="https://www.udemy.com/course/common-lisp-programming/?referralCode=2F3D698BBC4326F94358">Common Lisp programming: from novice to effective developer (2022)</a> (<a href="https://github.com/vindarel/common-lisp-course-in-videos">Code</a>)</li>
+<li><a href="https://github.com/ciel-lang/CIEL">CIEL</a> - Extended Lisp. Batteries included.</li>
+<li><a href="https://github.com/vindarel/colisper">Colisper</a> - Check and transform Lisp code with Comby.</li>
+<li><a href="https://lisp-journey.gitlab.io/web-dev/">State of Common Lisp Web Development - an overview (2022)</a></li>
+<li><a href="https://mfiano.net/posts/2022-09-04-from-common-lisp-to-julia/">From Common Lisp to Julia (2022)</a> (<a href="https://news.ycombinator.com/item?id=32745318">HN</a>)</li>
+<li><a href="https://gist.github.com/digikar99/24decb414ddfa15a220b27f6748165d7">Why Not: From Common Lisp to Julia</a> (<a href="https://news.ycombinator.com/item?id=32750052">HN</a>)</li>
+<li><a href="https://github.com/hipeta/arrow-macros">Arrow-macros</a> - Clojure-like arrow macros in Common Lisp.</li>
+<li><a href="https://github.com/dnaeon/clingon">clingon</a> - Command-line options parser system for Common Lisp.</li>
+<li><a href="https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node131.html#SECTION001670000000000000000">Common Lisp names all sixteen binary logic gates</a> (<a href="https://news.ycombinator.com/item?id=32802308">HN</a>)</li>
+<li><a href="https://github.com/massung/re">RE</a> - Lua-style Pattern Matching for Common Lisp.</li>
+<li><a href="https://github.com/quil-lang/sbcl-librarian">sbcl-librarian</a> - Opinionated interface for creating C- and Python-compatible shared libraries in Common Lisp with SBCL.</li>
+<li><a href="https://github.com/40ants/openrpc">OpenRPC for Common Lisp</a></li>
+<li><a href="https://ultralisp.org/">Ultralisp</a> - Fast Common Lisp Repository. (<a href="https://github.com/ultralisp/ultralisp">Code</a>)</li>
+<li><a href="https://mfiano.net/posts/2022-09-04-from-common-lisp-to-julia/index.html">From Common Lisp to Julia (2022)</a> (<a href="https://news.ycombinator.com/item?id=33519402">HN</a>)</li>
+<li><a href="https://pldb.com/posts/scottFalhmanInterview.html">Brief interview with Common Lisp co-creator Dr. Scott Fahlman (2022)</a> (<a href="https://news.ycombinator.com/item?id=33574311">HN</a>) (<a href="https://www.reddit.com/r/lisp/comments/ystf9s/a_brief_interview_with_common_lisp_creator_dr/">Reddit</a>)</li>
+<li><a href="https://github.com/tdrhq/easy-macros">easy-macros</a> - Library to define less error-prone macros, faster.</li>
+<li><a href="https://github.com/tokenrove/imago">Imago</a> - Image manipulation library for Common Lisp.</li>
+<li><a href="https://hescaide.me/clos/">Common Lisp Object System (CLOS)</a> (<a href="https://news.ycombinator.com/item?id=33718011">HN</a>)</li>
+<li><a href="https://www.tfeb.org/fragments/2022/12/16/the-empty-list/">The empty list (2022)</a></li>
+<li><a href="https://borretti.me/article/astronomical-calculations-for-hard-sf-common-lisp">Astronomical Calculations for Hard SF in Common Lisp (2022)</a> (<a href="https://news.ycombinator.com/item?id=34058658">HN</a>)</li>
+<li><a href="https://github.com/borodust/alien-works-delivery">Application delivery for Common Lisp</a></li>
+<li><a href="https://lisp-journey.gitlab.io/blog/these-years-in-common-lisp-2022-in-review/">Common Lisp: 2022 in review</a> (<a href="https://news.ycombinator.com/item?id=34321090">HN</a>)</li>
+<li><a href="https://github.com/Clozure/ccl/wiki">Clozure Common Lisp Wiki</a></li>
+<li><a href="https://github.com/Enerccio/SLT">SLT</a> - Common Lisp Language Plugin for Jetbrains IDE Lineup. (<a href="https://news.ycombinator.com/item?id=34388369">HN</a>)</li>
+<li><a href="https://github.com/antimer/lmdb">LMDB bindings for Common Lisp</a></li>
+<li><a href="https://github.com/Shinmera/parachute">Parachute</a> - Simple-to-use and extensible testing framework.</li>
+<li><a href="https://github.com/sionescu/iolib">iolib</a> - Common Lisp I/O library.</li>
+<li><a href="https://www.n16f.net/blog/common-lisp-implementations-in-2023/">Common Lisp implementations in 2023</a> (<a href="https://news.ycombinator.com/item?id=34909113">HN</a>)</li>
+<li><a href="https://github.com/fosskers/cl-transducers">Transducers: Ergonomic, efficient data processing</a></li>
+<li><a href="http://clqr.boundp.org/">Common Lisp Quick Reference</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

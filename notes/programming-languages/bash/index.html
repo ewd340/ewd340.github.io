@@ -1,0 +1,1249 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../assembly/">
+      
+      
+        <link rel="next" href="../language-server-protocol/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Bash - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bash" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bash
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Bash
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c/c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c/c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="bash">Bash</h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<p>It's useful to use <a href="https://www.shellcheck.net">ShellCheck</a> to check any shell code you write.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The proper she-bang for Bash is <code>#!/usr/bin/env bash</code>.</li>
+</ul>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Check if command is in PATH</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>checkDep<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">     </span><span class="nv">path</span><span class="o">=</span><span class="sb">`</span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="s2"> found at </span><span class="si">${</span><span class="nv">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="s2"> not found&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Get output of command. https://www.cyberciti.biz/faq/unix-linux-bsd-appleosx-bash-assign-variable-command-output/</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># i.e. save output of date to var now</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">now</span><span class="o">=</span><span class="k">$(</span>date<span class="k">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>File testing
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>![](https://i.imgur.com/QGkHbPm.png)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Pipe output to file.</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># i.e. pipe output of ls to output.txt</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>ls<span class="w"> </span>&gt;<span class="w"> </span>output.txt
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Check if no arguments passed</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>...<span class="w"> </span><span class="k">fi</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Check if file does not exist</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># Putting ! before makes it a not statement. Spaces before and after [] are important.</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span>~/Desktop/file.txt<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;File not found!&quot;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">fi</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Source vs ./</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># Runs the script as an executable file, launching a new shell to run it</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>./script
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1"># Reads and executes commands from filename in the current shell environment</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">source</span><span class="w"> </span>script
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># need to wrap the cd command inside () to run it in scope of the cd</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># i.e. pod install will be run inside ios dir</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">(</span><span class="nb">cd</span><span class="w"> </span>ios<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pod<span class="w"> </span>install<span class="o">)</span>
+</code></pre></div>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://wiki.bash-hackers.org/syntax/pe">Parameter expansion</a></li>
+<li><a href="http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/">Defensive BASH Programming</a></li>
+<li><a href="https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md">Safe ways to do things in Bash</a> (<a href="https://news.ycombinator.com/item?id=17057596">HN</a>)</li>
+<li><a href="https://github.com/dylanaraps/pure-bash-bible">Pure Bash Bible</a> - Collection of pure bash alternatives to external processes. (<a href="https://news.ycombinator.com/item?id=21013150">HN</a>) (<a href="https://news.ycombinator.com/item?id=30363506">HN</a>)</li>
+<li><a href="https://github.com/niieani/bash-oo-framework">Bash Infinity</a> - Modern boilerplate / framework / standard library for Bash.</li>
+<li><a href="https://github.com/bbugyi200/funky">Funky</a> - Takes shell functions to the next level by making them easier to define, more flexible, and more interactive.</li>
+<li><a href="https://github.com/nikita-skobov/create-bash-script">create-bash-script</a> - Bash script designed to create other bash scripts with argument parsing.</li>
+<li><a href="https://github.com/bash-lsp/bash-language-server">Bash-LSP</a> - Language server for Bash. (<a href="https://news.ycombinator.com/item?id=26663135">HN</a>)</li>
+<li><a href="https://tiswww.case.edu/php/chet/bash/bashref.html">Bash Reference Manual</a></li>
+<li><a href="https://mywiki.wooledge.org/BashGuide">Bash Guide</a> (<a href="https://lobste.rs/s/onsous/bash_guide">Lobsters</a>)</li>
+<li><a href="https://jmulholland.com/how-to-automate-basic-development-tasks-with-bash">How To Automate Basic Development Tasks with Bash</a></li>
+<li><a href="https://erkanerol.github.io/bash-lingua-non-grata/#/">Mini Gitbook for a presentation about BASH</a> (<a href="https://github.com/erkanerol/bash-lingua-non-grata">Code</a>)</li>
+<li>[Bash <span class="arithmatex">\(\* and <span class="arithmatex">\(@ (2017)](https://eklitzke.org/bash-\)</span>%2A-and-\)</span>@) (<a href="https://news.ycombinator.com/item?id=22027809">HN</a>)</li>
+<li><a href="https://www.linuxjournal.com/content/understanding-bash-elements-programming">Understanding Bash: Elements of Programming (2018)</a> (<a href="https://news.ycombinator.com/item?id=22052890">HN</a>)</li>
+<li><a href="https://github.com/SimonBaeumer/bash-tricks">Bash tricks</a> - Simple bash tricks which will make your life easier. (<a href="https://www.reddit.com/r/bash/comments/eokp46/some_simple_bash_tipps/">Reddit</a>)</li>
+<li><a href="https://blog.yossarian.net/2020/01/23/Anybody-can-write-good-bash-with-a-little-effort">Anybody can write good bash (with a little effort) (2020)</a> (<a href="https://lobste.rs/s/y0nx8o/anybody_can_write_good_bash_with_little">Lobsters</a>)</li>
+<li><a href="https://shellmagic.xyz/">Bash Quick References</a></li>
+<li><a href="https://github.com/Checksum/critic.sh">critic.sh</a> - Dead simple testing framework for Bash with coverage.</li>
+<li><a href="https://wiki.bash-hackers.org/">Bash Hackers Wiki</a> (<a href="https://news.ycombinator.com/item?id=22382686">HN</a>)</li>
+<li><a href="https://github.com/bats-core/bats-core">Bats</a> - Bash Automated Testing System.</li>
+<li><a href="https://news.ycombinator.com/item?id=22859935">HN: Renaming files with mv without typing the name two times</a></li>
+<li><a href="https://ashishb.net/all/the-first-two-statements-of-your-bash-script-should-be/">The first two statements of your BASH script should be.. (2020)</a> (<a href="https://lobste.rs/s/ajoaje/first_two_statements_your_bash_script">Lobsters</a>)</li>
+<li><a href="http://redsymbol.net/articles/unofficial-bash-strict-mode/">Use Bash Strict Mode (Unless You Love Debugging)</a></li>
+<li><a href="https://github.com/bminor/bash">Bash code</a></li>
+<li><a href="https://zwischenzugs.com/2020/05/09/some-relatively-obscure-bash-tips/">Some Relatively Obscure Bash Tips (2020)</a> (<a href="https://news.ycombinator.com/item?id=23126305">HN</a>)</li>
+<li><a href="https://medium.com/better-programming/bash-cheat-sheet-top-25-commands-and-creating-custom-commands-75941dcdc450">A Bash Cheat Sheet: Top 25 most-used commands, and how to create custom commands (2020)</a></li>
+<li><a href="https://www.yesthatblog.com/post/0065-env-defaults/">Bash Env Variable Defaults</a></li>
+<li><a href="https://opensource.com/article/20/6/bash-trap">Using Bash traps in your scripts (2020)</a></li>
+<li><a href="https://samizdat.dev/help-message-for-shell-scripts/">Help message for shell scripts (2020)</a> (<a href="https://news.ycombinator.com/item?id=23763166">HN</a>) (<a href="https://lobste.rs/s/5njqrb/help_message_for_shell_scripts">Lobsters</a>)</li>
+<li><a href="https://metaredux.com/posts/2020/07/07/supercharge-your-bash-history.html">Supercharge Your Bash History (2020)</a> (<a href="https://lobste.rs/s/ruygyw/supercharge_your_bash_history">Lobsters</a>)</li>
+<li><a href="https://import.pw/">Import</a> - Simple and Fast Module System for Bash and Other Unix Shells. (<a href="https://news.ycombinator.com/item?id=23864909">HN</a>)</li>
+<li><a href="https://rdmp.org/dmbcs/i-bash">Intelligent Bash (ibash)</a></li>
+<li><a href="https://github.com/ssledz/bash-fun">Functional programming in bash</a> (<a href="https://ssledz.github.io/presentations/bash-fun.html#/">Slides</a>)</li>
+<li><a href="https://mywiki.wooledge.org/BashPitfalls">Bash Pitfalls</a> (<a href="https://lobste.rs/s/1vqimp/bash_pitfalls">Lobsters</a>)</li>
+<li><a href="https://github.com/matejak/argbash">argbash</a> - Bash argument parsing code generator. (<a href="https://news.ycombinator.com/item?id=24636367">HN</a>) (<a href="https://news.ycombinator.com/item?id=30737701">HN</a>)</li>
+<li><a href="https://wizardzines.com/comics/brackets-cheatsheet/">Bash Bracket Cheat Sheet</a></li>
+<li><a href="https://wizardzines.com/comics/bash-errors/">Bash Error Handling</a> (<a href="https://news.ycombinator.com/item?id=24727495">HN</a>)</li>
+<li><a href="https://github.com/taviso/ctypes.sh">ctypes.sh</a> - Foreign function interface for bash. (<a href="https://news.ycombinator.com/item?id=24738814">HN</a>)</li>
+<li><a href="https://devhints.io/bash">DevHints Bash Cheat Sheet</a></li>
+<li><a href="https://github.com/spack/sbang">sbang</a> - Run scripts with very long shebang lines. (<a href="https://lobste.rs/s/rin6rc/sbang_lets_you_run_scripts_with_very_long">Lobsters</a>)</li>
+<li><a href="https://github.com/ohmybash/oh-my-bash">Oh My Bash</a> - Open source, community-driven framework for managing your bash configuration.</li>
+<li><a href="http://jbrot.com/blog/dash_e_problems.html">An Awful Edge Case in Bash's set -e (2020)</a></li>
+<li><a href="https://github.com/mumoshu/variant2">Variant</a> - Turn your bash scripts into a modern, single-executable CLI app.</li>
+<li><a href="https://work.lisk.in/2020/11/20/even-faster-bash-startup.html">Even faster bash startup (2020)</a></li>
+<li><a href="https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html">How To Use Bash Parameter Substitution Like A Pro (2020)</a></li>
+<li><a href="https://github.com/bobbyiliev/introduction-to-bash-scripting">Introduction to Bash Scripting Book</a></li>
+<li><a href="https://github.com/alexanderepstein/Bash-Snippets">Bash Snippets</a> - Collection of small bash scripts for heavy terminal users with no dependencies.</li>
+<li><a href="https://betterdev.blog/minimal-safe-bash-script-template/">Minimal safe Bash script template (2020)</a> (<a href="https://lobste.rs/s/yeloyn/minimal_safe_bash_script_template">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=25428621">HN</a>)</li>
+<li><a href="https://lists.gnu.org/archive/html/info-gnu/2020-12/msg00003.html">Bash 5.1</a> (<a href="https://news.ycombinator.com/item?id=25492551">HN</a>)</li>
+<li><a href="https://batsh.org/">Batsh</a> - Language that compiles to Bash and Windows Batch. (<a href="https://github.com/batsh-dev-team/Batsh">Code</a>)</li>
+<li><a href="https://raymii.org/s/software/Bash_HTTP_Monitoring_Dashboard.html">Bash HTTP monitoring dashboard</a></li>
+<li><a href="https://github.com/Akianonymus/parallel-bash">Parallel bash</a> - Parallel processing of commands in pure bash along with the support of functions.</li>
+<li><a href="https://github.com/pforret/LearnBashQuickly">Learn Bash in 27 minutes</a></li>
+<li><a href="https://andydote.co.uk/2020/08/28/better-bashing-through-technology/">Better BASHing Through Technology (2020)</a></li>
+<li><a href="https://github.com/wagoodman/bashful">bashful</a> - Use a yaml file to stitch together commands and bash snippets and run them with a bit of style.</li>
+<li><a href="https://github.com/pgrange/bash_unit">bash_unit</a> - Bash unit testing.</li>
+<li><a href="https://timvisee.com/blog/elegant-bash-conditionals/">Elegant bash conditionals (2021)</a> (<a href="https://lobste.rs/s/nao13f/elegant_bash_conditionals">Lobsters</a>)</li>
+<li><a href="https://github.com/spencertipping/bash-lambda">Bash lambda</a> - Anonymous functions and FP stuff for bash.</li>
+<li><a href="https://mhoffman.github.io/2015/05/21/how-to-navigate-directories-with-the-shell.html">How to navigate directories faster with bash (2015)</a> (<a href="https://news.ycombinator.com/item?id=26899531">HN</a>)</li>
+<li><a href="https://write.as/bpsylevc6lliaspe">Your <code>~/.bashrc</code> doesn't have to be a mess (2021)</a> (<a href="https://lobste.rs/s/r1tpld/your_bashrc_doesn_t_have_be_mess">Lobsters</a>)</li>
+<li><a href="https://blog.dnmfarrell.com/post/bash-function-names-can-be-almost-anything/">Bash Function Names Can Be Almost Anything (2021)</a> (<a href="https://news.ycombinator.com/item?id=27726699">HN</a>)</li>
+<li><a href="https://mbuki-mvuki.org/posts/2021-07-12-writing-a-bash-builtin-in-c-to-parse-ini-configs/">Writing a Bash Builtin in C to Parse INI Configs (2021)</a> (<a href="https://lobste.rs/s/6wjuk4/writing_bash_builtin_c_parse_ini_configs">Lobsters</a>)</li>
+<li><a href="https://github.com/DannyBen/bashly">Bashly</a> - Create beautiful bash scripts from simple YAML configuration. (<a href="https://news.ycombinator.com/item?id=28305479">HN</a>) (<a href="https://bashly.dannyb.co/">Docs</a>)</li>
+<li><a href="https://github.com/tree-sitter/tree-sitter-bash">tree-sitter-bash</a> - Bash grammar for tree-sitter.</li>
+<li><a href="https://github.com/xwmx/bash-boilerplate">Bash Boilerplate</a> - Collection of Bash scripts for creating safe and useful command line programs.</li>
+<li><a href="https://github.com/TekWizely/bash-tpl">Bash-TPL</a> - Smart, lightweight shell script templating engine, written in Bash.</li>
+<li><a href="https://cuddly-octo-palm-tree.com/posts/2021-10-31-better-bash-functions/">Bash functions are better than I thought (2021)</a> (<a href="https://www.reddit.com/r/programming/comments/qjnzmn/underwhelmed_by_bash_functions_maybe_youre_using/">Reddit</a>) (<a href="https://news.ycombinator.com/item?id=29058140">HN</a>)</li>
+<li><a href="https://github.com/scop/bash-completion">bash-completion</a> - Programmable completion functions for bash.</li>
+<li><a href="https://will-keleher.com/posts/5-Useful-Bash-Patterns.html">Bash patterns I use weekly</a> (<a href="https://news.ycombinator.com/item?id=29318751">HN</a>)</li>
+<li><a href="https://arslan.io/2019/07/03/how-to-write-idempotent-bash-scripts/">How to write idempotent Bash scripts (2019)</a> (<a href="https://news.ycombinator.com/item?id=29483070">HN</a>) (<a href="https://lobste.rs/s/ixuahi/how_write_idempotent_bash_scripts">Lobsters</a>)</li>
+<li><a href="https://www.blockloop.io/mastering-bash-and-terminal/">Mastering Bash and Terminal (2017)</a> (<a href="https://news.ycombinator.com/item?id=13400350">HN</a>)</li>
+<li><a href="https://github.com/tdenniston/bish">bish</a> - Language that compiles to Bash. Shell scripting with a modern feel.</li>
+<li><a href="https://github.com/remileduc/sherver">Sherver</a> - Pure Bash lightweight web server. (<a href="https://news.ycombinator.com/item?id=29648135">HN</a>)</li>
+<li><a href="https://www.mulle-kybernetik.com/modern-bash-scripting/">Modern Bash (Zsh) Scripting</a> (<a href="https://lobste.rs/s/gwzjjw/modern_bash_scripting">Lobsters</a>)</li>
+<li><a href="https://arxiv.org/abs/1802.08979">NL2Bash: A Corpus and Semantic Parser for Natural Language Interface to the Linux Operating System (2018)</a> (<a href="https://github.com/TellinaTool/nl2bash">Code</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=30405177">Ask HN: Let's build Check style for Bash? (2022)</a></li>
+<li><a href="https://blog.dnmfarrell.com/post/replicating-bash-argument-splitting/">Replicating Bash Argument Splitting (2021)</a></li>
+<li><a href="https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial">Creating a bash completion script (2018)</a> (<a href="https://news.ycombinator.com/item?id=30524440">HN</a>)</li>
+<li><a href="https://levelup.gitconnected.com/5-modern-bash-scripting-techniques-that-only-a-few-programmers-know-4abb58ddadad">5 Modern Bash Scripting Techniques That Only A Few Programmers Know (2022)</a></li>
+<li><a href="https://github.com/bpkg/bpkg">bpkg</a> - Lightweight bash package manager. (<a href="https://bpkg.sh/">Web</a>)</li>
+<li><a href="https://github.com/onceupon/Bash-Oneliner">Bash One liners</a> - Collection of handy Bash One-Liners and terminal tricks. (<a href="https://news.ycombinator.com/item?id=31250275">HN</a>)</li>
+<li><a href="https://bashjazz.orion3.space/cli-args.html">CLI argument parser for Bash scripts and functions</a></li>
+<li><a href="https://github.com/Mythra/typeish">Type-ish</a> - Runtime type checker for bash functions, implemented entirely in bash.</li>
+<li><a href="https://socketsupply.co/blog/bash-pipes-and-socket-sdk/">Bash, Pipes, &amp; Socket SDK (2022)</a></li>
+<li><a href="https://github.com/importpw/vercel-bash">Vercel Bash</a> - Bash Runtime for Vercel serverless functions.</li>
+<li><a href="https://github.com/lovesegfault/beautysh">Beautysh</a> - Bash beautifier for the masses.</li>
+<li><a href="https://lwn.net/Articles/909596/">Bash 5.2 released</a> (<a href="https://lobste.rs/s/dceccl/bash_5_2_released">Lobsters</a>)</li>
+<li><a href="http://mywiki.wooledge.org/BashFAQ/105">Why doesn't Bash's <code>set -e</code> do what I expected?</a> (<a href="https://news.ycombinator.com/item?id=33116310">HN</a>)</li>
+<li><a href="https://github.com/bahamas10/bash-style-guide">Bash Style Guide</a></li>
+<li><a href="https://github.com/pforret/bashew">bashew</a> - Bash script micro-framework - from small stand-alone script to complex projects with CI/CD and testing.</li>
+<li><a href="https://brev.dev/blog/ai-wont-replace-you-write-bash">Using ChatGPT to make Bash palatable (2022)</a></li>
+<li><a href="https://musings.yasyf.com/never-write-a-bash-command-again-with-gpt-3/">GPT-3 Powered Shell (2022)</a> (<a href="https://news.ycombinator.com/item?id=34102363">HN</a>) (<a href="https://github.com/yasyf/gpt-do">Code</a>)</li>
+<li><a href="https://gist.github.com/sj26/88e1c6584397bb7c13bd11108a579746">Bash retry function with exponential backoff</a> (<a href="https://news.ycombinator.com/item?id=34161661">HN</a>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

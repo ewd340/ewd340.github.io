@@ -1,0 +1,1260 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../language-server-protocol/">
+      
+      
+        <link rel="next" href="../perl/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Lua - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lua" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lua
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Lua
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Lua
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c/c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c/c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lua"><a href="https://www.lua.org">Lua</a></h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<p><a href="https://github.com/bakpakin/Fennel">Fennel</a> is interesting.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><a href="https://www.reddit.com/r/lua/comments/hg9g3p/if_someone_asks_me_why_lua_i_show_him_this_link/">Lua was created explicitly to be an embedded scripting language. It's evolution has very tightly focused on that usage, and that continues to be the most common way it is used. It's language as library, a small, pure ANSI C library with no external dependencies. It's easy to include in a project and extend, while remaining a powerful, expressive language that performs well. It's fantastic for that purpose.</a></li>
+<li><a href="https://news.ycombinator.com/item?id=23851393">Lua is a language I really want to love. I like the emphasis on simplicity and minimalism, and the Scheme-like semantics, which mix imperative and functional styles, really hits a sweet spot IMO. LuaJIT is a crazy impressive feat of software engineering. However, there are some specific issues which hold Lua back IMO. First, as LuaJIT author Mike Pall famously noted, the Lua authors constantly break compatibility between releases. Lua is really several different, incompatible languages (Lua 5.1, 5.2, etc). LuaJIT is still at Lua 5.1, IIRC. Second, there are a bunch of minor nitpicks (1-based-indexing, anyone?) which turn off a bunch of people. Lastly, because Lua is so minimal and focused on portability, people end up reimplementing their own abstractions (such as object systems) from scratch, further fracturing the ecosystem. I think there's a space for a new project, which takes LuaJIT as a starting point and addresses some of the issues I described. It would also be great if this hypothetical new language had better support for Unicode and concurrency.</a></li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://luau-lang.org/">Luau</a> - Fast, small, safe, gradually typed embeddable scripting language derived from Lua. (<a href="https://github.com/Roblox/luau">Code</a>) (<a href="https://news.ycombinator.com/item?id=29097692">HN</a>)</li>
+<li><a href="https://github.com/luarocks/luacheck">Luacheck</a> - Tool for linting and static analysis of Lua code.</li>
+<li><a href="https://fennel-lang.org/">Fennel</a> - Programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system. (<a href="https://github.com/bakpakin/Fennel">Code</a>) (<a href="https://fennel-lang.org/rationale">Rationale</a>) (<a href="https://lobste.rs/s/6bphbw/fennel_programming_language_rationale">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=24390904">HN</a>) (<a href="https://conf.fennel-lang.org/">FennelConf</a>) (<a href="https://www.mattroelle.com/fennel-the-practical-lisp">Fennel: The Practical Lisp</a>)</li>
+<li><a href="https://github.com/kyren/rlua">rlua</a> - High level bindings between Rust and Lua.</li>
+<li><a href="https://sepisoad.com/blog/how%20to%20lua%20and%20c%20-%20a%20short%20novel.html">How to Lua and C - a short novel (2018)</a></li>
+<li><a href="https://github.com/trixnz/lua-fmt">Code Formatter for Lua</a> - Pretty-printer for Lua code, written in TypeScript and deeply inspired by prettier.</li>
+<li><a href="https://github.com/Shopify/go-lua">Lua VM in pure Go</a></li>
+<li><a href="https://github.com/yuin/gopher-lua">GopherLua</a> - VM and compiler for Lua in Go.</li>
+<li><a href="https://github.com/LewisJEllis/awesome-lua">Awesome Lua</a></li>
+<li><a href="https://github.com/uhub/awesome-lua">Awesome Lua 2</a></li>
+<li><a href="https://github.com/davepoo/EmbeddingLuaTutorial">Embedding Lua Tutorial</a></li>
+<li><a href="https://github.com/bastibe/lunatic-python">Lunatic Python</a> - Two-way bridge between Python and Lua.</li>
+<li><a href="https://thesephist.com/posts/lua/">Interesting things about the Lua interpreter (2020)</a></li>
+<li><a href="https://technomancy.us/189">Interactive Lua development with Fennel (2018)</a> (<a href="https://lobste.rs/s/1xlmb3/interactive_lua_development_with_fennel">Lobsters</a>)</li>
+<li><a href="https://github.com/LuaJIT/LuaJIT">LuaJIT</a> - Just-In-Time (JIT) compiler for the Lua programming language. (<a href="http://luajit.org/">Web</a>)</li>
+<li><a href="http://wiki.luajit.org/Optimizations">LuaJIT Bytecode Optimizations</a></li>
+<li><a href="https://github.com/lonng/lua-rs">Lua in Rust</a> - Pure Rust implementation of Lua compiler.</li>
+<li><a href="https://github.com/andremm/typedlua">Typed Lua</a> - Optional Type System for Lua.</li>
+<li><a href="https://github.com/teal-language/tl">Teal</a> - Compiler for Teal, a typed dialect of Lua.</li>
+<li><a href="https://github.com/jagt/pprint.lua">pprint.lua</a> - Lua pretty printer.</li>
+<li><a href="https://mkhan45.github.io/2020/06/16/using-lua-as-a-serialization-format.html">Using Lua As A Serialization Format (2020)</a> (<a href="https://news.ycombinator.com/item?id=23539332">HN</a>) (<a href="https://lobste.rs/s/dttksl/using_lua_as_serialization_format">Lobsters</a>)</li>
+<li><a href="https://mkhan45.github.io/2020/06/12/lua-integration.html">Lua Integration (2020)</a></li>
+<li><a href="https://github.com/franko/luajit-lang-toolkit">LuaJIT Language Toolkit</a> - Implementation of the Lua programming language written in Lua itself.</li>
+<li><a href="https://git.sr.ht/~technomancy/antifennel">Antifennel</a> - Turn Lua code into Fennel code.</li>
+<li><a href="https://news.ycombinator.com/item?id=23686297">HN: Lua 5.4.0 (2020)</a></li>
+<li><a href="https://github.com/hengestone/lua-languages">Languages that compile to Lua</a></li>
+<li><a href="https://technomancy.us/192">Making the Fennel compiler self-hosting with another compiler (2020)</a></li>
+<li><a href="https://medium.com/roblox-tech-blog/how-to-plan-a-luau-augmenting-luas-syntax-with-types-7751a790f0d8">How to Plan a Luau: Augmenting Lua’s Syntax With Types (2020)</a> (<a href="https://news.ycombinator.com/item?id=24448364">HN</a>)</li>
+<li><a href="https://github.com/giann/croissant">Croissant</a> - Lua REPL and debugger implemented in Lua.</li>
+<li><a href="https://github.com/fengari-lua/fengari">Fengari</a> - Lua for the Browser. (<a href="https://fengari.io/">Web</a>) (<a href="https://news.ycombinator.com/item?id=30404104">HN</a>)</li>
+<li><a href="https://github.com/Olivine-Labs/lua-style-guide">Lua Style Guide</a></li>
+<li><a href="https://github.com/Olivine-Labs/busted">busted</a> - Elegant Lua unit testing.</li>
+<li><a href="https://github.com/bjornbytes/RxLua">RxLua</a> - Reactive Extensions for Lua.</li>
+<li><a href="https://github.com/tboox/ltui">LTUI</a> - Cross-platform terminal ui library based on Lua.</li>
+<li><a href="https://andreyorst.gitlab.io/posts/2020-10-15-raymarching-with-fennel-and-love/">Raymarching with Fennel and LÖVE (2020)</a></li>
+<li><a href="https://github.com/gamesys/moonshine">Moonshine</a> - Lightweight Lua VM for the browser.</li>
+<li><a href="https://cacm.acm.org/magazines/2018/11/232214-a-look-at-the-design-of-lua/fulltext">A Look at the Design of Lua (2018)</a> (<a href="https://news.ycombinator.com/item?id=18327661">HN</a>)</li>
+<li><a href="https://github.com/unindented/lua-fsm">lua-fsm</a> - Simple finite-state machine implementation for Lua.</li>
+<li><a href="https://github.com/nvim-lua/plenary.nvim">plenary.nvim</a> - All the lua functions I don't want to write twice.</li>
+<li><a href="https://github.com/bluebird75/luaunit">LuaUnit</a> - Popular unit-testing framework for Lua, with an interface typical of xUnit libraries.</li>
+<li><a href="https://github.com/Koihik/LuaFormatter">LuaFormatter</a> - Reformats your Lua source code.</li>
+<li><a href="https://github.com/Hyperspace-Logistics/heart">Heart</a> - High performance Lua web server with a simple, powerful API.</li>
+<li><a href="https://andregarzia.com/2021/01/lua-a-misunderstood-language.html">Lua, a misunderstood language (2021)</a> (<a href="https://lobste.rs/s/novtvd/lua_misunderstood_language">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=25796852">HN</a>) (<a href="https://news.ycombinator.com/item?id=33022031">HN</a>)</li>
+<li><a href="https://lwn.net/Articles/812122/">Lua and Python (2020)</a> (<a href="https://news.ycombinator.com/item?id=25794374">HN</a>) (<a href="https://lobste.rs/s/2lpxqj/lua_python">Lobsters</a>)</li>
+<li><a href="https://luapower.com/">luapower</a> - LuaJIT distribution. (<a href="https://github.com/luapower">GitHub</a>)</li>
+<li><a href="https://github.com/lunarmodules/Penlight">Penlight</a> - Useful pure Lua modules, focusing on input data handling, functional programming and OS path management.</li>
+<li><a href="https://github.com/JohnnyMorganz/StyLua">StyLua</a> - Opinionated Lua code formatter.</li>
+<li><a href="https://github.com/Kampfkarren/full-moon">Full Moon</a> - Lossless Lua 5.1 parser.</li>
+<li><a href="https://github.com/dibyendumajumdar/ravi">Ravi</a> - Dialect of Lua, featuring limited optional static typing, JIT and AOT compilers. (<a href="http://ravilang.github.io/">Web</a>)</li>
+<li><a href="https://luajit.me/">LuaJIT compiler explorer</a> (<a href="https://github.com/rapidlua/luajit.me">Code</a>)</li>
+<li><a href="https://github.com/tongson/LadyLua">LadyLua</a> - Batteries-included static Lua 5.1 interpreter. (<a href="https://news.ycombinator.com/item?id=26738006">HN</a>)</li>
+<li><a href="https://github.com/TypeScriptToLua/TypeScriptToLua">TypeScriptToLua</a> - Write Lua with TypeScript. (<a href="https://typescripttolua.github.io/">Web</a>)</li>
+<li><a href="https://github.com/slembcke/debugger.lua">debugger.lua</a> - Simple, embedabble CLI debugger for Lua.</li>
+<li><a href="https://terralang.org/">Terra</a> - Low-level system programming language meta-programmed from Lua. (<a href="https://news.ycombinator.com/item?id=27334065">HN</a>) (<a href="https://github.com/terralang/terra">Code</a>)</li>
+<li><a href="https://github.com/sumneko/lua-language-server">Lua Language Server</a></li>
+<li><a href="https://gitspartv.github.io/lua-patterns/">Lua Patterns Viewer</a> - Tool for inspecting, analyzing and learning Lua patterns. (<a href="https://github.com/GitSparTV/lua-patterns">Code</a>)</li>
+<li><a href="https://github.com/ok-nick/liter">liter</a> - Powerful Luau library for enhanced Rust-like iterators.</li>
+<li><a href="https://github.com/starius/lua-lru">lua-lru</a> - LRU cache in Lua.</li>
+<li><a href="https://github.com/Stepets/utf8.lua">utf8.lua</a> - Pure Lua 5.3 regex library.</li>
+<li><a href="https://github.com/luc-tielen/lua-quickcheck">Lua-QuickCheck</a> - Property based testing in Lua, inspired by the original QuickCheck.</li>
+<li><a href="https://moonscript.org/">MoonScript</a> - Language that compiles to Lua. (<a href="https://github.com/leafo/moonscript">Code</a>)</li>
+<li><a href="https://github.com/lua/lua">Lua Code</a></li>
+<li><a href="https://github.com/kelindar/lua">Concurrent LUA Executor</a> - Concurrent LUA executor that is designed to keep running a same (but updateable) set of scripts over a long period of time.</li>
+<li><a href="https://github.com/squeek502/zua">Zua</a> - Implementation of Lua 5.1 in Zig, for learning purposes.</li>
+<li><a href="https://github.com/openresty/lua-resty-lrucache">lua-resty-lrucache</a> - Lua-land LRU Cache based on LuaJIT FFI.</li>
+<li><a href="https://brmmm3.github.io/posts/2019/07/28/python_and_lua/">Python and Lua (2019)</a> (<a href="https://news.ycombinator.com/item?id=28814141">HN</a>)</li>
+<li><a href="https://github.com/luafun/luafun">Lua Functional</a> - High-performance functional programming library for Lua designed with LuaJIT's trace compiler in mind. (<a href="https://luafun.github.io/">Docs</a>)</li>
+<li><a href="https://github.com/justincormack/ljsyscall">LuaJIT Unix syscall FFI</a></li>
+<li><a href="https://github.com/danii/hematita">Hematita Da Lua</a> - Memory safe Lua interpreter.</li>
+<li><a href="http://wiki.luajit.org/New-Garbage-Collector">LuaJIT Garbage Collector Design Doc</a></li>
+<li><a href="https://github.com/hishamhm/f-strings">f-strings</a> - String interpolation for Lua.</li>
+<li><a href="https://github.com/pandoc/lua-filters">Lua Filters</a> - Collection of lua filters for pandoc.</li>
+<li><a href="https://github.com/ignacio/StackTracePlus">StackTracePlus</a> - Provides enhanced stack traces for Lua.</li>
+<li><a href="https://github.com/akkartik/teliva">Teliva</a> - Fork of Lua 5.1 to encourage end-user programming. (<a href="https://news.ycombinator.com/item?id=29231563">HN</a>)</li>
+<li><a href="https://github.com/fab13n/checks">checks</a> - Runtime argument type checking API for Lua.</li>
+<li><a href="https://github.com/ms-jpq/lua-async-await">Lua Async Await</a> - Async Await in 90 lines of code.</li>
+<li><a href="https://github.com/ers35/luastatic">luastatic</a> - Build a standalone executable from a Lua program.</li>
+<li><a href="https://github.com/edubart/nelua-lang/wiki/Useful-Links-for-Research">Links on how Lua works behind the scenes</a></li>
+<li><a href="https://github.com/kyleconroy/lua-state-machine">Lua Finite State Machine</a> - Finite state machine lua micro framework.</li>
+<li><a href="https://github.com/davidm/lua2c">lua2c</a> - Converts Lua 5.1 source code to C code.</li>
+<li><a href="https://github.com/cjneidhart/lua-in-rust">Lua in Rust</a> - Lua programming language, implemented in Rust.</li>
+<li><a href="http://notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts">Lua: Good, bad, and ugly parts (2012)</a> (<a href="https://news.ycombinator.com/item?id=29659336">HN</a>)</li>
+<li><a href="https://github.com/rvirding/luerl">Luerl</a> - Implementation of Lua in Erlang. (<a href="https://news.ycombinator.com/item?id=29703949">HN</a>)</li>
+<li><a href="https://notes.eatonphil.com/lua-in-rust.html">Writing a minimal Lua implementation with a virtual machine from scratch in Rust (2021)</a> (<a href="https://lobste.rs/s/wlpgc3/writing_minimal_lua_implementation_with">Lobsters</a>) (<a href="https://github.com/eatonphil/lust">Code</a>) (<a href="https://news.ycombinator.com/item?id=29952516">HN</a>)</li>
+<li><a href="https://github.com/ahuth/lua-ts">lua-ts</a> - TypeScript implementation of minimal Lua.</li>
+<li><a href="https://github.com/exosite/lua-yaml">lua-yaml</a> - LUA YAML parser.</li>
+<li><a href="https://github.com/jiyinyiyong/json-lua">JSON.lua</a> - JSON encoder/decoder.</li>
+<li><a href="https://github.com/paigeruten/lua-feels">lua-feels</a> - Lua REPL that gives you a feel for its internals.</li>
+<li><a href="https://www.youtube.com/watch?v=jUuqBZwwkQw">Lua in 100 Seconds (2022)</a></li>
+<li><a href="https://github.com/pkulchenko/fullmoon">Fullmoon</a> - Fast and minimalistic web framework based on Redbean web server.</li>
+<li><a href="https://github.com/Neopallium/lua-pb">lua-pb</a> - Lua Protocol Buffers.</li>
+<li><a href="https://github.com/catwell/cw-lua">Catwell's Lua playground</a> - Store the various Open Source tools, algorithms and libraries I write in Lua.</li>
+<li><a href="https://github.com/Malien/luar">Luar</a> - Lua interpreter / JIT compiler.</li>
+<li><a href="https://ferib.dev/blog.php?l=post/Lua_Devirtualization_Part_1_Introduction">Lua Devirtualization (2022)</a> (<a href="https://news.ycombinator.com/item?id=30475616">HN</a>)</li>
+<li><a href="https://github.com/cbrewster/luna">luna</a> - Node.js bindings to Lua.</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/tfurkb/if_lua_is_faster_and_smaller_than_python_while/">Why Python is more popular than Lua (2022)</a></li>
+<li><a href="https://github.com/CapsAdmin/NattLua">NattLua</a> - Superset of LuaJIT that adds a structural typesystem.</li>
+<li><a href="https://github.com/stevedonovan/luar">Luar</a> - Lua reflection bindings for Go.</li>
+<li><a href="https://github.com/xpol/lua-rapidjson">RapidJSON bindings for Lua</a></li>
+<li><a href="https://github.com/arnodel/golua">GoLua</a> - Lua compiler / runtime in Go.</li>
+<li><a href="https://github.com/ysugimoto/webassembly-lua">WebAssembly Lua</a> - Write and compile WebAssembly code with Lua.</li>
+<li><a href="https://github.com/bakpakin/binser">binser</a> - Customizable Lua Serializer.</li>
+<li><a href="https://github.com/rxi/json.lua">JSON.lua</a> - Lightweight JSON library for Lua.</li>
+<li><a href="https://github.com/daurnimator/lua-http">Lua HTTP</a> - HTTP Library for Lua. Supports HTTP(S) 1.0, 1.1 and 2.0; client and server.</li>
+<li><a href="https://github.com/cloudflare/loom">LOOM</a> - Easier to read LuaJIT dumps.</li>
+<li><a href="https://github.com/SwadicalRag/wasm2lua">wasm2lua</a> - Converting WASM into Lua.</li>
+<li><a href="https://github.com/zxh0/lua.go">lua.go</a> - Toy Lua 5.3 implementation written in Go.</li>
+<li><a href="https://github.com/kikito/inspect.lua">inspect.lua</a> - Human-readable representation of Lua tables.</li>
+<li><a href="https://github.com/mpeterv/luacheck">Luacheck</a> - Tool for linting and static analysis of Lua code.</li>
+<li><a href="https://github.com/edubart/minilua">MiniLua</a> - Lua contained in a single header to be bundled in C/C++ applications with ease.</li>
+<li><a href="https://github.com/rxi/lume">Lume</a> - Lua functions geared towards game dev.</li>
+<li><a href="https://github.com/lunarmodules/LDoc">LDoc</a> - Lua Documentation Tool.</li>
+<li><a href="https://github.com/hackerer1c/hive">Hive</a> - Lua microservices framework written in Rust.</li>
+<li><a href="https://github.com/chen0040/lua-graph">lua-graph</a> - Graph algorithms in Lua.</li>
+<li><a href="https://github.com/ClueLang/Clue">Clue</a> - C/Rust like programming language that compiles into Lua code.</li>
+<li><a href="https://github.com/euclidianAce/ltreesitter">Standalone tree sitter bindings for the Lua language</a></li>
+<li><a href="https://github.com/gooac/gooac">Gooa</a> - Lua Preprocessor written in Go.</li>
+<li><a href="https://github.com/lunarmodules/luasocket">LuaSocket</a> - Network support for the Lua language.</li>
+<li><a href="https://github.com/Insality/defold-eva">Eva</a> - Basic defold module for mobile games.</li>
+<li><a href="https://github.com/Insality/druid">Druid</a> - Defold UI component library.</li>
+<li><a href="https://github.com/ligurio/luac-manual-pages">Lua C API manual pages</a></li>
+<li><a href="https://github.com/Azganoth/tree-sitter-lua">Lua grammar for tree-sitter</a></li>
+<li><a href="https://www.lua.org/history.html">A History of Lua</a> (<a href="https://news.ycombinator.com/item?id=32407430">HN</a>)</li>
+<li><a href="https://github.com/api7/jsonschema">jsonschema</a> - Pure Lua JSON schema validator for Lua/LuaJIT.</li>
+<li><a href="https://github.com/api7/lua-resty-radixtree">lua-resty-radixtree</a> - Adaptive Radix Trees implemented in Lua / LuaJIT.</li>
+<li><a href="https://github.com/tesselode/baton">Baton</a> - Input library for LÖVE that bridges the gap between keyboard and joystick controls.</li>
+<li><a href="https://github.com/kevinhwang91/promise-async">promise-async</a> - Promise &amp; Async in Lua.</li>
+<li><a href="https://github.com/ofunc/lua">Go Lua Compiler and VM</a></li>
+<li><a href="https://github.com/mlua-rs/rustmoon">Lua 5.3 in Rust</a></li>
+<li><a href="https://gist.github.com/belm0/4c6d11f47ccd31a231cde04616d6bb22">Structured concurrency and Lua</a> (<a href="https://news.ycombinator.com/item?id=32910719">HN</a>)</li>
+<li><a href="https://github.com/Kampfkarren/selene">Selene</a> - Blazing-fast modern Lua linter written in Rust.</li>
+<li><a href="https://github.com/Kampfkarren/Roblox">Lua Scripts for Roblox</a></li>
+<li><a href="https://github.com/Bogdanp/racket-lua">Racket-Lua</a> - Implementation of Lua 5.4 for Racket. (<a href="https://defn.io/2022/11/12/ann-racket-lua/">Article</a>) (<a href="https://news.ycombinator.com/item?id=33577089">HN</a>)</li>
+<li><a href="https://github.com/shawnjb/lua-standard-library">Lua Standard Library</a> - Implement popular data structures &amp; algorithms into your Lua applications.</li>
+<li><a href="https://sillycross.github.io/2022/11/22/2022-11-22/index.html">Building the fastest Lua interpreter automatically (2022)</a> (<a href="https://news.ycombinator.com/item?id=33711583">HN</a>)</li>
+<li><a href="https://github.com/luajit-remake/luajit-remake">LuaJIT Remake</a> - Implement a multi-tier method-JIT for Lua.</li>
+<li><a href="https://github.com/jupyter-xeus/xeus-lua">Xeus Lua</a> - Jupyter kernel for Lua based on the native implementation of the Jupyter protocol xeus.</li>
+<li><a href="https://github.com/hslua/hslua">HsLua</a> - Haskell bindings to Lua, an embeddable scripting language.</li>
+<li><a href="https://github.com/flily/lua-performance">Lua performance guide</a></li>
+<li><a href="https://github.com/osyrisrblx/t">t</a> - Runtime Typechecker for Roblox.</li>
+<li><a href="https://github.com/catwell/cwtest">cwtest</a> - Tiny Lua test helper.</li>
+<li><a href="http://www.lua.org/gems/">Lua Programming Gems</a> (<a href="http://www.lua.org/gems/lpg.pdf">PDF</a>)</li>
+<li><a href="https://edw.is/using-lua-with-cpp/">Using Lua with C++ (2023)</a> (<a href="https://news.ycombinator.com/item?id=34782491">HN</a>)</li>
+<li><a href="https://github.com/pigpigyyy/Yuescript">Yuescript</a> - Moonscript dialect compiles to Lua. (<a href="https://yuescript.org/doc/">Docs</a>)</li>
+<li><a href="https://github.com/groverburger/g3d">g3d</a> - Simple and easy 3D engine for LÖVE.</li>
+<li><a href="https://github.com/lunarmodules/luafilesystem">LuaFileSystem</a> - File System Library for Lua.</li>
+<li><a href="https://github.com/ligurio/luzer">luzer</a> - Coverage-guided, native Lua fuzzing engine.</li>
+<li><a href="https://github.com/Rerumu/Wasynth">Wasynth</a> - WebAssembly to Lua translation library and tool.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

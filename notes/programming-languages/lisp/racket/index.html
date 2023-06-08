@@ -1,0 +1,1266 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../lisp/">
+      
+      
+        <link rel="next" href="../scheme/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Racket - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#racket" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Racket
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Racket
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Racket
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="racket"><a href="https://racket-lang.org/">Racket</a></h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<p><a href="https://beautifulracket.com/">Beautiful Racket</a> &amp; <a href="https://cs.uwaterloo.ca/~plragde/flaneries/TYR/">Teach Yourself Racket</a> are great intros.</p>
+<p><a href="https://racket-news.com/">Racket News</a> is nice to stay up to date. <a href="https://github.com/racket/zuo">Zuo</a> &amp; <a href="https://github.com/racket/typed-racket">Typed Racket</a> seem nice.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://docs.racket-lang.org/">Racket documentation</a></li>
+<li><a href="https://docs.racket-lang.org/guide/">The Racket Guide</a></li>
+<li><a href="https://beautifulracket.com/appendix/why-lop-why-racket.html">Why language-oriented programming? Why Racket? (2019)</a> (<a href="https://news.ycombinator.com/item?id=19232068">HN</a>)</li>
+<li><a href="https://github.com/racket/drracket">DrRacket</a> - IDE for Racket.</li>
+<li><a href="https://download.racket-lang.org/v7.3.html">Racket 7.3</a> (<a href="https://news.ycombinator.com/item?id=19925832">HN</a>)</li>
+<li><a href="https://beautifulracket.com/appendix/why-racket-why-lisp.html">Why Racket? Why Lisp?</a> (<a href="https://news.ycombinator.com/item?id=19952714">HN</a>) (<a href="https://news.ycombinator.com/item?id=32839542">HN</a>)</li>
+<li><a href="https://dustycloud.org/blog/racket-is-an-acceptable-python/">Racket is an acceptable Python (2019)</a> (<a href="https://lobste.rs/s/q2kci7/racket_is_acceptable_python">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=31493207">HN</a>)</li>
+<li><a href="https://github.com/racket/racket">Racket Code</a></li>
+<li><a href="https://beautifulracket.com/">Beautiful Racket</a> - Introduction to language-oriented programming using racket. (<a href="https://github.com/mbutterick/beautiful-racket">Code</a>)</li>
+<li><a href="https://github.com/lexi-lambda/hackett">Hackett</a> - Attempt to implement a Haskell-like language with support for Racket’s macro system, built using the techniques described in the paper Type Systems as Macros.</li>
+<li><a href="https://artyom.me/learning-racket-1">Learning Racket #1: Introduction</a></li>
+<li><a href="https://github.com/avelino/awesome-racket">Awesome Racket</a></li>
+<li><a href="https://sagegerard.com/racket-powered.html">I built this website using Racket. Here's what i can do now.</a></li>
+<li><a href="https://defn.io/2020/01/04/remember-internals/">Native Applications with Racket (2020)</a> (<a href="https://lobste.rs/s/s4okil/native_applications_with_racket">Lobsters</a>)</li>
+<li><a href="https://defn.io/2020/01/05/racket-on-ios/">Running Racket on iOS (2020)</a></li>
+<li><a href="https://github.com/greghendershott/frog">Frog</a> - Static blog generator implemented in Racket, targeting Bootstrap and able to use Pygments.</li>
+<li><a href="https://defn.io/2020/02/12/racket-web-server-guide/">The Missing Guide to Racket's Web Server (2020)</a></li>
+<li><a href="https://lisp.sh/">Tips, tricks, articles, and tutorials for getting the most out of Racket. By Jesse Alama.</a></li>
+<li><a href="https://www2.ccs.neu.edu/racket/pubs/manifesto.pdf">Racket Manifesto</a></li>
+<li><a href="https://github.com/racket/db">db Racket packages</a></li>
+<li><a href="https://github.com/stchang/macrotypes">Turnstile+</a> - Racket-based framework for creating extensible and reusable typed languages.</li>
+<li><a href="https://docs.racket-lang.org/ts-guide/index.html">Typed Racket Guide</a></li>
+<li><a href="https://blog.racket-lang.org/2020/05/racket-is-25.html">Racket is 25 years old (2020)</a> (<a href="https://news.ycombinator.com/item?id=23132621">HN</a>)</li>
+<li><a href="https://racket-stories.com/">Racket Stories</a></li>
+<li><a href="https://racket-news.com/">Racket News</a> (<a href="https://github.com/pmatos/racket-news">Code</a>)</li>
+<li><a href="https://github.com/rjnw/sham">sham</a> - DSL for runtime code generation in racket.</li>
+<li><a href="http://www.pasterack.org/">PasteRack</a> - Evaluating pastebin for Racket. (<a href="https://github.com/stchang/pasterack">Code</a>)</li>
+<li><a href="https://github.com/calvis/cKanren">cKanren</a> - Constraint programming language embedded in Racket.</li>
+<li><a href="https://defn.io/2020/06/28/racket-deployment/">Deploying Racket Web Apps (2020)</a> (<a href="https://lobste.rs/s/lzv4iu/deploying_racket_web_apps">Lobsters</a>)</li>
+<li><a href="https://www.penguinrandomhouse.com/books/645955/racket-programming-the-fun-way-by-james-stelly/">Racket Programming the Fun Way by James Stelly (2020)</a> (<a href="https://www.micahcantor.com/blog/racket-programming-the-fun-way-review/">Review</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=s3Q3M2wZ7rI">Rebuilding Racket on Chez Scheme Experience Report (2020)</a></li>
+<li><a href="https://github.com/greghendershott/fear-of-macros">Practical guide to Racket macros</a></li>
+<li><a href="https://learnxinyminutes.com/docs/racket/">Learn Racket in Y Minutes</a></li>
+<li><a href="https://con.racket-lang.org/">RacketCon</a></li>
+<li><a href="https://micahcantor.xyz/blog/logic-racket-parser">Parsing propositional logic in 33 lines of Racket (2020)</a> (<a href="https://news.ycombinator.com/item?id=24764648">HN</a>)</li>
+<li><a href="https://github.com/rain-1/continuations-study-group">Racket Continuations Study Group</a></li>
+<li><a href="https://github.com/corpix/golisp">GoLisp</a> - Racket DSL to make code-generation for Go.</li>
+<li><a href="https://github.com/danprager/racket-2048">2048 - Racket Edition</a> - Clean-room, functional implementation in Racket of the game 2048.</li>
+<li><a href="https://github.com/jackfirth/racket-package-ci-action">racket-package-ci-action</a> - GitHub Action for building and testing Racket packages.</li>
+<li><a href="https://github.com/racket-tw/sauron">Sauron</a> - IDE for Racket language.</li>
+<li><a href="https://github.com/racket/typed-racket">Typed Racket</a> - Racket's gradually-typed sister language which lets you add statically-checked type annotations to your programs.</li>
+<li><a href="https://github.com/pnwamk/datatype">datatype</a> - Algebraic(-like) Data Types for Racket.</li>
+<li><a href="https://emina.github.io/rosette/">Rosette</a> - Solver-aided programming language that extends Racket with language constructs for program synthesis, verification, and more. (<a href="https://github.com/emina/rosette">Code</a>)</li>
+<li><a href="https://github.com/stchang/typed-rosette">Typed Rosette</a> - Experimental typed version of the Rosette language.</li>
+<li><a href="https://github.com/racket">Racket GitHub</a></li>
+<li><a href="https://docs.racket-lang.org/racket-cheat/">Racket Cheat Sheet</a> (<a href="https://github.com/jeapostrophe/racket-cheat">Code</a>)</li>
+<li><a href="https://github.com/mflatt/scratchy">Demonstration of implementing a language in Racket</a></li>
+<li><a href="https://github.com/russellw/racket-format">racket-format</a> - Format Racket source code.</li>
+<li><a href="https://github.com/pouyakary/vscode-racket">Racket for Visual Studio Code</a></li>
+<li><a href="https://defn.io/2021/01/19/racket-cs-on-ios/">Running Racket CS on iOS (2021)</a></li>
+<li><a href="https://github.com/racketscript/racketscript">RacketScript</a> - Racket to JavaScript Compiler. (<a href="https://news.ycombinator.com/item?id=28662132">HN</a>) (<a href="http://racketscript.org/">Web</a>) (<a href="https://news.ycombinator.com/item?id=33409159">HN</a>)</li>
+<li><a href="https://github.com/rackt-org/rackt">Rackt</a> - Ultrasmall (~70 loc) React wrapper written in RacketScript.</li>
+<li><a href="https://github.com/Bogdanp/racket-http-easy">racket-http-easy</a> - High-level HTTP client for Racket.</li>
+<li><a href="https://blog.racket-lang.org/2021/02/racket-v8-0.html">Racket v8.0 (2021)</a> (<a href="https://news.ycombinator.com/item?id=26129480">HN</a>)</li>
+<li><a href="http://picturingprograms.com/">Picturing Programs: A Racket Book (2010)</a></li>
+<li><a href="https://github.com/jeapostrophe/racket-langserver">racket-langserver</a> - Language Server Protocol implementation for Racket.</li>
+<li><a href="https://github.com/racket/gui">Racket GUI packages</a></li>
+<li><a href="https://github.com/mbutterick/brag">brag</a> - Racket DSL for generating parsers from BNF grammars.</li>
+<li><a href="https://docs.racket-lang.org/goblins/">Goblins: A transactional, distributed actor model environment</a> (<a href="https://news.ycombinator.com/item?id=26665387">HN</a>)</li>
+<li><a href="https://github.com/Metaxal/MrEd-Designer">MrEd Designer</a> - WYSIWYG program to create GUI applications for Racket.</li>
+<li><a href="https://www.youtube.com/watch?v=ZvwE6_MMJjM">Building Web Services with Racket (2021)</a></li>
+<li><a href="https://blog.racket-lang.org/2021/05/racket-v8-1.html">Racket 8.1 (2021)</a> (<a href="https://news.ycombinator.com/item?id=27073879">HN</a>)</li>
+<li><a href="https://github.com/soegaard/sketching">sketching</a> - Racket library inspired by Processing.</li>
+<li><a href="https://github.com/iambrj/imin">imin</a> - Compiler for (a subset of) Racket -&gt; x86-64, written in Racket.</li>
+<li><a href="https://github.com/countvajhula/cli">cli</a> - Language for writing command line interfaces in Racket.</li>
+<li><a href="https://github.com/Bogdanp/racket-gui-easy">racket-gui-easy</a> - Declarative GUIs in Racket. (<a href="https://www.youtube.com/watch?v=AXJ9tTVGDwU">Video</a>) (<a href="https://lobste.rs/s/vaouwt/declarative_guis_racket">Lobsters</a>)</li>
+<li><a href="https://www.reddit.com/r/Racket/comments/pfjs2e/how_do_i_implement_racket_from_scratch/">How do I implement Racket from scratch? (2021)</a></li>
+<li><a href="https://www.reddit.com/r/Racket/comments/ptimod/what_drew_you_to_racket/">What drew you to Racket? (2021)</a></li>
+<li><a href="https://github.com/sorawee/fmt">fmt</a> - Code formatter for Racket.</li>
+<li><a href="https://github.com/akeep/abstract-racket">Abstract Machine for Racket Bytecode</a></li>
+<li><a href="https://nostarch.com/realmofracket.htm">Realm of Racket</a> - Learn to Program, One Game at a Time.</li>
+<li><a href="https://blog.racket-lang.org/2021/11/racket-v8-3.html">Racket v8.3 (2021)</a> (<a href="https://news.ycombinator.com/item?id=29134609">HN</a>)</li>
+<li><a href="https://racket.discourse.group/">Racket Discussions</a></li>
+<li><a href="https://github.com/racket/scribble">Scribble</a> - Racket Documentation Tool.</li>
+<li><a href="https://github.com/zyrolasting/racket-koans">Learn Racket by doing</a> - Practice language features by fixing topic-oriented unit tests.</li>
+<li><a href="https://www.micahcantor.com/blog/crafting-interpreters-typed-racket/">Crafting Interpreters in Typed Racket (2021)</a></li>
+<li><a href="https://www.micahcantor.com/blog/logic-racket-parser/">Parsing propositional logic in 33 lines of Racket (2020)</a></li>
+<li><a href="https://www.micahcantor.com/blog/mutable-hash-racket/">Implementing Simple Hash Tables in Racket (2020)</a></li>
+<li><a href="https://docs.racket-lang.org/rosette-guide/index.html">The Rosette Guide</a></li>
+<li><a href="https://github.com/micahcantor/racket-lox">Implementation of the Lox language in Racket</a></li>
+<li><a href="https://andregarzia.com/2021/12/the-blog-is-the-program.html">The Blog is the program (2021)</a></li>
+<li><a href="https://github.com/racket/rhombus-prototype">Rhombus</a> - Language based on Racket. (<a href="https://github.com/racket/rhombus-prototype/discussions/199">Does Rhombus risk missing the trees for enforestation?</a>)</li>
+<li><a href="https://github.com/maxsnyder2000/TheRelationalParser">The Relational Parser</a> - Core-OMeta parser embedded in Racket/staged-miniKanren.</li>
+<li><a href="https://github.com/Metaxal/rascas">rascas</a> - Computer Algebra System for Racket.</li>
+<li><a href="https://github.com/Metaxal/quickscript">Quickscript</a> - Scripting engine for DrRacket.</li>
+<li><a href="https://docs.racket-lang.org/qi/index.html">Qi</a> - Functional, Flow-Oriented DSL. (<a href="https://github.com/countvajhula/qi-tutorial">Interactive Tutorial</a>)</li>
+<li><a href="https://github.com/zyrolasting/polyglot">polyglot</a> - Creates websites using a mix of any DSLs you want in a single source file.</li>
+<li><a href="https://defn.io/2021/12/30/parallel-racket-web-server/">Parallelizing the Racket Web Server (2021)</a></li>
+<li><a href="https://github.com/lexi-lambda/racket-curly-fn">curly-fn</a> - Meta-language for adding Clojure-style shorthand function literals to arbitrary Racket languages.</li>
+<li><a href="https://github.com/lexi-lambda/functional">functional</a> - Functional interfaces and datatypes for Racket.</li>
+<li><a href="https://github.com/mflatt/zuo">Zuo</a> - Tiny Racket for Scripting. (<a href="https://docs.racket-lang.org/zuo/index.html">Docs</a>) (<a href="https://news.ycombinator.com/item?id=33560492">HN</a>)</li>
+<li><a href="https://www.micahcantor.com/blog/why-learn-racket/">Why learn Racket? A student's perspective (2022)</a></li>
+<li><a href="https://www.micahcantor.com/blog/thoughts-typed-racket/">Typed Racket: the good and the bad (2021)</a> (<a href="https://news.ycombinator.com/item?id=30402408">HN</a>)</li>
+<li><a href="https://countvajhula.com/2022/02/22/how-to-organize-your-racket-library/">How to Organize Your Racket Library (2022)</a> (<a href="https://www.reddit.com/r/Racket/comments/sz0uhe/how_to_organize_your_racket_library_blog/">Reddit</a>)</li>
+<li><a href="https://github.com/lexi-lambda/blackboard">blackboard</a> - OpenType Math layout and rendering engine in Racket.</li>
+<li><a href="https://github.com/nikomatsakis/a-mir-formality">PLT redex model of MIR and its type system</a></li>
+<li><a href="https://github.com/dedbox/racket-algebraic">Algebraic Racket</a> - Algebraic structures for untyped Racket.</li>
+<li><a href="https://github.com/dedbox/racket-template">Template Macros</a> - Racket Meta-Program Generator.</li>
+<li><a href="https://github.com/rogerkeays/racket-fluent">fluent</a> - UNIX style pipes and a lambda shorthand syntax to make your Racket code more readable.</li>
+<li><a href="https://www.grinning-cat.com/post/improving-logging-with-racket/">Improving Logging With Racket (2022)</a></li>
+<li><a href="https://alex-hhh.github.io/2020/05/dependency-management-in-racket-applications.html">Dependency Management in Racket Applications (2020)</a></li>
+<li><a href="https://github.com/mbutterick/typesetting">typesetting</a> - Document-layout tools.</li>
+<li><a href="https://github.com/soegaard/sci">sci</a> - Racket libraries for scientific computing.</li>
+<li><a href="https://github.com/sorawee/racket-analysis">racket-analysis</a> - Analysis of Racket code base.</li>
+<li><a href="https://github.com/Bogdanp/racket-review">racket-review</a> - Linter for Racket.</li>
+<li><a href="https://github.com/rmculpepper/sql">Embedding of some of SQL into Racket</a></li>
+<li><a href="https://github.com/metareflection/poof">Prototypes: Object Orientation, Functionally</a></li>
+<li><a href="https://github.com/tonyg/syndicate">Syndicate</a> - Networked, Concurrent, Functional Programming Language for interactive programs.</li>
+<li><a href="https://github.com/uwplse/rake">Rake</a> - Compiling DSLs to high-level hardware instructions.</li>
+<li><a href="https://github.com/racket/zuo">Zuo</a> - Tiny Racket for Scripting.</li>
+<li><a href="https://github.com/racket/racket/pull/4179">Racket gains new build system using tiny Scheme implementation Zuo</a> (<a href="https://lobste.rs/s/ax4iyv/racket_gains_new_build_system_using_tiny">Lobsters</a>)</li>
+<li><a href="https://github.com/lexi-lambda/racket-collections">collections</a> - Generic collections API for Racket.</li>
+<li><a href="https://github.com/samdphillips/raco-pkg-env">raco-env-lib</a> - Virtualenv like tool for Racket.</li>
+<li><a href="https://github.com/racketscript/racketscript-playground">RacketScript Playground</a></li>
+<li><a href="https://blog.racket-lang.org/2022/04/racket-v8-5.html">Racket v8.5 (2022)</a> (<a href="https://news.ycombinator.com/item?id=31230504">HN</a>)</li>
+<li><a href="https://github.com/countvajhula/qi">qi</a> - General-purpose functional DSL.</li>
+<li><a href="https://github.com/pycket/pycket">Pycket</a> - Racket/Scheme implementation that is generated using the RPython framework.</li>
+<li><a href="https://github.com/soegaard/urlang">Urlang</a> - JavaScript with a sane syntax. Written in Racket.</li>
+<li><a href="https://www.hashcollision.org/whalesong/">Whalesong</a> - Racket to JavaScript Compiler. (<a href="https://news.ycombinator.com/item?id=31457045">HN</a>)</li>
+<li><a href="https://github.com/dbenoit17/dynamic-ffi">dynamic-ffi</a> - Auto define Racket bindings to C by parsing header files.</li>
+<li><a href="https://github.com/jackfirth/package-analysis">package-analysis</a> - Racket package for analyzing the Racket package ecosystem.</li>
+<li><a href="https://github.com/Bogdanp/koyo">koyo</a> - Web development toolkit for Racket.</li>
+<li><a href="https://github.com/ruliana/racket-examples">Examples of the nice parts of Racket</a></li>
+<li><a href="https://github.com/bennn/with-cache">with-cache</a> - Simple, filesystem-based caching for Racket.</li>
+<li><a href="https://github.com/bennn/zordoz">Zordoz</a> - Manipulating racket bytecode.</li>
+<li><a href="https://github.com/nikofeyn/ray-tracing-with-racket">Ray tracing with Racket</a></li>
+<li><a href="https://github.com/philnguyen/set-extras">set-extras</a> - Some extra functionalities for set in Typed Racket.</li>
+<li><a href="https://github.com/philnguyen/json-type-provider">json-type-provider</a> - Well-typed JSON parser generator inspired by Type Provider.</li>
+<li><a href="https://github.com/soegaard/pyffi">Pyffi</a> - Use Python from Racket. (<a href="https://soegaard.github.io/pyffi/An_introduction_to_pyffi.html">Docs</a>) (<a href="https://news.ycombinator.com/item?id=33193681">HN</a>)</li>
+<li><a href="https://github.com/lang-party/Summer2022">Lang Party Summer 2022</a> - Write a language with Racket this summer.</li>
+<li><a href="https://kmicinski.com/certifying-interpreters">Certifying Interpreters in Racket (2022)</a></li>
+<li><a href="https://gopiandcode.uk/logs/log-racket-and-rhombus-sexp.html">Racket-&gt;Rhombus: To Sexp or not to Sexp? (2022)</a> (<a href="https://lobste.rs/s/ndqnr2/racket_rhombus_sexp_not_sexp">Lobsters</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=aTvU0j4hBR0">Racket Hacking: SwiftUI + Racket (2022)</a></li>
+<li><a href="https://gist.github.com/vindarel/c1ef5e043773921e3b11d8f4fe1ca7ac">Common Lisp VS Racket</a> (<a href="https://news.ycombinator.com/item?id=32723784">HN</a>)</li>
+<li><a href="https://williamjbowman.com/resources/wjb2022-hashlang-x64.pdf">Macro-Embedding Compiler Intermediate Languages in Racket (2022)</a></li>
+<li><a href="https://github.com/jessealama/argo">Argo</a> - JSON Schema validator for Racket.</li>
+<li><a href="https://github.com/massung/gann">gann</a> - Genetic Algorithm based Neural Networks for Racket.</li>
+<li><a href="https://github.com/camoy/corpse-reviver">Corpse Reviver</a> - Sound and efficient gradual typing via contract verification.</li>
+<li><a href="https://github.com/camoy/redex-parameter">Redex Parameters</a> - Parameters for extensions in Redex.</li>
+<li><a href="https://github.com/caocao485/awesome-racket-and-scheme">Awesome Racket and Scheme</a></li>
+<li><a href="https://github.com/jackfirth/lens">lens</a> - Racket package for creating and composing pure functional lenses.</li>
+<li><a href="https://github.com/fractalide/fractalide">Fractalide</a> - Reusable Reproducible Composable Software.</li>
+<li><a href="https://github.com/massung/r-cade">R-cade</a> - Retro Game Engine for Racket.</li>
+<li><a href="https://github.com/samdphillips/raco-run">raco-run</a> - Easier running Racket submodules on the command line.</li>
+<li><a href="https://github.com/samdphillips/raco-static-web">Racket Static Web</a> - Little raco command to serve some files on the web.</li>
+<li><a href="https://github.com/samth/disassemble">disassemble</a> - Disassembler for Racket.</li>
+<li><a href="https://github.com/samth/fancy-app">fancy-app</a> - Scala-style magic function application form.</li>
+<li><a href="https://github.com/jeapostrophe/pict3d">Pict3D</a> - 3D engine with a purely functional API.</li>
+<li><a href="https://github.com/jackfirth/resyntax">Resyntax</a> - Racket refactoring engine.</li>
+<li><a href="https://cs.brown.edu/people/bgreenma/resources/talks/g-rcon-2020.pdf">Shallow Typed Racket (2020)</a></li>
+<li><a href="https://github.com/dbp/isl-spec">Intermediate Student with Lambda (ISL+) Enhanced with Specification support via Quickcheck</a></li>
+<li><a href="https://docs.racket-lang.org/quick/">Introduction to Racket with Pictures</a></li>
+<li><a href="https://cs.uwaterloo.ca/~plragde/flaneries/TYR/">Teach Yourself Racket</a></li>
+<li><a href="https://defn.io/2023/02/04/racket-foreign-callouts-to-swift/">Safe Foreign Callouts from Racket to Swift (2023)</a></li>
+<li><a href="https://github.com/lexi-lambda/case-kw-lambda">case-kw-lambda</a> - Variants of case-lambda and case-&gt; that support keyword and optional arguments.</li>
+<li><a href="https://github.com/6cdh/racket-fixw">Racket fixw</a> - Racket formatter that only fixes whitespaces.</li>
+<li><a href="https://github.com/herbie-fp/regraph">Regraph</a> - Racket E-graph Library.</li>
+<li><a href="https://github.com/Luv2C0d3/funascii">Creating minimal language in Racket</a></li>
+<li><a href="https://github.com/6cdh/tree-sitter-racket">Racket grammar for tree-sitter</a></li>
+<li><a href="https://github.com/greghendershott/pdb">pdb</a> - Multi-file check-syntax database.</li>
+<li><a href="https://github.com/Bogdanp/racket-dbg">Racket dbg</a> - Server, client and UI for remotely debugging Racket applications.</li>
+<li><a href="https://github.com/Bogdanp/racket-protocol-buffers">Racket Protocol Buffers</a> - Protocol Buffers implementation for Racket.</li>
+<li><a href="https://github.com/alex-hhh/data-frame">data-frame</a> - Data frame implementation for Racket.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

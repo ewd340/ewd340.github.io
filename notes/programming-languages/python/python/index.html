@@ -1,0 +1,1713 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../php/php/">
+      
+      
+        <link rel="next" href="../python-libraries/dask/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Python - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="python"><a href="https://www.python.org">Python</a></h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<p><a href="https://github.com/bloomberg/memray">Memray</a> is useful python memory profiler. <a href="https://snarky.ca/mvpy-minimum-viable-python/">Minimum Viable Python</a> is a good overview.</p>
+<p><a href="https://github.com/charliermarsh/ruff">Ruff</a> is nice linter.</p>
+<p><a href="https://github.com/taichi-dev/taichi">Taichi language</a> is interesting as it's embedded Python but with parallel code execution.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><a href="https://wiki.python.org/moin/GlobalInterpreterLock">Global interpreter lock (or GIL) is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once.</a></li>
+<li><a href="https://www.reddit.com/r/bioinformatics/comments/n2fwz4/what_is_something_that_you_realized_that_entirely/">Create separate enviornments in Conda for each program to avoid dependency issues.</a></li>
+<li><a href="https://www.reddit.com/r/programming/comments/so9luw/how_we_optimized_python_api_server_code_100x/">Tricks to speed up python: 1. asyncio.gather argument ordering by IO wait time (no C). 2. Shared filters in SQLAlchemy Core (no C). 3. Custom construction of Pandas DataFrame from asyncpg.Record-s (with C). 4. Iterating lists without GIL in Cython (with C). 5. Zero-copy (de)serialization data structure (no C). 6. Replacing pandas groupby with pure numpy (no C).</a></li>
+<li><a href="https://twitter.com/jakevdp/status/1518659999844630528">"gradual typing" is often difficult to implement in established Python packages. The issue is that it runs entirely counter to the "Easier to Ask for Forgiveness than Permission" (EAFP) coding style long advocated in the Python language.</a></li>
+<li><a href="https://twitter.com/nedbat/status/1522184975818371072">Classic Python speed-bump: default values for function arguments are computed once, and shared for all calls. If you mutate them, the effect persists! Use None instead.</a></li>
+<li><a href="https://twitter.com/nedbat/status/1521820685844180993">Instead of list comprehensions, consider Python generator comprehensions (parens instead of square brackets). They use the same syntax, but are lazy. Less space, and can be less computation</a></li>
+</ul>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># read file line by line</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Iterate over list</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="o">..</span>
+</code></pre></div>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://learnxinyminutes.com/docs/python/">Learn Python in Y Minutes</a></li>
+<li><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf">Python 3 cheat sheet</a></li>
+<li><a href="https://github.com/facebook/pyre-check">Pyre Check</a> - Performant type-checking for python. (<a href="https://engineering.fb.com/security/pysa/">Article</a>) (<a href="https://pyre-check.org/">Web</a>) (<a href="https://news.ycombinator.com/item?id=27107647">HN</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=GiZKuyLKvAA">Optional Static Typing for Python - Guido van Rossum (2018)</a></li>
+<li><a href="https://github.com/satwikkansal/wtfpython">WTF Python</a> - Exploring and understanding Python through surprising snippets. (<a href="https://news.ycombinator.com/item?id=26097732">HN</a>) (<a href="https://news.ycombinator.com/item?id=31566031">HN</a>)</li>
+<li><a href="https://jacobian.org/2019/nov/11/python-environment-2020/">My Python Development Environment, 2020 Edition (2019)</a> (<a href="https://news.ycombinator.com/item?id=21510262">HN</a>)</li>
+<li><a href="https://github.com/arogozhnikov/python3_with_pleasure">Python 3 with pleasure</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python!</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/writing/structure/">Structuring Your Python Project</a></li>
+<li><a href="https://github.com/zotroneneis/harry_potter_universe">Awesome Python Features Explained Using Harry Potter</a></li>
+<li><a href="https://github.com/trekhleb/learn-python">Learn python</a> - Playground and cheatsheet for learning Python.</li>
+<li><a href="https://github.com/benfred/py-spy">Py-Spy</a> - Sampling profiler for Python programs.</li>
+<li><a href="https://github.com/what-studio/profiling">Profiling</a> - Interactive continuous Python profiler.</li>
+<li><a href="https://github.com/google/pytype">Pytype</a> - Static analyzer for Python code.</li>
+<li><a href="https://github.com/go-python/gpython">gpython</a> - Python interpreter written in Go "batteries not included".</li>
+<li><a href="https://github.com/RustPython/RustPython">RustPython</a> - Python Interpreter written in Rust. (<a href="https://news.ycombinator.com/item?id=29094323">HN</a>) (<a href="https://news.ycombinator.com/item?id=35056586">HN</a>)</li>
+<li><a href="https://github.com/gto76/python-cheatsheet">Comprehensive Python Cheatsheet</a></li>
+<li><a href="https://github.com/guardrailsio/awesome-python-security">Awesome Python Security resources</a></li>
+<li><a href="https://github.com/Microsoft/pyright">Pyright</a> - Static type checker for the Python language. (<a href="https://news.ycombinator.com/item?id=34222407">HN</a>)</li>
+<li><a href="https://github.com/python/cpython">cpython</a> - Python programming language source code.</li>
+<li><a href="https://github.com/cool-RR/PySnooper">PySnooper</a> - Never use print for debugging again.</li>
+<li><a href="https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e">Python at Netflix (2019)</a></li>
+<li><a href="https://datawhatnow.com/things-you-are-probably-not-using-in-python-3-but-should/">Things you’re probably not using in Python 3 – but should (2019)</a> (<a href="https://news.ycombinator.com/item?id=19916089">HN</a>)</li>
+<li><a href="https://github.com/python/black">Black</a> - Uncompromising Python code formatter. (<a href="https://news.ycombinator.com/item?id=19939806">HN</a>) (<a href="https://news.ycombinator.com/item?id=30130315">HN</a>)</li>
+<li><a href="http://pyfound.blogspot.com/2019/05/amber-brown-batteries-included-but.html">Amber Brown: Batteries Included, But They're Leaking</a> (<a href="https://news.ycombinator.com/item?id=19948642">HN</a>)</li>
+<li><a href="https://www.pythonsheets.com/">Python Cheatsheet</a> (<a href="https://github.com/crazyguitar/pysheeet">Code</a>)</li>
+<li><a href="https://github.com/indygreg/PyOxidizer">PyOxidizer</a> - Modern Python application packaging and distribution tool.</li>
+<li><a href="https://github.com/timothycrosley/isort">isort</a> - Python utility / library to sort imports.</li>
+<li><a href="https://lwn.net/SubscriberLink/793818/0c6f9dd271021cd4/">What's coming in Python 3.8</a> (<a href="https://news.ycombinator.com/item?id=20463170">HN</a>)</li>
+<li><a href="https://github.com/danijar/handout">Python Handout</a> - Turn Python scripts into handouts with Markdown and figures.</li>
+<li><a href="https://news.ycombinator.com/item?id=20672051">HN: Python Is Eating the World (2019)</a></li>
+<li><a href="https://realpython.com/cpython-source-code-guide/">Your Guide to the CPython Source Code (2019)</a></li>
+<li><a href="https://github.com/30-seconds/30-seconds-of-python">30 seconds of python</a> - Curated collection of useful Python snippets that you can understand in 30 seconds or less.</li>
+<li><a href="https://github.com/prompt-toolkit/ptpython">ptpython</a> - Better Python REPL.</li>
+<li><a href="https://cython.org/">cython</a> - Optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex).</li>
+<li><a href="https://news.ycombinator.com/item?id=21054462">Ask HN: How do you handle/maintain local Python environments? (2019)</a></li>
+<li><a href="https://github.com/cvxgrp/cvxpy">CVXPY</a> - Python-embedded modeling language for convex optimization problems.</li>
+<li><a href="https://github.com/serge-sans-paille/pythran">Pythran</a> - Ahead of time compiler for a subset of the Python language, with a focus on scientific computing.</li>
+<li><a href="https://py-vscode.readthedocs.io/en/latest/">How to Python in VS Code</a></li>
+<li><a href="https://github.com/airspeed-velocity/asv">Airspeed Velocity</a> - Primarily designed to benchmark a single project over its lifetime using a given suite of benchmarks.</li>
+<li><a href="http://charlesleifer.com/blog/new-features-planned-for-python-4-0/">New features planned for Python 4.0 satire</a></li>
+<li><a href="https://2019.pycon-au.org/talks/instant-feedback-instant-debugging-python-coding">Instant-feedback, instant-debugging Python coding (2019)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=21252784">HN: What’s New in Python 3.8 (2019)</a></li>
+<li><a href="https://www.youtube.com/watch?v=r-A78RgMhZU">A Talk Near the Future of Python (2019)</a></li>
+<li><a href="https://github.com/joerick/pyinstrument">Pyinstrument</a> - Call stack profiler for Python. Shows you why your code is slow.</li>
+<li><a href="https://github.com/julvo/reloading">reloading</a> - Python utility to reload a loop body from source on each iteration without losing state.</li>
+<li><a href="https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c">Static Analysis at Scale: An Instagram Story (2019)</a></li>
+<li><a href="https://realpython.com/courses/python-type-checking/">Python Type Checking course</a></li>
+<li><a href="https://github.com/python/peps">Python Enhancement Proposals</a> (<a href="https://www.python.org/dev/peps/">Web</a>)</li>
+<li><a href="https://github.com/chiphuyen/python-is-cool">Cool Python features for machine learning that I used to be too afraid to use</a></li>
+<li><a href="https://beepb00p.xyz/mypy-error-handling.html">Python: better typed than you think (2019)</a></li>
+<li><a href="https://github.com/mattgreen/hython">hython</a> - Haskell-powered Python 3 interpreter. (<a href="http://callcc.io/hython-the-simplest-possible-language/">Article</a>)</li>
+<li><a href="https://pythonspeed.com/">Python -&gt; Speed blog</a> - Learn tools and techniques to help you ship better Python software, faster.</li>
+<li><a href="https://github.com/pipxproject/pipx">pipx</a> - Install and Run Python Applications in Isolated Environments.</li>
+<li><a href="https://github.com/vstinner/pyperf">pyperf</a> - Toolkit to run Python benchmarks.</li>
+<li><a href="https://github.com/takluyver/flit">Flit</a> - Simplified packaging of Python modules.</li>
+<li><a href="https://github.com/microsoft/ptvsd">Python debugger package for use with Visual Studio and Visual Studio Code</a></li>
+<li><a href="https://github.com/uber/pyflame">Pyflame</a> - Ptracing Profiler For Python.</li>
+<li><a href="https://www.manning.com/books/classic-computer-science-problems-in-python">Classic Computer Science Problems in Python book (2019)</a></li>
+<li><a href="https://github.com/pyinstaller/pyinstaller">PyInstaller</a> - Freeze (package) Python programs into stand-alone executables. (<a href="https://www.pyinstaller.org/">Web</a>) (<a href="https://news.ycombinator.com/item?id=29439149">HN</a>)</li>
+<li><a href="https://docs.python-guide.org/writing/structure/">Structuring Your Project</a> (<a href="https://news.ycombinator.com/item?id=21732821">HN</a>)</li>
+<li><a href="https://github.com/pympler/pympler">Pympler</a> - Development tool to measure, monitor and analyze the memory behavior of Python objects in a running Python application.</li>
+<li><a href="https://github.com/python-poetry/poetry">Poetry</a> - Python dependency management and packaging made easy. (<a href="https://python-poetry.org/">Web</a>) (<a href="https://news.ycombinator.com/item?id=24081125">HN</a>)</li>
+<li><a href="https://wizardforcel.gitbooks.io/sicp-in-python/content/index.html">SICP in Python</a></li>
+<li><a href="https://docs.quantifiedcode.com/python-anti-patterns/index.html">The Little Book of Python Anti-Patterns</a> (<a href="https://github.com/quantifiedcode/python-anti-patterns">Code</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=7kn7NtlV6g0">Creator of Python Programming Language, Guido van Rossum | Oxford Union (2019)</a></li>
+<li><a href="https://github.com/emeryberger/scalene">scalene</a> - High-performance CPU and memory profiler for Python.</li>
+<li><a href="https://nvie.com/posts/iterators-vs-generators/">Iterables vs. Iterators vs. Generators (2014)</a></li>
+<li><a href="https://martinheinz.dev/blog/13">Making Python Programs Blazingly Fast (2020)</a> (<a href="https://news.ycombinator.com/item?id=22040899">HN</a>)</li>
+<li><a href="https://treyhunner.com/2019/05/python-builtins-worth-learning/">Python built-ins worth learning (2019)</a> (<a href="https://news.ycombinator.com/item?id=30621552">HN</a>)</li>
+<li><a href="https://github.com/rednafi/py-sanity">Python Coding Guidelines for Sanity</a></li>
+<li><a href="https://github.com/navdeep-G/setup.py">Human's Ultimate Guide to setup.py</a></li>
+<li><a href="https://nsa.sfo2.digitaloceanspaces.com/comp3321.pdf">Python Guide by NSA</a></li>
+<li><a href="https://packaging.python.org/">Python Packaging User Guide</a></li>
+<li><a href="https://amitness.com/2019/08/math-for-programmers/">Math Symbols Explained with Python</a> (<a href="https://news.ycombinator.com/item?id=22637402">HN</a>)</li>
+<li><a href="https://github.com/Instagram/MonkeyType">MonkeyType</a> - System for Python that generates static type annotations by collecting runtime types. (<a href="https://news.ycombinator.com/item?id=22624845">HN</a>)</li>
+<li><a href="https://github.com/pschanely/CrossHair">CrossHair</a> - Static analysis tool for Python that blurs the line between testing and type systems.</li>
+<li><a href="https://github.com/webartifex/intro-to-python">Introduction to Python and Programming (2020)</a> (<a href="https://news.ycombinator.com/item?id=22669084">HN</a>)</li>
+<li><a href="https://github.com/jendrikseipp/vulture">Vulture</a> - Finds unused code in Python programs.</li>
+<li><a href="https://github.com/nedbat/byterun">Byterun</a> - Python implementation of a Python bytecode runner.</li>
+<li><a href="https://github.com/zedr/clean-code-python">Clean Code Python</a></li>
+<li><a href="https://github.com/cython/cython">cython</a> - Most widely used Python to C compiler.</li>
+<li><a href="https://github.com/hpyproject/hpy">HPy</a> - Better API for extending Python in C. (<a href="https://hpyproject.org/blog/posts/2021/03/hello-hpy/">Hello, HPy</a>) (<a href="https://hpyproject.org/index.html">Web</a>) (<a href="https://news.ycombinator.com/item?id=26625398">HN</a>)</li>
+<li><a href="https://github.com/pyupio/safety">Safety checks your installed dependencies for known security vulnerabilities</a></li>
+<li><a href="https://python-patterns.guide/gang-of-four/composition-over-inheritance/">The Composition Over Inheritance Principle</a></li>
+<li><a href="https://arpitbhayani.me/blogs/fsm">Building Finite State Machines with Python Coroutines</a> (<a href="https://news.ycombinator.com/item?id=22915716">HN</a>)</li>
+<li><a href="https://github.com/vinta/awesome-python">Awesome Python</a></li>
+<li><a href="https://ljvmiranda921.github.io/notebook/2019/11/08/flask-redis-celery-mcdo/">Distill: Why do we need Flask, Celery, and Redis? (2019)</a> (<a href="https://news.ycombinator.com/item?id=22901856">HN</a>)</li>
+<li><a href="https://pythonspeed.com/articles/reproducible-docker-builds-python/">Building on solid ground: ensuring reproducible Docker builds for Python (2020)</a> (<a href="https://lobste.rs/s/xu1lxh/building_on_solid_ground_ensuring">Lobsters</a>)</li>
+<li><a href="https://github.com/python-lsp/python-lsp-server">Python LSP Server</a> - Fork of the python-language-server project, maintained by the Spyder IDE team and the community.</li>
+<li><a href="https://github.com/palantir/python-language-server">Python Language Server (unmaintained)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=22964910">HN: Best Practices for Working with Configuration in Python Applications (2020)</a></li>
+<li><a href="https://github.com/pdbpp/pdbpp">pdb++</a> - Drop-in replacement for pdb.</li>
+<li><a href="https://github.com/nix-community/poetry2nix">poetry2nix</a> - Convert poetry projects to nix automagically.</li>
+<li><a href="https://towardsdatascience.com/ultimate-setup-for-your-next-python-project-179bda8a7c2c">Ultimate Setup for Your Next Python Project (2020)</a> (<a href="https://lobste.rs/s/c5cpd0/ultimate_setup_for_your_next_python">Lobsters</a>)</li>
+<li><a href="https://github.com/asottile/reorder_python_imports">reorder_python_imports</a> - Tool for automatically reordering python imports. Similar to isort but uses static analysis more.</li>
+<li><a href="http://blog.kevmod.com/2020/05/python-performance-its-not-just-the-interpreter/">Python performance: it’s not just the interpreter (2020)</a> (<a href="https://news.ycombinator.com/item?id=23235930">HN</a>)</li>
+<li><a href="https://martinheinz.dev/blog/17">Automating Every Aspect of Your Python Project (2020)</a></li>
+<li><a href="https://dragonquest64.blogspot.com/2020/05/python-generated-sequence-diagrams.html">Python Generated Sequence Diagrams (2020)</a> (<a href="https://news.ycombinator.com/item?id=23269697">HN</a>)</li>
+<li><a href="https://github.com/graalvm/graalpython">GraalVM Implementation of Python</a></li>
+<li><a href="https://github.com/hauntsaninja/pyp">pyp</a> - Easily run Python at the shell! Magical, but never mysterious.</li>
+<li><a href="https://cjolowicz.github.io/posts/hypermodern-python-01-setup/">Hypermodern Python (2020)</a> (<a href="https://news.ycombinator.com/item?id=23336050">HN</a>) (<a href="https://lobste.rs/s/2dcejo/hypermodern_python">Lobsters</a>)</li>
+<li><a href="https://github.com/quora/pyanalyze">pyanalyze</a> - Static analysis tool for Python.</li>
+<li><a href="https://github.com/joaoventura/full-speed-python">Full Speed Python</a> - Book aims to teach the Python programming language using a practical approach.</li>
+<li><a href="https://dabeaz-course.github.io/practical-python/Notes/Contents.html">Practical Python Programming course</a> (<a href="https://github.com/dabeaz-course/practical-python">Code</a>)</li>
+<li><a href="https://github.com/getsentry/milksnake">Milksnake</a> - Extension for setuptools that allows you to distribute dynamic linked libraries in Python wheels in the most portable way imaginable.</li>
+<li><a href="https://github.com/ninjaaron/replacing-bash-scripting-with-python">Replacing Bash Scripting with Python</a></li>
+<li><a href="https://modelpredict.com/python-dependency-management-tools">Overview of Python Dependency Management (2020)</a> (<a href="https://news.ycombinator.com/item?id=23380113">HN</a>)</li>
+<li><a href="https://martinheinz.dev/blog/24">Guide to Python Debugging (2020)</a> (<a href="https://news.ycombinator.com/item?id=23386537">HN</a>)</li>
+<li><a href="https://norvig.com/python-lisp.html">Python for Lisp Programmers (2000)</a> (<a href="https://news.ycombinator.com/item?id=26222374">HN</a>)</li>
+<li><a href="https://book.pythontips.com/en/latest/">Intermediate Python book</a></li>
+<li><a href="https://johnlekberg.com/blog/2020-06-06-enum.html">Using enumerated types in Python (2020)</a> (<a href="https://news.ycombinator.com/item?id=23440541">HN</a>)</li>
+<li><a href="https://github.com/google/subpar">Subpar</a> - Utility for creating self-contained python executables. It is designed to work well with Bazel.</li>
+<li><a href="https://pythonwheels.com/">Python Wheels</a> - New standard of Python distribution. (<a href="https://news.ycombinator.com/item?id=23452365">HN</a>)</li>
+<li><a href="https://calmcode.io/">Calm Code</a> - Learn code calmly. (<a href="https://news.ycombinator.com/item?id=25123059">HN</a>)</li>
+<li><a href="https://sobolevn.me/2020/06/how-async-should-have-been">How async should have been in Python (2020)</a> (<a href="https://lobste.rs/s/srbshw/how_async_should_have_been_python">Lobsters</a>)</li>
+<li><a href="https://github.com/pfalcon/pycopy">Pycopy</a> - Minimalist and memory-efficient Python implementation. Good for desktop, cloud, constrained systems, microcontrollers, and just everything. (<a href="https://news.ycombinator.com/item?id=23446721">HN</a>)</li>
+<li><a href="https://pgjones.dev/blog/packaging-without-setup-py-2020/">Packaging without setup.py (2020)</a></li>
+<li><a href="https://calpaterson.com/async-python-is-not-faster.html">Async Python is not faster (2020)</a> (<a href="https://news.ycombinator.com/item?id=23496994">HN</a>) (<a href="https://lobste.rs/s/hyi7ov/async_python_is_not_faster">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=29119995">HN</a>)</li>
+<li><a href="https://levelup.gitconnected.com/advanced-pytest-techniques-i-learned-while-contributing-to-pandas-7ba1465b65eb">Advanced pytest techniques I learned while contributing to pandas (2020)</a> (<a href="https://lobste.rs/s/6qgags/advanced_pytest_techniques_i_learned">Lobsters</a>)</li>
+<li><a href="https://effectivepython.com/">Effective Python book</a> (<a href="https://github.com/bslatkin/effectivepython">Code</a>)</li>
+<li><a href="https://github.com/SigmaQuan/Better-Python-59-Ways">Specific ways to write better Python (2017)</a> (<a href="https://news.ycombinator.com/item?id=23584594">HN</a>)</li>
+<li><a href="https://scipython.com/book/">Learning Scientific Programming with Python</a></li>
+<li><a href="https://thomazleite.com/posts/development-with-nix-python/">Development with Nix: Python (2020)</a> (<a href="https://lobste.rs/s/tjgvzi/development_with_nix_python">Lobsters</a>)</li>
+<li><a href="http://dynamicsofprogramming.blogspot.com/2019/02/problems-with-python-for-introductory-cs.html">Picking a Language for Introductory CS - Why I don't like Python (2020)</a></li>
+<li><a href="https://pythonspeed.com/articles/function-calls-prevent-garbage-collection/">Clinging to memory: how Python function calls can increase your memory usage (2020)</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0622/">PEP 622 – Structural Pattern Matching</a> (<a href="https://news.ycombinator.com/item?id=23627017">HN</a>) (<a href="https://github.com/gvanrossum/patma">Code</a>)</li>
+<li><a href="https://snarky.ca/what-is-the-core-of-the-python-programming-language/">What is the core of the Python programming language? (2020)</a> (<a href="https://news.ycombinator.com/item?id=23698846">HN</a>)</li>
+<li><a href="https://github.com/google/mlir-npcomp">NPComp</a> - Aspirational MLIR based numpy compiler.</li>
+<li><a href="https://github.com/Nuitka/Nuitka">Nuitka</a> - Python compiler written in Python. (<a href="https://nuitka.net/">Web</a>) (<a href="https://news.ycombinator.com/item?id=27537819">HN</a>) (<a href="https://news.ycombinator.com/item?id=28377541">HN</a>)</li>
+<li><a href="https://brython.info/">Brython</a> - Python 3 implementation for client-side web programming. (<a href="https://news.ycombinator.com/item?id=23746067">HN</a>) (<a href="https://github.com/brython-dev/brython">Code</a>)</li>
+<li><a href="https://akshayr.me/blog/articles/python-dictionaries">Hashing it Out (2020)</a> - A deep dive into Python dictionaries.</li>
+<li><a href="https://utcc.utoronto.ca/~cks/space/blog/python/WhyNoMainFunction">An exploration of why Python doesn't require a 'main' function (2020)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=23849070">Ask HN: How do I teach intermediate Python engineering skills? (2020)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=24022583">Creating a virtual env in Python steps (2020)</a></li>
+<li><a href="https://futurecoder.io/">FutureCoder</a> - Platform for beginners to learn programming in Python. (<a href="https://news.ycombinator.com/item?id=24020906">HN</a>) (<a href="https://github.com/alexmojaki/futurecoder">Code</a>) (<a href="https://news.ycombinator.com/item?id=34289581">HN</a>)</li>
+<li><a href="https://nullprogram.com/blog/2020/07/30/">Exactly-Once Initialization in Asynchronous Python (2020)</a></li>
+<li><a href="https://diveintopython3.net/">Dive Into Python 3 book</a> (<a href="https://github.com/diveintomark/diveintopython3">Code</a>)</li>
+<li><a href="http://greenteapress.com/thinkpython2/html/index.html">Think Python: How to Think Like a Computer Scientist</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/i0m2sy/i_know_python_basics_what_next/">I know Python basics, what next? (2020)</a></li>
+<li><a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/">Fluent Python (2021)</a> (<a href="https://github.com/fluentpython/example-code-2e">Code</a>)</li>
+<li><a href="https://github.com/typeddjango/awesome-python-typing">Awesome Python Typing</a> - Collection of awesome Python types, stubs, plugins, and tools to work with them.</li>
+<li><a href="https://maxwellforbes.com/posts/spark-joy-python-why">Sparking Joy with Python (2020)</a></li>
+<li><a href="https://pythonspeed.com/articles/distributing-software/">Options for packaging your Python code: Wheels, Conda, Docker, and more (2020)</a> (<a href="https://news.ycombinator.com/item?id=24117464">HN</a>)</li>
+<li><a href="https://github.com/python/mypy">Mypy</a> - Optional Static Typing for Python.</li>
+<li><a href="https://github.com/python/mypy/tree/master/mypyc">Mypyc</a> - Mypy to Python C Extension Compiler. (<a href="https://lobste.rs/s/3c1oog/mypyc_mypy_python_c_extension_compiler">Lobsters</a>)</li>
+<li><a href="https://www.tweag.io/blog/2020-08-12-poetry2nix/">Developing Python with Poetry &amp; Poetry2nix: Reproducible flexible Python environments (2020)</a></li>
+<li><a href="https://lwn.net/Articles/827179/">Structural pattern matching for Python (2020)</a></li>
+<li><a href="https://docs.python.org/3/reference/index.html">Python Language Reference</a></li>
+<li><a href="https://docs.python.org/3/reference/datamodel.html">Python Data model</a></li>
+<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+<li><a href="https://hacks.mozilla.org/2020/05/building-functiontrace-a-graphical-python-profiler/">Building FunctionTrace, a graphical Python profiler (2020)</a></li>
+<li><a href="https://ilya-sher.org/2020/08/16/python-3-8-makes-me-sad-again/">Python 3.8 Makes me Sad Again (2020)</a> (<a href="https://lobste.rs/s/rgcgjz/python_3_8_makes_me_sad_again">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=24176823">HN</a>)</li>
+<li><a href="https://data-apis.org/blog/announcing_the_consortium/">The Consortium for Python Data API Standards (2020)</a> (<a href="https://news.ycombinator.com/item?id=24205363">HN</a>)</li>
+<li><a href="https://notes.eatonphil.com/writing-a-simple-python-compiler.html">Write a Python to C compiler in Python (2020)</a></li>
+<li><a href="https://tonybaloney.github.io/posts/extending-python-with-assembly.html">Writing Python Extensions in Assembly (2020)</a></li>
+<li><a href="https://realpython.com/products/cpython-internals-book/">CPython Internals Book</a> (<a href="https://github.com/tonybaloney/cpython-book-samples">Code</a>)</li>
+<li><a href="https://pythonspeed.com/articles/official-python-docker-image/">A deep dive into the official Docker image for Python (2020)</a></li>
+<li><a href="https://simonwillison.net/2020/Feb/11/cheating-at-unit-tests-pytest-black/">How to cheat at unit tests with pytest and Black (2020)</a></li>
+<li><a href="https://glyph.twistedmatrix.com/2020/08/never-run-python-in-your-downloads-folder.html">Never Run ‘python’ In Your Downloads Folder (2020)</a> (<a href="https://news.ycombinator.com/item?id=24250418">HN</a>) (<a href="https://www.reddit.com/r/Python/comments/ifkt6k/never_run_python_in_your_downloads_folder/">Reddit</a>)</li>
+<li><a href="https://github.com/rossant/awesome-scientific-python">Awesome Scientific Python</a></li>
+<li><a href="https://github.com/jerry-git/learn-python3">Learn Python 3 with Jupyter notebooks</a></li>
+<li><a href="https://towardsdatascience.com/writing-more-idiomatic-and-pythonic-code-c22e900eaf83">Writing More Idiomatic and Pythonic Code (2020)</a> (<a href="https://lobste.rs/s/nprial/writing_more_idiomatic_pythonic_code">Lobsters</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=TbIHRHy7_JM">Package and deploy Python apps faster with Poetry and Nix (2020)</a></li>
+<li><a href="https://github.com/huangsam/ultimate-python">Ultimate Python study guide</a></li>
+<li><a href="https://blog.miguelgrinberg.com/post/sync-vs-async-python-what-is-the-difference">Sync vs. Async Python: What Is the Difference? (2020)</a> (<a href="https://news.ycombinator.com/item?id=24427978">HN</a>)</li>
+<li><a href="https://www.pm.inf.ethz.ch/research/nagini.html">Nagini</a> - Automated, modular verifier for (concurrent) Python programs, based on the Viper verification infrastructure. (<a href="https://github.com/marcoeilers/nagini">Code</a>)</li>
+<li><a href="https://github.com/lab-ml/source_code_modelling">Source Code Modeling</a> - Use Transformers and LSTMs to learn Python source code.</li>
+<li><a href="https://github.com/Pierian-Data/Complete-Python-3-Bootcamp">Course Files for Complete Python 3 Bootcamp Course</a></li>
+<li><a href="https://github.com/mahmoud/awesome-python-applications">Awesome Python Applications</a> - Case studies in successfully shipping Python software.</li>
+<li><a href="https://www.moderndescartes.com/essays/data_oriented_python/">Data-oriented Programming in Python (2020)</a> (<a href="https://news.ycombinator.com/item?id=24504947">HN</a>)</li>
+<li><a href="https://rotemtam.com/2020/08/13/python-ast/">Analyzing Python Code with Python (2020)</a></li>
+<li><a href="https://blog.vtemian.com/post/healthy-python-codebase/">Healthy Python Codebase (2020)</a></li>
+<li><a href="https://blog.vtemian.com/post/multiple-inheritance/">Python Multiple Inheritance (2020)</a></li>
+<li><a href="https://alexfranz.com/posts/personal-python-data-science-toolkit-part-1/">The Personal Python Data Science Toolkit (2020)</a></li>
+<li><a href="https://alecthegeek.github.io/2020/05/04/Intro-to-stdio.html">Beginners Introduction to using Standard I/O (2020)</a></li>
+<li><a href="https://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/">Asynchronous Python and Databases (2015)</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLCTHcU1KoD99ZWRvzAGrvF6ZBCrkmZk4t">What does this python package do?</a> - Bi-weekly series, our developer advocate, Nafiul Islam, explores different Python packages both in the standard library and the community.</li>
+<li><a href="https://www.youtube.com/c/PyCharmIDE/playlists">PyCharm JetBrains YouTube</a></li>
+<li><a href="https://rtpg.co/2020/10/12/pylint-usage.html">How I Tried To Reduce Pylint Memory Usage (2020)</a> (<a href="https://news.ycombinator.com/item?id=24754397">HN</a>)</li>
+<li><a href="https://pysdr.org/index.html">PySDR: A Guide to SDR and DSP Using Python</a> (<a href="https://news.ycombinator.com/item?id=24750588">HN</a>)</li>
+<li><a href="https://github.com/mamba-org/boa">Boa</a> - Fast Conda and Mamba Package Builder.</li>
+<li><a href="https://github.com/llvm/mlir-npcomp">NPComp</a> - MLIR based compiler toolkit for numerical python programs.</li>
+<li><a href="https://github.com/wemake-services/wemake-python-styleguide">wemake-python-styleguide</a> - Strictest and most opinionated python linter ever.</li>
+<li><a href="https://www.youtube.com/c/codebasics/videos">codebasics learn python channel</a> (<a href="https://github.com/codebasics/py">Code</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=gXMdfBTcOfQ">Python Core Developers Q&amp;A (2020)</a></li>
+<li><a href="https://github.com/dlint-py/dlint">Dlint</a> - Tool for encouraging best coding practices and helping ensure Python code is secure.</li>
+<li><a href="https://sobolevn.me/2020/10/higher-kinded-types-in-python">Higher Kinded Types in Python (2020)</a></li>
+<li><a href="https://thehftguy.com/2020/10/27/my-experience-in-production-with-flask-bottle-tornado-and-twisted/">My Experience In Production with: Flask, Bottle, Tornado and Twisted (2020)</a></li>
+<li><a href="https://github.com/life4/flakehell">FlakeHell</a> - Flake8 wrapper to make it nice, legacy-friendly, configurable.</li>
+<li><a href="https://github.com/life4/awesome-python-code-formatters">Awesome Python Code Formatters</a></li>
+<li><a href="https://github.com/P403n1x87/austin">Austin</a> - Python frame stack sampler for CPython written in pure C.</li>
+<li><a href="https://github.com/pyston/pyston">Pyston</a> - Performance-oriented Python implementation built using LLVM and modern JIT techniques. (<a href="https://blog.pyston.org/2020/10/28/pyston-v2-20-faster-python/">Pyston v2: 20% faster Python</a>) (<a href="https://news.ycombinator.com/item?id=24921790">HN</a>)</li>
+<li><a href="https://martinheinz.dev/blog/34">The Magic of Python Context Managers (2020)</a></li>
+<li><a href="https://www.coursera.org/specializations/python">Python for Everybody course</a></li>
+<li><a href="https://realpython.com/lru-cache-python/">Caching in Python Using the LRU Cache Strategy (2020)</a></li>
+<li><a href="https://github.com/mdipierro/nlib">Annotated Algorithms in Python</a> - With applications in Physics, Biology, and Finance.</li>
+<li><a href="http://composingprograms.com/">Composing Programs</a> - Free online introduction to programming and computer science using Python.</li>
+<li><a href="https://medium.com/swlh/writing-performant-parallel-python-code-7e2f0292f438">Writing Performant Parallel Python Code (2020)</a></li>
+<li><a href="https://pythonspeed.com/articles/do-you-need-cluster-or-multiprocessing/">Optimizing your code is not the same as parallelizing your code (2020)</a></li>
+<li><a href="https://github.com/mozillazg/pypy">PyPy</a> - Interpreter that implements the Python programming language, based on the RPython compiler framework for dynamic language implementations. (<a href="https://realpython.com/pypy-faster-python/">PyPy: Faster Python With Minimal Effort</a>)</li>
+<li><a href="https://github.com/hultner-technologies/evolution-of-modern-python">Evolution of modern python talk (2020)</a></li>
+<li><a href="https://beeware.org/">BeeWare</a> - Write Python, run everywhere using native UIs. (<a href="https://github.com/beeware/beeware.github.io">Code</a>) (<a href="https://news.ycombinator.com/item?id=30190717">HN</a>)</li>
+<li><a href="http://cs.brown.edu/~sk/Publications/Papers/Published/pmmwplck-python-full-monty/">Python: The Full Monty: A Tested Semantics for the Python Programming Language</a></li>
+<li><a href="https://mubinsodyssey.com/getting-started-with-python-3">Getting Started With Python 3 (2020)</a></li>
+<li><a href="http://ykarroum.com/2020/11/07/subprocess/">Python Internals Serie : Subprocess.Popen (2020)</a></li>
+<li><a href="https://reliability.substack.com/p/run-python-servers-more-efficiently">Run Python Applications Efficiently With malloc_trim (2020)</a></li>
+<li><a href="https://github.com/explosion/wheelwright">wheelwright</a> - Automated build repo for Python wheels and source packages.</li>
+<li><a href="https://github.com/dephell/dephell">DepHell</a> - Project management for Python.</li>
+<li><a href="https://gist.github.com/jph00/c3db65d2fdb75d8c369c45b688630e98">Minimal web server demo in Python</a> (<a href="https://twitter.com/jeremyphoward/status/1328780892769120256">Tweet</a>)</li>
+<li><a href="https://www.openfaas.com/blog/openfaas-flask/">Build a Flask microservice with OpenFaaS (2020)</a></li>
+<li><a href="https://ipythonbook.com/">IPython for Web Devs</a></li>
+<li><a href="https://github.com/laike9m/Cyberbrain">Cyberbrain</a> - Python debugging, redefined.</li>
+<li><a href="https://github.com/DavHau/mach-nix">mach-nix</a> - Create highly reproducible python environments.</li>
+<li><a href="http://python-history.blogspot.com/2010/06/from-list-comprehensions-to-generator.html">The History of Python: From List Comprehensions to Generator Expressions (2010)</a></li>
+<li><a href="https://github.com/keewis/blackdoc">blackdoc</a> - Tool that applies black to code in documentation.</li>
+<li><a href="https://hakibenita.com/python-mypy-exhaustive-checking">Exhaustiveness Checking with Mypy (2020)</a> (<a href="https://news.ycombinator.com/item?id=25428583">HN</a>)</li>
+<li><a href="https://github.com/beartype/beartype">Beartype</a> - Fast O(1) runtime type-checking in pure Python. (<a href="https://news.ycombinator.com/item?id=29288402">HN</a>)</li>
+<li><a href="https://tenthousandmeters.com/tag/python-behind-the-scenes/">Python behind the scenes (2020)</a></li>
+<li><a href="https://tenthousandmeters.com/materials/python-behind-the-scenes-a-list-of-resources/">Python behind the scenes: a list of resources</a></li>
+<li><a href="https://github.com/akaihola/darker">Darker</a> - Reformat and lint modified Python code.</li>
+<li><a href="https://rtpg.co/2020/12/11/dbg-in-python.html">Implementing Rust's dbg! in Python (2020)</a> (<a href="https://lobste.rs/s/9ubykl/implementing_rust_s_dbg_python">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=25386358">HN</a>)</li>
+<li><a href="https://github.com/pyutils/line_profiler">line_profiler</a> - Line-by-line profiling for Python.</li>
+<li><a href="https://pawroman.dev/how-not-to-be-slow-using-python-functions/">How not to be slow using Python: Functions (2020)</a></li>
+<li><a href="https://pawroman.dev/pytest-basic-setup/">Basic Python testing setup with pytest (2018)</a></li>
+<li><a href="https://www.pythonkitchen.com/legally-free-python-books-list/">Legally Free Python Books List (2020)</a></li>
+<li><a href="https://github.com/gaogaotiantian/viztracer">VizTracer</a> - Low-overhead logging/debugging/profiling tool that can trace and visualize your python code execution.</li>
+<li><a href="https://github.com/vitsalis/pycg">PyCG</a> - Practical Python Call Graphs.</li>
+<li><a href="https://instagram-engineering.com/python-at-scale-strict-modules-c0bb9245c834">Python at Scale: Strict Modules (2019)</a> (<a href="https://news.ycombinator.com/item?id=25462168">HN</a>)</li>
+<li><a href="https://github.com/faif/python-patterns">Python Patterns</a> - Collection of design patterns/idioms in Python. (<a href="https://news.ycombinator.com/item?id=31566025">HN</a>)</li>
+<li><a href="https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/">Python Cookbook (2013)</a> (<a href="https://github.com/dabeaz/python-cookbook">Code</a>)</li>
+<li><a href="https://learnbyexample.github.io/practice_python_projects/">Practice Python Projects</a> - Book on basic to intermediate level Python projects.</li>
+<li><a href="https://github.com/pfalcon/pyastinterp">pyastinterp</a> - Python AST interpreter (aka tree-walking interpreter) in Python. Aka meta-circular interpreter.</li>
+<li><a href="https://github.com/faroit/awesome-python-scientific-audio">Python for Scientific Audio</a></li>
+<li><a href="https://github.com/quobit/awesome-python-in-education">Awesome Python in Education</a></li>
+<li><a href="https://meribold.org/python/2018/02/13/virtual-environments-9487/">Virtual Environments Demystified (2018)</a> (<a href="https://news.ycombinator.com/item?id=25611307">HN</a>)</li>
+<li><a href="https://github.com/indygreg/python-build-standalone">Python Standalone Builds</a> - Self-contained, highly-portable Python distributions. (<a href="https://python-build-standalone.readthedocs.io/en/latest/index.html">Docs</a>) (<a href="https://lobste.rs/s/efwa7y/python_standalone_builds">Lobsters</a>)</li>
+<li><a href="https://github.com/PyCQA/pyflakes">Pyflakes</a> - Simple program which checks Python source files for errors.</li>
+<li><a href="https://testdriven.io/blog/python-environments/">Modern Python Environments - dependency and workspace management (2020)</a></li>
+<li><a href="https://github.com/norvig/pytudes">pytudes</a> - Python programs, usually short, of considerable difficulty, to perfect particular skills by Peter Norvig.</li>
+<li><a href="https://camillovisini.com/article/abstracting-fastapi-services/">Implementing FastAPI Services – Abstraction and Separation of Concerns (2020)</a> (<a href="https://news.ycombinator.com/item?id=25797140">HN</a>)</li>
+<li><a href="https://www.maartenbreddels.com/perf/jupyter/python/tracing/gil/2021/01/14/Tracing-the-Python-GIL.html">Tracing and visualizing the Python GIL with perf and VizTracer (2021)</a></li>
+<li><a href="https://github.com/mesalock-linux/mesapy">MesaPy</a> - Memory-Safe Python Implementation based on PyPy.</li>
+<li><a href="https://github.com/sio/Makefile.venv">Makefile.venv</a> - Seamlessly manage Python virtual environment with a Makefile.</li>
+<li><a href="https://alan-turing-institute.github.io/rse-course/html/index.html">Research Software Engineering with Python Course</a> (<a href="https://github.com/alan-turing-institute/rse-course">Code</a>)</li>
+<li><a href="https://leontrolski.github.io/mostly-pointless.html">OO in Python is mostly pointless</a> (<a href="https://news.ycombinator.com/item?id=25933121">HN</a>) (<a href="https://lobste.rs/s/ldzfsw/oo_python_is_mostly_pointless">Lobsters</a>)</li>
+<li><a href="https://arpitbhayani.me/blogs/constant-folding-python">Constant Folding in Python (2021)</a></li>
+<li><a href="https://frostming.com/2021/01-22/introducing-pdm/">You don't really need a virtualenv (2021)</a> (<a href="https://news.ycombinator.com/item?id=26020732">HN</a>)</li>
+<li><a href="https://justinmayer.com/posts/homebrew-python-is-not-for-you/">Homebrew Python Is Not For You (2021)</a> (<a href="https://lobste.rs/s/vhfoga/homebrew_python_is_not_for_you">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=26017852">HN</a>)</li>
+<li><a href="https://lwn.net/Articles/845480/">Pattern matching accepted for Python (2021)</a> (<a href="https://news.ycombinator.com/item?id=26080760">HN</a>) (<a href="https://lobste.rs/s/l4n7db/pattern_matching_accepted_for_python">Lobsters</a>)</li>
+<li><a href="https://learnbyexample.github.io/100_page_python_intro/introduction.html">100 Page Python Intro Book</a> (<a href="https://news.ycombinator.com/item?id=26076721">HN</a>)</li>
+<li><a href="https://github.com/python-cmake-buildsystem/python-cmake-buildsystem">CPython CMake Build System</a></li>
+<li><a href="https://blog.astrosnail.pt.eu.org/2021-02-11-snake.html">I have no name, and I must recurse (2021)</a> (<a href="https://lobste.rs/s/gguvow/i_have_no_name_i_must_recurse">Lobsters</a>)</li>
+<li><a href="https://python.hamel.dev/concurrency/">Python Concurrency: The Tricky Bits (2020)</a> (<a href="https://twitter.com/HamelHusain/status/1361355718469718020">Tweet</a>)</li>
+<li><a href="https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html">Python Programming and Numerical Methods: A Guide for Engineers and Scientists</a> (<a href="https://news.ycombinator.com/item?id=26164879">HN</a>)</li>
+<li><a href="https://pythonspeed.com/articles/upgrade-pip/">Why you really need to upgrade pip (2021)</a> (<a href="https://lobste.rs/s/gywypy/why_you_really_need_upgrade_pip">Lobsters</a>)</li>
+<li><a href="https://suade.org/dev/12-requests-per-second-with-python/">12 requests per second: A realistic look at Python web frameworks (2021)</a> (<a href="https://news.ycombinator.com/item?id=26188765">HN</a>)</li>
+<li><a href="https://github.com/conda-incubator/conda-lock">Conda lock</a> - Lightweight library that can be used to generate fully reproducible lock files for conda environments.</li>
+<li><a href="https://glyph.twistedmatrix.com/2021/03/interfaces-and-protocols.html">Interfaces and Protocols in Python (2021)</a></li>
+<li><a href="https://www.alexpghayes.com/blog/many-models-workflows-in-python-part-i/">Many models workflows in Python (2020)</a></li>
+<li><a href="https://www.youtube.com/watch?v=lwN4-W1WR84">VSCode's Python Interactive mode is amazing! (2020)</a></li>
+<li><a href="https://giansegato.com/essays/how-i-beat-the-berlin-rental-market-with-a-python-script/">How I Beat the Berlin Rental Market With a Python Script (2021)</a></li>
+<li><a href="https://github.com/timofurrer/awesome-asyncio">Awesome asyncio</a></li>
+<li><a href="https://github.com/cjolowicz/cookiecutter-hypermodern-python">Hypermodern Python Cookiecutter Template</a></li>
+<li><a href="https://github.com/facebookincubator/Bowler">Bowler</a> - Safe code refactoring for modern Python. (<a href="https://pybowler.io/">Web</a>)</li>
+<li><a href="https://kuroko-lang.github.io/">Kuroko</a> - Dynamic, bytecode-compiled programming language and a dialect of Python. (<a href="https://github.com/kuroko-lang/kuroko">Code</a>)</li>
+<li><a href="https://ipython.readthedocs.io/en/stable/interactive/shell.html">IPython as a System Shell</a> (<a href="https://news.ycombinator.com/item?id=26711434">HN</a>)</li>
+<li><a href="https://github.com/ipython/ipython">IPython</a> - Productive Interactive Computing. (<a href="https://ipython.readthedocs.io/en/stable/">Docs</a>)</li>
+<li><a href="https://github.com/breuleux/jurigged">Jurigged</a> - Hot code reloading for Python. (<a href="https://news.ycombinator.com/item?id=26753190">HN</a>)</li>
+<li><a href="https://github.com/pamoroso/free-python-books">Free Python Books</a> (<a href="https://news.ycombinator.com/item?id=26759677">HN</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=vBH6GRJ1REM">Python dataclasses will save you hours (2021)</a></li>
+<li><a href="https://blog.kchung.co/faster-python-with-go-shared-objects/">Faster Python with Go shared objects (the easy way) (2021)</a></li>
+<li><a href="https://death.andgravity.com/stdlib">Learn by reading code: Python standard library design decisions explained (for advanced beginners) (2021)</a></li>
+<li><a href="https://www.cs.rpi.edu/~milanova/docs/dls2020.pdf">Python 3 Types in the Wild: A Tale of Two Type Systems (2020)</a> (<a href="https://news.ycombinator.com/item?id=26788177">HN</a>)</li>
+<li><a href="https://sourcery.ai/">Sourcery</a> - Automatically Improve Python Code Quality.</li>
+<li><a href="https://twitter.com/PrasoonPratham/status/1383279052430008323">Roadmap for mastering Python (2021)</a></li>
+<li><a href="https://github.com/DmytroLitvinov/awesome-flake8-extensions">Awesome Flake8 Extensions</a></li>
+<li><a href="https://pythonspeed.com/articles/python-extension-performance/">The hidden performance overhead of Python C extensions (2021)</a> (<a href="https://lobste.rs/s/6rxxhh/hidden_performance_overhead_python_c">Lobsters</a>)</li>
+<li><a href="https://github.com/facebookincubator/cinder">Cinder</a> - Instagram's performance oriented fork of CPython. (<a href="https://news.ycombinator.com/item?id=27043217">HN</a>) (<a href="https://trycinder.com/">Cinder Explorer</a>)</li>
+<li><a href="https://testdriven.io/blog/fastapi-and-celery/">Asynchronous Tasks with FastAPI and Celery (2021)</a></li>
+<li><a href="https://github.com/adsharma/py2many">py2many</a> - Python to CLike languages transpiler.</li>
+<li><a href="https://pythonspeed.com/articles/smaller-docker-images/">Shrinking your Python application’s Docker image: an overview (2021)</a></li>
+<li><a href="http://tinypythonprojects.com/">Tiny Python Projects Book (2020)</a> - Learn coding and testing with puzzles and games. (<a href="https://github.com/kyclark/tiny_python_projects">Code</a>)</li>
+<li><a href="https://github.com/zpoint/CPython-Internals">Cpython Internals</a> - Dive into CPython internals, trying to illustrate every detail of CPython implementation.</li>
+<li><a href="https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda">The guide to Python virtual environments with conda (2021)</a></li>
+<li><a href="https://pycon.blogspot.com/2021/06/pycon-us-2021-recordings-are-complete.html?m=1">PyCon US 2021 Recordings</a> (<a href="https://news.ycombinator.com/item?id=27398986">HN</a>)</li>
+<li><a href="https://github.com/raxod502/python-in-a-box">Python in a Box</a> - Interactive online Python REPL in 30 lines of JavaScript.</li>
+<li><a href="https://blog.jonlu.ca/posts/async-python-http">Writing fast async HTTP requests in Python (2021)</a> (<a href="https://lobste.rs/s/fxpne4/writing_fast_async_http_requests_python">Lobsters</a>)</li>
+<li><a href="https://pragprog.com/titles/dmpython/intuitive-python/">Intuitive Python: Productive Development for Projects that Last (2021)</a> (<a href="https://news.ycombinator.com/item?id=27592822">HN</a>)</li>
+<li><a href="https://hynek.me/articles/python-subclassing-redux/">Subclassing in Python: Redux (2021)</a></li>
+<li><a href="https://sobolevn.me/2021/06/typeclasses-in-python">Typeclasses in Python (2021)</a> (<a href="https://lobste.rs/s/3eorxj/typeclasses_python">Lobsters</a>)</li>
+<li><a href="https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project/">Python Best Practices for a New Project in 2021</a> (<a href="https://news.ycombinator.com/item?id=27736465">HN</a>)</li>
+<li><a href="https://pythonextensionpatterns.readthedocs.io/en/latest/index.html">Coding Patterns for Python Extensions</a> (<a href="https://github.com/paulross/PythonExtensionPatterns">Code</a>)</li>
+<li><a href="https://github.com/guilatrova/tryceratops">tryceratops</a> - Linter to manage all your python exceptions and try/except blocks. (<a href="https://news.ycombinator.com/item?id=27770750">HN</a>)</li>
+<li><a href="https://martinheinz.dev/blog/52">Functools – The Power of Higher-Order Functions in Python</a> (<a href="https://news.ycombinator.com/item?id=27768211">HN</a>)</li>
+<li><a href="https://earthly.dev/blog/python-timsort-merge/">Beating TimSort at Merging (2021)</a> (<a href="https://lobste.rs/s/1a0gmn/beating_timsort_at_merging">Lobsters</a>)</li>
+<li><a href="https://death.andgravity.com/namedtuples">Namedtuple in a Post-Dataclasses World (2021)</a> (<a href="https://news.ycombinator.com/item?id=27906752">HN</a>)</li>
+<li><a href="https://tenthousandmeters.com/blog/python-behind-the-scenes-11-how-the-python-import-system-works/">How the Python import system works</a> (<a href="https://news.ycombinator.com/item?id=27941208">HN</a>)</li>
+<li><a href="https://epicpython.com/">Epic Python</a> - Fun exercise heavy approach to learning modern Python from scratch.</li>
+<li><a href="https://www.youtube.com/playlist?list=PLYx7XA2nY5Geb1XY6mZU-35lgIfkDqaem">SciPy 2021 Tutorials</a></li>
+<li><a href="https://blog.replit.com/replit-web">Replit.web: Python Framework With Built-in Database and Auth Support (2021)</a> (<a href="https://twitter.com/amasad/status/1420479217805021184">Tweet</a>)</li>
+<li><a href="https://github.com/dashingsoft/pyarmor">PyArmor</a> - Tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts. (<a href="http://pyarmor.dashingsoft.com/">Web</a>)</li>
+<li><a href="https://deprogrammaticaipsum.com/the-state-of-python-in-2021/">The State Of Python In 2021</a></li>
+<li><a href="https://blog.startifact.com/posts/framework-patterns.html#">Framework Patterns (2019)</a> (<a href="https://news.ycombinator.com/item?id=28098578">HN</a>)</li>
+<li><a href="https://pythonspeed.com/articles/base-image-python-docker-images/">The best Docker base image for your Python application (2021)</a> (<a href="https://lobste.rs/s/jclep1/best_docker_base_image_for_your_python">Lobsters</a>)</li>
+<li><a href="https://github.com/facebookexperimental/skybison">Skybison</a> - Instagram's experimental performance oriented greenfield implementation of Python.</li>
+<li><a href="https://tenthousandmeters.com/blog/python-behind-the-scenes-12-how-asyncawait-works-in-python/">How async/await works in Python (2021)</a> (<a href="https://news.ycombinator.com/item?id=28401049">HN</a>)</li>
+<li><a href="https://github.com/pythonspeed/filprofiler">Fil memory profiler for Python</a> (<a href="https://pythonspeed.com/fil/">Web</a>) (<a href="https://pythonspeed.com/fil/docs/index.html">Docs</a>)</li>
+<li><a href="https://github.com/facebookincubator/memory-analyzer">Memory analyzer for running python processes</a></li>
+<li><a href="https://github.com/terrencepreilly/darglint">Darglint</a> - Python documentation linter which checks that the docstring description matches the definition.</li>
+<li><a href="https://github.com/nat-n/poethepoet">Poe the Poet</a> - Task runner that works well with poetry.</li>
+<li><a href="https://valinsky.me/articles/python-anti-pattern/">Python Anti-Pattern</a> (<a href="https://news.ycombinator.com/item?id=28534196">HN</a>)</li>
+<li><a href="https://snarky.ca/unravelling-async-for-loops/">Unravelling <code>Async for</code> Loops (2021)</a> (<a href="https://news.ycombinator.com/item?id=28509391">HN</a>)</li>
+<li><a href="https://new.pythonforengineers.com/blog/python-in-2021-the-good-the-bad-and-the-ugly/">Python in 2021: The Good, The Bad, and the Ugly</a> (<a href="https://lobste.rs/s/otshxn/python_2021_good_bad_ugly">Lobsters</a>)</li>
+<li><a href="https://github.com/kylepollina/objexplore">Objexplore</a> - Interactive Python object explorer for the terminal.</li>
+<li><a href="https://github.com/microsoft/PythonProgrammingPuzzles">Python Programming Puzzles</a> - Dataset of python programming puzzles which can be used to teach and evaluate an AI's programming proficiency.</li>
+<li><a href="https://jvns.ca/blog/2021/09/16/debugging-in-a-repl-is-fun/">Debugging by starting a REPL at a breakpoint is fun (2021)</a></li>
+<li><a href="https://benhoyt.com/writings/python-pattern-matching/">Structural pattern matching in Python 3.10 (2021)</a> (<a href="https://news.ycombinator.com/item?id=28600594">HN</a>)</li>
+<li><a href="https://github.com/jiffyclub/snakeviz">SnakeViz</a> - In-browser Python profile viewer.</li>
+<li><a href="https://www.pypy.org/posts/2021/09/jit-auto-generated-code.html">Better JIT Support for Auto-Generated Python Code (2021)</a></li>
+<li><a href="https://tenthousandmeters.com/blog/python-behind-the-scenes-13-the-gil-and-its-effects-on-python-multithreading/">The GIL and its effects on Python multithreading (2021)</a> (<a href="https://news.ycombinator.com/item?id=28690560">HN</a>)</li>
+<li><a href="https://github.com/sumerc/yappi">Yappi</a> - Yet Another Python Profiler, but this time thread &amp; coroutine &amp; greenlet aware.</li>
+<li><a href="https://www.softwareatscale.dev/p/software-at-scale-34-faster-python">Faster Python with Guido van Rossum (2021)</a> (<a href="https://lobste.rs/s/8tlsr1/guido_van_rossum_on_improving_python_s">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=28787007">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=28771931">HN: Python 3.11: “Zero cost” exception handling (2021)</a></li>
+<li><a href="https://sadh.life/post/builtins/">Understanding all of Python, through its builtins (2021)</a> (<a href="https://news.ycombinator.com/item?id=28819030">HN</a>)</li>
+<li><a href="https://sadh.life/post/slices/">The math behind Python's slices (2021)</a></li>
+<li><a href="https://adamj.eu/tech/2021/10/08/tips-for-debugging-with-print/">Tips for debugging with print() (2021)</a> (<a href="https://lobste.rs/s/kkrvku/tips_for_debugging_with_print">Lobsters</a>)</li>
+<li><a href="https://adamj.eu/tech/2021/10/10/the-many-ways-to-exit-in-python/">The Many Ways to Exit in Python (2021)</a></li>
+<li><a href="https://adamj.eu/tech/2021/10/09/a-python-script-template-with-and-without-type-hints-and-async/">A Python Script Template, with and without Type Hints and Async (2021)</a> (<a href="https://adamj.eu/tech/2021/10/15/a-python-script-template-with-sub-commands-and-type-hints/">Extended</a>)</li>
+<li><a href="https://github.com/colesbury/nogil">Python Multithreading without GIL</a> (<a href="https://docs.google.com/document/u/0/d/18CXhDb1ygxg-YXNBJNzfzZsDFosB5e6BfnXLlejd9l0/mobilebasic">Doc</a>) (<a href="https://www.reddit.com/r/programming/comments/q8n508/prototype_gilless_cpython_shows_nearly_20x/">Reddit</a>) (<a href="https://lwn.net/SubscriberLink/872869/0e62bba2db51ec7a/">Viable solution for Python concurrency</a>) (<a href="https://news.ycombinator.com/item?id=28880782">HN</a>)</li>
+<li><a href="https://github.com/LiarPrincess/Violet">Violet</a> - Python VM written in Swift. For Swift &lt;-&gt; Python interop. (<a href="https://forums.swift.org/t/violet-python-vm-written-in-swift/56945">Discussion</a>)</li>
+<li><a href="https://github.com/Python-World/python-mini-projects">Python-Mini-Projects</a> - Collection of simple python mini projects to enhance your Python skills.</li>
+<li><a href="https://github.com/MagicStack/MagicPython">Magic Python</a> - Cutting edge Python syntax highlighter for Sublime Text, Atom and Visual Studio Code. Used by GitHub to highlight your Python code.</li>
+<li><a href="https://www.youtube.com/watch?v=0RInKZR8Weo">Lukasz Langa / Designing With Immutability (2020)</a></li>
+<li><a href="https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/">Some thoughts on asynchronous API design in a post-async/await world (2016)</a></li>
+<li><a href="https://lukasz.langa.pl/f15a8851-af26-4e94-a4b1-c146c57c9d20/">Where does all the effort go? Looking at Python core developer activity (2021)</a></li>
+<li><a href="https://github.com/PyCQA/prospector">Prospector</a> - Tool to analyze Python code and output information about errors, potential problems, convention violations and complexity.</li>
+<li><a href="https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html">You shouldn't invoke setup.py directly (2021)</a> (<a href="https://news.ycombinator.com/item?id=28918440">HN</a>)</li>
+<li><a href="https://github.com/berkerpeksag/astor">astor</a> - Python AST read/write.</li>
+<li><a href="https://github.com/wemake-services/pravda">pravda</a> - Python type-checker written in Rust.</li>
+<li><a href="https://rushter.com/blog/python-code-isolation/">On code isolation in Python (2020)</a></li>
+<li><a href="https://github.com/laffra/pynsights">Pynsights</a> - Understanding Python programs by visualizing how modules interact.</li>
+<li><a href="https://calpaterson.com/bank-python.html">Bank Python: The strange world of Python, as used by big investment banks (2021)</a> (<a href="https://news.ycombinator.com/item?id=29104047">HN</a>) (<a href="https://www.reddit.com/r/programming/comments/rbvpmy/bank_python_the_strange_world_of_python_as_used/">Reddit</a>)</li>
+<li><a href="https://www.graalvm.org/python/">GraalVM Python</a> - On average, Python in GraalVM is 8.92x faster than CPython. (<a href="https://news.ycombinator.com/item?id=29097715">HN</a>)</li>
+<li><a href="https://github.com/jokull/python-ts-graphql-demo">Mini Inch App in Python</a> - Python asyncio backend querying with SQLAlchemy and Strawberry serving GraphQL with Starlette.</li>
+<li><a href="https://devguide.python.org/parser/">Guide of CPython’s Parser</a></li>
+<li><a href="https://devguide.python.org/">Python Developer's Guide</a> (<a href="https://github.com/python/devguide">Code</a>)</li>
+<li><a href="https://github.com/PyCQA/bandit">Bandit</a> - Tool designed to find common security issues in Python code.</li>
+<li><a href="https://www.trypyjion.com/">Pyjion</a> - Python JIT Compiler. (<a href="https://news.ycombinator.com/item?id=29159545">HN</a>) (<a href="https://github.com/tonybaloney/Pyjion">Code</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=29171319">Ask HN: How did Python become the lingua franca of ML/AI? (2021)</a></li>
+<li><a href="https://www.benfrederickson.com/why-python-needs-paused-during-profiling/">Why Python needs to be paused during profiling - but Ruby doesn't always (2021)</a> (<a href="https://news.ycombinator.com/item?id=29170093">HN</a>)</li>
+<li><a href="https://github.com/microsoft/debugpy">debugpy</a> - Debugger for Python.</li>
+<li><a href="https://pythonspeed.com/articles/rust-cython-python-extensions/">Cython, Rust, and more: choosing a language for Python extensions (2021)</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/qrd1kj/what_did_you_find_hardest_to_learn_as_a_beginner/">What Did You Find Hardest To Learn As A Beginner In Python? (2021)</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/qsc3g3/what_are_the_advanced_concepts_someone_should/">What are the advanced concepts someone should learn to be considered as an expert in Python? (2021)</a></li>
+<li><a href="https://susam.in/maze/infinitely-nested-dictionary.html">Infinitely Nested Dictionary (2021)</a></li>
+<li><a href="https://www.abhinavomprakash.com/posts/understanding-partial-functions/">Understanding partial functions (2021)</a></li>
+<li><a href="https://github.com/rocky/python-uncompyle6">uncompyle6</a> - Cross-version Python bytecode decompiler.</li>
+<li><a href="https://github.com/rocky/python-decompile3">decompyle3</a> - Python decompiler for 3.7-3.8 Stripped down from uncompyle6 so we can refactor and start to fix up some long-standing problems.</li>
+<li><a href="https://antonz.org/list-internals/">How Python List Works</a> (<a href="https://news.ycombinator.com/item?id=29217038">HN</a>)</li>
+<li><a href="https://github.com/zanellia/prometeo">prometeo</a> - Python-to-C transpiler for high-performance computing. (<a href="https://news.ycombinator.com/item?id=29253039">HN</a>)</li>
+<li><a href="https://susam.in/blog/peculiar-self-references.html">Why does a = a[0] = [0] create a self-referential list in Python? (2021)</a> (<a href="https://news.ycombinator.com/item?id=29269805">HN</a>)</li>
+<li><a href="https://github.com/pythonprofilers/memory_profiler">Memory Profiler</a> - Monitor Memory usage of Python code.</li>
+<li><a href="https://merely-useful.tech/py-rse/">Research Software Engineering with Python: Building software that makes research possible (2021)</a></li>
+<li><a href="https://www.daan.fyi/writings/python-protocols">Static Duck Typing in Python with Protocols (2021)</a> (<a href="https://news.ycombinator.com/item?id=29295535">HN</a>)</li>
+<li><a href="https://github.com/peterjc/flake8-black">flake8-black</a> - flake8 plugin to run black for checking Python coding style.</li>
+<li><a href="https://github.com/zopefoundation/RestrictedPython">RestrictedPython</a> - Restricted execution environment for Python to run untrusted code.</li>
+<li><a href="https://github.com/ethanhs/python-wasm">CPython on WASM</a> - Build scripts and configuration for building CPython for Emscripten.</li>
+<li><a href="http://saidvandeklundert.net/learn/2021-11-18-calling-rust-from-python-using-pyo3/">Calling Rust from Python using PyO3 (2021)</a> (<a href="https://news.ycombinator.com/item?id=29368530">HN</a>)</li>
+<li><a href="https://lwn.net/Articles/875441/">Late-bound argument defaults for Python (2021)</a> (<a href="https://lobste.rs/s/tvextk/late_bound_argument_defaults_for_python">Lobsters</a>)</li>
+<li><a href="https://twitter.com/ethanhs/status/1464308141105967104">CPython's main branch running in the browser with WebAssembly</a> (<a href="https://news.ycombinator.com/item?id=29376105">HN</a>)</li>
+<li><a href="https://engineeringblog.ridereport.com/pythons-none-problem">Python's None problem, and how Mypy helps you deal with it (2021)</a> (<a href="https://lobste.rs/s/6sdtuq/python_s_none_problem_how_mypy_helps_you">Lobsters</a>)</li>
+<li><a href="https://github.com/nbigaouette/hygeia">Hygeia</a> - Python toolchain manager.</li>
+<li><a href="https://pandastutor.com/vis.html">Pandas Tutor</a> - Visualize Python pandas code. (<a href="https://pandastutor.com/">Web</a>)</li>
+<li><a href="https://pythonspeed.com/articles/python-multiprocessing/">Why your multiprocessing Pool is stuck (2021)</a></li>
+<li><a href="https://github.com/jackdbd/design-patterns">Common design patterns implemented in Python</a></li>
+<li><a href="https://blogs.gentoo.org/mgorny/2021/11/07/the-future-of-python-build-systems-and-gentoo/">The future of Python build systems and Gentoo (2021)</a> (<a href="https://news.ycombinator.com/item?id=29509454">HN</a>)</li>
+<li><a href="https://iscinumpy.dev/post/bound-version-constraints/">Should You Use Upper Bound Version Constraints? (2021)</a></li>
+<li><a href="https://github.com/paulross/pymemtrace">pymemtrace</a> - Python memory tracing.</li>
+<li><a href="https://github.com/talkpython/htmx-python-course">HTMX + Flask: Modern Python Web Apps, Hold the JavaScript</a></li>
+<li><a href="https://pythonspeed.com/articles/stop-using-python-3.6/">It’s time to stop using Python 3.6 (2021)</a> (<a href="https://lobste.rs/s/c5fu40/it_s_time_stop_using_python_3_6">Lobsters</a>)</li>
+<li><a href="https://github.com/linkedin/shiv">shiv</a> - Command line utility for building fully self-contained Python zipapps.</li>
+<li><a href="https://github.com/faster-cpython/ideas">Faster CPython Ideas</a></li>
+<li><a href="https://allendowney.github.io/DSIRP/">Data Structures and Information Retrieval in Python</a> (<a href="https://github.com/AllenDowney/DSIRP">Code</a>)</li>
+<li><a href="https://github.com/RafeKettler/magicmethods">Guide to Python's magic methods</a></li>
+<li><a href="https://gto76.github.io/python-cheatsheet/">Comprehensive Python Cheat Sheet</a> (<a href="https://news.ycombinator.com/item?id=29679788">HN</a>)</li>
+<li><a href="https://sadh.life/post/ast/">Learn Python ASTs, by building your own linter (2021)</a> (<a href="https://news.ycombinator.com/item?id=29724431">HN</a>)</li>
+<li><a href="https://www.packtpub.com/product/scientific-computing-with-python-second-edition/9781838822323">Scientific Computing with Python Book</a></li>
+<li><a href="https://github.com/brettcannon/python-launcher">Python Launcher for Unix</a> - Launch your Python interpreter the lazy/smart way.</li>
+<li><a href="https://typing.readthedocs.io/en/latest/">Static Typing with Python Docs</a> (<a href="https://github.com/python/typing">Code</a>)</li>
+<li><a href="https://rednafi.github.io/reflections/">Redowan's Reflections on Python</a> (<a href="https://github.com/rednafi/reflections">Code</a>)</li>
+<li><a href="https://rednafi.github.io/digressions/python/2020/07/03/python-mixins.html">Interfaces, Mixins and Building Powerful Custom Data Structures in Python (2020)</a></li>
+<li><a href="https://rednafi.github.io/digressions/python/2020/06/16/python-proxy-pattern.html">Implementing Proxy Pattern in Python (2020)</a></li>
+<li><a href="https://rednafi.github.io/digressions/python/2020/06/26/python-metaclasses.html">Deciphering Python’s Metaclasses (2020)</a></li>
+<li><a href="https://github.com/rednafi/think-async">Exploring Cooperative Concurrency Primitives in Python</a></li>
+<li><a href="https://github.com/MoserMichael/pyasmtool/blob/master/bytecode_disasm.md">Python Bytecode Explained</a> (<a href="https://news.ycombinator.com/item?id=29959262">HN</a>)</li>
+<li><a href="https://python-patterns.guide/">Python Design Patterns</a> (<a href="https://github.com/brandon-rhodes/python-patterns">Code</a>) (<a href="https://news.ycombinator.com/item?id=30649470">HN</a>)</li>
+<li><a href="https://sethmlarson.dev/blog/strict-python-function-parameters">Strict Python function parameters (2022)</a> (<a href="https://lobste.rs/s/kllcvy/strict_python_function_parameters">Lobsters</a>)</li>
+<li><a href="https://pythonspeed.com/articles/vectorization-python/">How vectorization speeds up your Python code (2022)</a> (<a href="https://lobste.rs/s/8kujeg/how_vectorization_speeds_up_your_python">Lobsters</a>)</li>
+<li><a href="https://rednafi.github.io/reflections/static-typing-python-decorators.html">Static Typing Python Decorators (2022)</a></li>
+<li><a href="https://github.com/dflook/python-minifier">Python Minifier</a> - Transforms Python source code into it's most compact representation.</li>
+<li><a href="https://github.com/grantjenks/blue">Blue</a> - Slightly less uncompromising Python code formatter.</li>
+<li><a href="https://ketansingh.me/posts/speeding-up-python-with-rust/">Speeding up Python with Rust, what works and what doesn't! (2021)</a></li>
+<li><a href="https://store.metasnake.com/effective-pandas-book">Effective Pandas Book</a> (<a href="https://github.com/mattharrison/effective_pandas_book">Code</a>)</li>
+<li><a href="https://rohitgupta.xyz/blog/keeping-python-code-clean-with-pre-commit-hooks-black-flake8-and-isort/">Keeping python code clean with pre-commit hooks: black, flake8 and isort (2019)</a></li>
+<li><a href="https://bas.codes/posts/python-dict-slots">Understanding Attributes, Dicts and Slots in Python (2022)</a></li>
+<li><a href="https://jott.live/markdown/interactive_optimization">Interactive Loop Optimization</a> (<a href="https://lobste.rs/s/wbqbpn/interactive_loop_optimization">Lobsters</a>)</li>
+<li><a href="https://github.com/vindarel/languages-that-compile-to-python">List of languages that compile to python</a></li>
+<li><a href="https://github.com/vald-phoenix/pylint-errors">pylint-errors</a> - Curated list of pylint errors with explanation and examples.</li>
+<li><a href="https://zerowithdot.com/improve-data-science-code/">How to write better scientific code in Python? (2022)</a> (<a href="https://news.ycombinator.com/item?id=30397485">HN</a>)</li>
+<li><a href="https://healeycodes.com/when-im-sad-my-computer-sends-me-a-cat">When I'm Sad My Computer Sends Me Cats (2022)</a> (<a href="https://github.com/healeycodes/if-sad-send-cat">Code</a>)</li>
+<li><a href="https://github.com/vpelletier/pprofile">pprofile</a> - Line-granularity, thread-aware deterministic and statistic pure-python profiler.</li>
+<li><a href="https://bas.codes/posts/python-decorators">Understanding Decorators in Python (2022)</a></li>
+<li><a href="https://github.com/appcypher/raccoon">Raccoon</a> - Language with Python 3.x syntax that is amenable to static analysis.</li>
+<li><a href="https://lwn.net/SubscriberLink/886516/d835ee6026544345/">CPython, C standards, and IEEE 754 (2022)</a> (<a href="https://news.ycombinator.com/item?id=30545466">HN</a>)</li>
+<li><a href="https://machinelearningmastery.com/a-gentle-introduction-to-serialization-for-python/">A Gentle Introduction to Serialization for Python (2022)</a></li>
+<li><a href="https://github.com/nschloe/tuna">tuna</a> - Python profile viewer.</li>
+<li><a href="https://www.trickster.dev/post/sending-notifications-programmatically/">Sending notifications programmatically: let me count the ways (2022)</a></li>
+<li><a href="https://wesmckinney.com/blog/python-parquet-multithreading/">Extreme IO performance with parallel Apache Parquet in Python (2017)</a></li>
+<li><a href="https://github.com/tonybaloney/perflint">perflint</a> - Pylint extension for performance anti patterns.</li>
+<li><a href="https://pythonspeed.com/articles/json-memory-streaming/">Processing large JSON files in Python without running out of memory (2022)</a></li>
+<li><a href="https://jerry-git.github.io/daily-dose-of-python/">Daily dose of Python</a> - Advanced Python tips and tricks in easy to digest format. (<a href="https://github.com/jerry-git/daily-dose-of-python">Code</a>)</li>
+<li><a href="https://github.com/s-zeng/dhall-python">dhall-python</a> - Dhall bindings for Python using the rust implementation.</li>
+<li><a href="https://www.fermyon.com/blog/python-wagi">Running Python in WebAssembly (2022)</a></li>
+<li><a href="https://github.com/mcintyre94/pyground">Pyground</a> - Playground for running Python using WASM on data in the browser.</li>
+<li><a href="https://www.youtube.com/watch?v=YnL9vAFphmE">Interview with a Postdoc, Junior Python Developer in 2022</a></li>
+<li><a href="https://github.com/PyCQA/flake8">Flake8</a> - Python tool that glues together pycodestyle, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.</li>
+<li><a href="https://2022.pycon.de/program/SBCNDY/">Python 3.11 in the Web Browser (2022)</a> (<a href="https://news.ycombinator.com/item?id=30815122">HN</a>)</li>
+<li><a href="https://cerfacs.fr/coop/fortran-vs-python">The counterintuitive rise of Python in scientific computing (2020)</a> (<a href="https://news.ycombinator.com/item?id=30812086">HN</a>) (<a href="https://twitter.com/hardmaru/status/1508026008342962177">Tweet</a>)</li>
+<li><a href="https://www.packtpub.com/product/advanced-python-programming/9781838551216">Advanced Python Programming Book</a> (<a href="https://github.com/PacktPublishing/Advanced-Python-Programming-Second-Edition">Code</a>)</li>
+<li><a href="https://lukasz.langa.pl/5d044f91-49c1-4170-aed1-62b6763e6ad0/">Notes From the Meeting On Python GIL Removal Between Python Core and Sam Gross (2021)</a></li>
+<li><a href="https://davidamos.dev/the-right-way-to-compare-floats-in-python/">How to compare floats in Python (2022)</a> (<a href="https://news.ycombinator.com/item?id=30856434">HN</a>)</li>
+<li><a href="https://github.com/qfpl/hpython">hpython</a> - Haskell-based language tools for Python.</li>
+<li><a href="https://www.pypy.org/posts/2022/04/how-is-pypy-tested.html">How is PyPy Tested? (2022)</a></li>
+<li><a href="https://github.com/asottile/pyupgrade">pyupgrade</a> - Tool (and pre-commit hook) to automatically upgrade syntax for newer versions of the language.</li>
+<li><a href="http://blog.behnel.de/posts/cython-is-20/">Cython Is 20 (2022)</a> (<a href="https://news.ycombinator.com/item?id=30904430">HN</a>)</li>
+<li><a href="https://github.com/python-discord/snekbox">snekbox</a> - Easy, safe evaluation of arbitrary Python code.</li>
+<li><a href="https://github.com/eliphatfs/yapyjit">Yet another Python JIT.</a></li>
+<li><a href="https://news.ycombinator.com/item?id=30980813">Ask HN: Python Programming Books (2022)</a></li>
+<li><a href="https://github.com/ml-tooling/best-of-python-dev">Best of Python Developer Tools</a> - Ranked list of awesome python developer tools and libraries. Updated weekly.</li>
+<li><a href="https://faster-cpython.readthedocs.io/">Faster CPython: Notes on making CPython faster</a> (<a href="https://github.com/vstinner/faster_cpython">Code</a>)</li>
+<li><a href="https://github.com/Stewori/JyNI">JyNI</a> - Enables Jython to load native CPython extensions.</li>
+<li><a href="https://github.com/adafruit/circuitpython-weekly-newsletter">Python for Microcontrollers Newsletter</a></li>
+<li><a href="https://github.com/evrone/evrone-python-guidelines/blob/master/EN.md">Evrone Python Guidelines</a></li>
+<li><a href="https://github.com/bloomberg/memray">Memray</a> - Memory profiler for Python. (<a href="https://twitter.com/1st1/status/1516859294896906241">Tweet</a>) (<a href="https://news.ycombinator.com/item?id=31102089">HN</a>)</li>
+<li><a href="https://nostarch.com/modeling-and-simulation-python">Modeling and Simulation in Python (2022)</a></li>
+<li><a href="https://bhave.sh/micropython-docker/">MicroPython in Docker Containers (2022)</a></li>
+<li><a href="https://github.com/henryiii/python-performance-minicourse">High Performance Python Princeton mini-course</a></li>
+<li><a href="https://github.com/maxhumber/hickory">hickory</a> - Command line tool for scheduling Python scripts.</li>
+<li><a href="https://www.youtube.com/watch?v=CvQ7e6yUtnw">Why Python Data Classes Are Awesome (2022)</a></li>
+<li><a href="https://pythonspeed.com/articles/python-gil/">When Python can’t thread: a deep-dive into the GIL’s impact (2022)</a> (<a href="https://lobste.rs/s/9hj80j/when_python_can_t_thread_deep_dive_into_gil">Lobsters</a>)</li>
+<li><a href="https://glyph.twistedmatrix.com/2022/04/you-should-compile-your-python-and-heres-why.html">You Should Compile Your Python And Here’s Why (2022)</a> (<a href="https://news.ycombinator.com/item?id=31200989">HN</a>)</li>
+<li><a href="https://explosion.ai/blog/bloom-embeddings">Compact word vectors with Bloom embeddings (2022)</a></li>
+<li><a href="https://github.com/pyscript/pyscript">PyScript</a> - Run Python in your HTML. (<a href="https://pyscript.net/">Web</a>) (<a href="https://www.anaconda.com/blog/pyscript-python-in-the-browser">Intro</a>) (<a href="https://news.ycombinator.com/item?id=31225193">HN</a>) (<a href="https://news.ycombinator.com/item?id=31217337">HN</a>) (<a href="https://github.com/mattkram/pyscript-cli">CLI</a>)</li>
+<li><a href="https://github.com/twiecki/pymc-in-browser">PyMC in the browser using PyScript</a></li>
+<li><a href="https://github.com/pablogsal/python-horror-show">Strange and odd python snippets explained</a></li>
+<li><a href="https://engineering.fb.com/2022/05/02/open-source/cinder-jits-instagram/">How the Cinder JIT’s function inliner helps us optimize Instagram (2022)</a></li>
+<li><a href="https://github.com/pfnet/pysen">pysen</a> - Python linting made easy.</li>
+<li><a href="https://lwn.net/SubscriberLink/893686/8978976335696804/">Modern Python Performance Considerations (2022)</a> (<a href="https://news.ycombinator.com/item?id=31272681">HN</a>)</li>
+<li><a href="https://jiby.tech/project/literate_wordle/wordle.html">Wordle in Python using literate programming</a> (<a href="https://news.ycombinator.com/item?id=31306340">HN</a>)</li>
+<li><a href="https://python.natto.dev/">Spatial Environment for Python</a> (<a href="https://news.ycombinator.com/item?id=31320335">HN</a>)</li>
+<li><a href="https://thepythoncorner.com/posts/2022-05-06-managing-python-versions-with-pyenv/">Managing Python Versions with Pyenv (2022)</a> (<a href="https://news.ycombinator.com/item?id=31326052">HN</a>)</li>
+<li><a href="https://pyoxidizer.readthedocs.io/en/latest/pyoxy.html">PyOxy Python Runner</a> - Alternative implementation and re-imagination of the ubiquitous python command, but providing more features and control than python.</li>
+<li><a href="https://github.com/DjangoEx/python-engineer-roadmap">Python Engineer Roadmap</a></li>
+<li><a href="https://emptysqua.re/blog/why-should-async-get-all-the-love/">Why Should Async Get All The Love?: Advanced Control Flow With Threads (2022)</a></li>
+<li><a href="https://github.com/alxschwrz/codex_py2cpp">OpenAI Codex Python to C++ Code Generator</a> (<a href="https://news.ycombinator.com/item?id=31405976">HN</a>)</li>
+<li><a href="https://github.com/pikasTech/pikascript">PikaScript</a> - Ultra-lightweight Python engine that can run in 4Kb of RAM.</li>
+<li><a href="https://antonz.org/compact-objects/">Compact objects in Python</a></li>
+<li><a href="https://bytepawn.com/python-decorators-for-data-scientists.html">Useful Python Decorators for Data Scientists (2022)</a> (<a href="https://news.ycombinator.com/item?id=31476521">HN</a>)</li>
+<li><a href="https://python-security.readthedocs.io/">Python Security</a> (<a href="https://github.com/vstinner/python-security">Code</a>)</li>
+<li><a href="https://nedbatchelder.com/text/which-py.html">What’s in Which Python</a> - Summary of what features appeared in which versions of Python. (<a href="https://news.ycombinator.com/item?id=31475130">HN</a>)</li>
+<li><a href="https://www.backblaze.com/blog/the-python-gil-past-present-and-future/">The Python GIL: Past, Present, and Future (2022)</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/v1rde4/whats_a_python_feature_that_is_very_powerful_but/">What's a Python feature that is very powerful but not many people use or know about it? (2022)</a></li>
+<li><a href="https://github.com/brandtbucher/specialist">Specialist</a> - Visualize CPython 3.11's specializing, adaptive interpreter.</li>
+<li><a href="https://github.com/Zac-HD/shed">shed</a> - Maximally opinionated autoformatting tool.</li>
+<li><a href="https://github.com/AbdulMalikDev/PythonCheatSheet">Python Cheat Sheet</a></li>
+<li><a href="https://www.packt.com/bizarre-python/">The strange relationship between objects, functions, generators and coroutines</a></li>
+<li><a href="https://dev.to/yonkeltron/illustrating-the-duality-of-closures-and-objects-2nfm">Illustrating the duality of closures and objects (2022)</a> (<a href="https://lobste.rs/s/ajgdnb/illustrating_duality_closures_objects">Lobsters</a>)</li>
+<li><a href="https://github.com/gotcha/ipdb">IPython pdb</a> - Integration of IPython pdb.</li>
+<li><a href="https://github.com/konchunas/pyrs">Python to Rust transpiler</a></li>
+<li><a href="https://lwn.net/SubscriberLink/898452/357b195db1ecce28/">Introducing PyScript (summary of PyCon keynote) (2022)</a> (<a href="https://news.ycombinator.com/item?id=31843996">HN</a>)</li>
+<li><a href="https://roman.pt/posts/dont-let-dicts-spoil-your-code/">Don't let dicts spoil your code (2020)</a> (<a href="https://lobste.rs/s/gzemqn/don_t_let_dicts_spoil_your_code">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=31879015">HN</a>)</li>
+<li><a href="https://deepsource.io/blog/python-3-11-whats-new/">What's New in Python 3.11? (2022)</a> (<a href="https://news.ycombinator.com/item?id=31888624">HN</a>)</li>
+<li><a href="https://blog.thea.codes/my-python-testing-style-guide/">My Python testing style guide</a> (<a href="https://lobste.rs/s/9983uh/my_python_testing_style_guide">Lobsters</a>)</li>
+<li><a href="https://github.com/bjpop/blip">Blip</a> - Bytecode compiler for Python 3.</li>
+<li><a href="https://superfastpython.com/multiprocessing-in-python/">Multiprocessing in Python: The Complete Guide (2022)</a></li>
+<li><a href="https://github.com/tonybaloney/rich-bench">rich-bench</a> - Little Python benchmarking tool.</li>
+<li><a href="https://ep2022.europython.eu/">EuroPython 2022</a> (<a href="https://github.com/EuroPython/website">Web Code</a>)</li>
+<li><a href="https://github.com/omnilib/ufmt">µfmt</a> - Safe, atomic formatting with black and µsort.</li>
+<li><a href="https://pythonspeed.com/articles/celery-performance/">Finding performance bottlenecks in Celery tasks (2022)</a></li>
+<li><a href="https://ahgamut.github.io/2021/07/13/ape-python/">Python is Actually Portable (2021)</a> (<a href="https://news.ycombinator.com/item?id=32245430">HN</a>)</li>
+<li><a href="https://github.com/Omyyyy/pycom">Pycom</a> - Python compiler, down to native code, using C++. (<a href="https://news.ycombinator.com/item?id=32270255">HN</a>)</li>
+<li><a href="https://www.hillelwayne.com/post/python-abc/">Crimes with Python's pattern matching (2022)</a> (<a href="https://news.ycombinator.com/item?id=32314368">HN</a>)</li>
+<li><a href="https://pythonspeed.com/articles/logging-vs-profiling/">Finding performance problems: profiling or logging?</a></li>
+<li><a href="https://github.com/erg-lang/erg">Erg</a> - Python compatible statically typed language.</li>
+<li><a href="https://snarky.ca/mvpy-minimum-viable-python/">MVPy: Minimum Viable Python</a> (<a href="https://lobste.rs/s/aihsd2/mvpy_minimum_viable_python">Lobsters</a>)</li>
+<li><a href="https://github.com/disrupted/blackd-client">Blackd-Client</a> - Blazing fast Python code formatting using Black.</li>
+<li><a href="https://martinheinz.dev/blog/79">You Should Be Using Python's Walrus Operator (2022)</a> (<a href="https://lobste.rs/s/0ipjdk/you_should_be_using_python_s_walrus">Lobsters</a>)</li>
+<li><a href="https://github.com/charliermarsh/ruff">Ruff</a> - Extremely fast Python linter, written in Rust. (<a href="https://lobste.rs/s/xjl3rd/ruff_extremely_fast_python_linter">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=32666035">HN</a>) (<a href="https://beta.ruff.rs/docs/">Docs</a>) (<a href="https://news.ycombinator.com/item?id=34788020">HN</a>)</li>
+<li><a href="https://notes.crmarsh.com/using-mypy-in-production-at-spring">Using Mypy in Production</a> (<a href="https://news.ycombinator.com/item?id=32556816">HN</a>)</li>
+<li><a href="https://lwn.net/SubscriberLink/906512/27b609f844d04f68/">Python multi-level break and continue</a> (<a href="https://news.ycombinator.com/item?id=32691526">HN</a>)</li>
+<li><a href="https://wakatime.com/blog/56-building-a-distributed-task-queue-in-python">Building a Distributed Task Queue in Python (2022)</a> (<a href="https://news.ycombinator.com/item?id=32730038">HN</a>)</li>
+<li><a href="https://hynek.me/til/python-portable-binaries/">You Can Build Portable Binaries of Python Applications (2022)</a></li>
+<li><a href="https://docs.taichi-lang.org/blog/accelerate-python-code-100x">Accelerate Python code by importing Taichi (2022)</a> (<a href="https://news.ycombinator.com/item?id=32767338">HN</a>)</li>
+<li><a href="https://www.tweag.io/blog/2022-09-08-fp1-typopaedia-pythonica/">Functional Python, Part I: Typopædia Pythonica (2022)</a></li>
+<li><a href="https://arxiv.org/abs/2208.14755">Python Type Hints are Turing Complete (2022)</a> (<a href="https://news.ycombinator.com/item?id=32779296">HN</a>) (<a href="https://github.com/OriRoth/python-typing-machines">Code</a>)</li>
+<li><a href="https://github.com/SMAT-Lab/Scalpel">Scalpel</a> - Python Static Analysis Framework.</li>
+<li><a href="https://github.com/kluctl/go-embed-python">Embedded Python Interpreter for Go</a></li>
+<li><a href="https://github.com/PyCQA/autoflake">autoflake</a> - Removes unused imports and unused variables from Python code.</li>
+<li><a href="https://github.com/faster-cpython/ideas/wiki/Workflow-for-3.12-cycle">Faster CPython 3.12 Plan</a> (<a href="https://news.ycombinator.com/item?id=32906085">HN</a>)</li>
+<li><a href="https://github.com/pyta-uoft/pyta">PyTA</a> - Adventures in code analysis for teaching Python.</li>
+<li><a href="https://github.com/dosisod/refurb">Refurb</a> - Tool for refurbishing and modernizing Python codebases.</li>
+<li><a href="https://blog.meadsteve.dev/programming/2022/09/27/making-python-fast-for-free/">Making python fast for free - adventures with mypyc (2022)</a></li>
+<li><a href="https://www.packtpub.com/product/blueprint-for-production-ready-web-development/9781803248509">A Blueprint for Production-Ready Web Applications (2022)</a> (<a href="https://github.com/pgjones/tozo">Code</a>)</li>
+<li><a href="https://medium.com/building-carta/type-annotation-via-automated-refactoring-fd8edfe123d4">Type annotation via automated refactoring (2022)</a></li>
+<li><a href="https://github.com/tree-sitter/tree-sitter-python">Python grammar for tree-sitter</a></li>
+<li><a href="https://alexgaynor.net/2022/oct/23/buffers-on-the-edge/">Buffers on the Edge: Python and Rust (2022)</a> (<a href="https://news.ycombinator.com/item?id=33312508">HN</a>)</li>
+<li><a href="https://martinheinz.dev/blog/83">Python CLI Tricks That Don't Require Any Code Whatsoever (2022)</a></li>
+<li><a href="https://discuss.python.org/t/python-3-11-0-final-is-now-available/20291">Python 3.11.0 (2022)</a> (<a href="https://news.ycombinator.com/item?id=33327896">HN</a>) (<a href="https://twitter.com/marktenenholtz/status/1584927749168250881">Tweet</a>)</li>
+<li><a href="https://lukeplant.me.uk/blog/posts/grep-python-syntax-using-ast-pyastgrep/">Better Python code grepping with pyastgrep (2022)</a></li>
+<li><a href="https://bernsteinbear.com/blog/inline-caches-in-skybison/">Inline caches in the Skybison Python runtime (2022)</a></li>
+<li><a href="https://superfastpython.com/python-asyncio/">Python Asyncio: The Complete Guide (2022)</a> (<a href="https://news.ycombinator.com/item?id=33547323">HN</a>)</li>
+<li><a href="https://softwaremaniacs.org/blog/2022/11/10/python-trie/en/">Trie in Python (2022)</a> (<a href="https://lobste.rs/s/cb4oqs/trie_python">Lobsters</a>)</li>
+<li><a href="https://github.com/darrenburns/shira">shira</a> - Python inspector.</li>
+<li><a href="https://lukeplant.me.uk/blog/posts/python-type-hints-parsy-case-study/">Python Type Hints: case study on parsy (2022)</a></li>
+<li><a href="https://inference-review.com/article/the-origins-of-python">The Origins of Python (2022)</a> (<a href="https://news.ycombinator.com/item?id=33750819">HN</a>)</li>
+<li><a href="https://www.moderndescartes.com/essays/data_oriented_python/">Data-oriented Programming in Python (2022)</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/zcr6o0/if_theres_gonna_be_a_python_40_one_day_whats_a/">What would you add to Python 4.0 (2022)</a></li>
+<li><a href="https://github.com/njsmith/posy">posy</a> - Project-oriented Python workflow manager.</li>
+<li><a href="https://github.com/exaloop/codon">Codon</a> - High-performance Python compiler using LLVM. (<a href="https://news.ycombinator.com/item?id=33908576">HN</a>)</li>
+<li><a href="https://statmodeling.stat.columbia.edu/2022/12/08/the-cleantech-job-market-every-modeler-is-supposed-to-be-a-great-python-programmer/">Every modeler is supposed to be a great Python programmer (2022)</a> (<a href="https://news.ycombinator.com/item?id=33914426">HN</a>)</li>
+<li><a href="https://github.com/shedskin/shedskin">Shed Skin</a> - Python to C++ compiler.</li>
+<li><a href="https://medium.com/@petefison/a-crash-course-in-python-comprehensions-and-generators-f069c8f8ca38">A crash course in Python “comprehensions” and “generators” (2022)</a> (<a href="https://news.ycombinator.com/item?id=33892017">HN</a>)</li>
+<li><a href="https://dabeaz-course.github.io/practical-python/Notes/Contents.html">Practical Python Programming Course</a></li>
+<li><a href="https://www.oreilly.com/library/view/python-distilled/9780134173399/">Python Distilled Book (2021)</a></li>
+<li><a href="https://github.com/pyccel/pyccel">Pyccel</a> - Python extension language using accelerators.</li>
+<li><a href="https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/">Boring Python: Code quality (2022)</a> (<a href="https://news.ycombinator.com/item?id=34061252">HN</a>)</li>
+<li><a href="https://vgel.me/posts/donut/">Signed distance functions in 46 lines of Python (2022)</a> (<a href="https://news.ycombinator.com/item?id=34073298">HN</a>)</li>
+<li><a href="https://github.com/mtshiba/pylyzer">pylyzer</a> - Fast static code analyzer &amp; language server for Python.</li>
+<li><a href="https://maxwellrules.com/programming/rusty-python.html">Extending Python with Rust</a> (<a href="https://news.ycombinator.com/item?id=34145691">HN</a>)</li>
+<li><a href="https://github.com/youssefHosni/Efficient-Python-for-Data-Scientists">Efficient Python for Data Scientists</a></li>
+<li><a href="https://datawranglingpy.gagolewski.com/">Minimalist Data Wrangling with Python</a> (<a href="https://github.com/gagolews/datawranglingpy">Code</a>)</li>
+<li><a href="https://github.com/suren-atoyan/x-python">s-Python</a> - Complete solution for Python-in-browser.</li>
+<li><a href="https://ianbicking.org/blog/2023/01/infinite-ai-array.html">Infinite AI Array (2023)</a> (<a href="https://github.com/ianb/infinite-ai-array">Code</a>) (<a href="https://news.ycombinator.com/item?id=34224664">HN</a>)</li>
+<li><a href="https://martinheinz.dev/blog/88">Lazy Evaluation Using Recursive Python Generators (2023)</a></li>
+<li><a href="https://henryiii.github.io/level-up-your-python/notebooks/0%20Intro.html">Level Up Your Python</a> - Course over intermediate Python. (<a href="https://github.com/henryiii/level-up-your-python">Code</a>)</li>
+<li><a href="https://blog.exaloop.io/python-llvm/">Mapping Python to LLVM (2023)</a> (<a href="https://news.ycombinator.com/item?id=34312474">HN</a>)</li>
+<li><a href="https://peps.python.org/pep-0703/">Making the Global Interpreter Lock Optional in CPython</a></li>
+<li><a href="https://pythonspeed.com/articles/polars-memory-pandas/">Why Polars uses less memory than Pandas (2023)</a> (<a href="https://lobste.rs/s/ouogwa/why_polars_uses_less_memory_than_pandas">Lobsters</a>)</li>
+<li><a href="https://github.com/skulpt/skulpt">Skulpt</a> - JavaScript implementation of Python.</li>
+<li><a href="https://github.com/charliermarsh/ruff-lsp">Ruff LSP</a> - Language Server Protocol implementation for Ruff.</li>
+<li><a href="https://whynothugo.nl/journal/2023/01/20/notes-on-ruff/">Notes on ruff (2023)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=34569425">Ask HN: Which book would you recommend for learning Python in detail? (2023)</a></li>
+<li><a href="https://wasmlabs.dev/articles/python-wasm32-wasi/">WebAssembly: Adding Python support to WASM language runtimes (2023)</a> (<a href="https://news.ycombinator.com/item?id=34581487">HN</a>)</li>
+<li><a href="https://lukeplant.me.uk/blog/posts/pythons-disappointing-superpowers/">Python's “disappointing” superpowers (2023)</a> (<a href="https://news.ycombinator.com/item?id=34611969">HN</a>) (<a href="https://lobste.rs/s/9w7ylg/python_s_disappointing_superpowers">Lobsters</a>)</li>
+<li><a href="https://sadh.life/post/cursed-for/">How I added C-style for-loops to Python (2022)</a> (<a href="https://news.ycombinator.com/item?id=34643811">HN</a>)</li>
+<li><a href="https://github.com/blueloveTH/pocketpy">PocketPy</a> - Lightweight Python interpreter for game engines. (<a href="https://news.ycombinator.com/item?id=34702386">HN</a>)</li>
+<li><a href="https://textual.textualize.io/blog/2023/02/11/the-heisenbug-lurking-in-your-async-code/">A Heisenbug lurking in async Python (2023)</a> (<a href="https://news.ycombinator.com/item?id=34754276">HN</a>)</li>
+<li><a href="https://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a> (<a href="https://news.ycombinator.com/item?id=34750397">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=34827386">Ask HN: How do you become a better Python developer? (2023)</a></li>
+<li><a href="https://www.dis-this.com/">Dis This</a> - Online Python Disassembler. (<a href="https://github.com/pamelafox/dis-this">Code</a>)</li>
+<li><a href="https://github.com/zotroneneis/magical_universe">Awesome Python Features Explained Using the World of Magic</a></li>
+<li><a href="https://news.ycombinator.com/item?id=35035618">Even the Pylint codebase uses Ruff</a></li>
+<li><a href="https://github.com/odashi/davinci-functions">davinci-functions</a> - Library to ask OpenAI GPT-3 for generating objects on the Python runtime.</li>
+<li><a href="https://maxhalford.github.io/blog/sympy-doctests/">Using SymPy in Python doctests (2023)</a></li>
+<li><a href="https://textual.textualize.io/blog/2023/03/08/overhead-of-python-asyncio-tasks/">Overhead of Python Asyncio tasks (2023)</a></li>
+<li><a href="https://peps.python.org/pep-0709/">PEP 709 – Inlined comprehensions (2023)</a> (<a href="https://lobste.rs/s/lrstjz/pep_709_inlined_comprehensions">Lobsters</a>)</li>
+<li><a href="https://snarky.ca/how-virtual-environments-work/">How virtual environments work (2023)</a> (<a href="https://lobste.rs/s/ypbrf6/how_virtual_environments_work">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=35131357">HN</a>)</li>
+<li><a href="https://github.com/Asabeneh/30-Days-Of-Python">30 Days Of Python</a></li>
+<li><a href="https://viper.cs.columbia.edu/">ViperGPT: Visual Inference via Python Execution for Reasoning (2023)</a> (<a href="https://github.com/cvlab-columbia/viper">Code</a>) (<a href="https://news.ycombinator.com/item?id=35198998">HN</a>)</li>
+<li><a href="https://pythonspeed.com/articles/faster-text-processing/">Speeding up text processing in Python (is hard) (2023)</a></li>
+<li><a href="https://ohadravid.github.io/posts/2023-03-rusty-python/">Making Python faster with Rust (2023)</a> (<a href="https://news.ycombinator.com/item?id=35367520">HN</a>)</li>
+<li><a href="https://genyrosk.github.io/posts/2023-03-05-learn-python-generators/">Learn Python Generators (2023)</a></li>
+<li><a href="https://genyrosk.github.io/posts/2023-03-05-learn-python-decorators/">Learn Python Decorators (2023)</a></li>
+<li><a href="https://genyrosk.github.io/posts/2023-03-05-learn-python-context-managers/">Learn Python Context Managers (2023)</a></li>
+<li><a href="https://lukeplant.me.uk/blog/posts/the-different-uses-of-python-type-hints/">The different uses of Python type hints (2023)</a> (<a href="https://lobste.rs/s/2beggz/different_uses_python_type_hints">Lobsters</a>)</li>
+<li><a href="https://github.com/SourceCode-AI/aura">Aura</a> - Python source code auditing and static analysis on a large scale. (<a href="https://news.ycombinator.com/item?id=35511817">HN</a>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

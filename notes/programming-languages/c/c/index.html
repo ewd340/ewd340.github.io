@@ -1,0 +1,1434 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../c-libraries/">
+      
+      
+        <link rel="next" href="../../lisp/carp/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>C - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        C
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="c">C</h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<p><a href="https://tmewett.com/c-tips/">Everything I wish I knew when learning C</a> is nice read.</p>
+<p><a href="../../zig/zig/">Zig</a>. </p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><a href="https://lobste.rs/s/b5xwwg/what_are_you_doing_this_weekend#c_1kh5sd">Notes on learning/using C.</a></li>
+<li><a href="https://twitter.com/BlueSpaceCanary/status/1417800133001891840">C models an assembly wildly different from modern x86, often informs you of errors by just setting shared globals you have to know to check, and has huge amounts of magic wrapped up in libc. There's so many ways that C does things behind your back.</a></li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://drewdevault.com/2017/03/15/How-I-learned-to-stop-worrying-and-love-C.html">Principles for C programming</a></li>
+<li><a href="http://drewdevault.com/2016/05/28/Understanding-pointers.html">Understanding pointers</a></li>
+<li><a href="https://github.com/rswier/c4">c4</a> - C in four functions. (<a href="https://news.ycombinator.com/item?id=22353532">HN</a>)</li>
+<li><a href="https://github.com/rby90/Project-Based-Tutorials-in-C">Project Based Tutorials in C</a></li>
+<li><a href="https://floooh.github.io/2018/06/02/one-year-of-c.html">One year of C (2018)</a>
+  https://floooh.github.io/2018/06/02/one-year-of-c.html</li>
+<li><a href="http://seenaburns.com/building-c-programs/">Building C programs</a></li>
+<li><a href="https://github.com/orangeduck/tgc">Tiny Garbage Collector</a> - Tiny Garbage Collector for C.</li>
+<li><a href="https://github.com/kozross/awesome-c">Awesome C</a> - Curated list of awesome C frameworks, libraries, resources and other shiny things.</li>
+<li><a href="https://github.com/uhub/awesome-c">Awesome C 2</a></li>
+<li><a href="https://github.com/rui314/9cc">9cc small C compiler</a></li>
+<li><a href="http://oldblog.antirez.com/post/picol.html">picol, a Tcl interpreter in 550 lines of C code (2007)</a></li>
+<li><a href="https://github.com/ivmai/bdwgc">Boehm-Demers-Weiser conservative C/C++ Garbage Collector (libgc, bdwgc, boehm-gc)</a></li>
+<li><a href="https://clang.llvm.org/docs/index.html">Clang documentation</a></li>
+<li><a href="https://github.com/hnes/libaco">libaco</a> - Blazing fast and lightweight C asymmetric coroutine library.</li>
+<li><a href="https://github.com/csmith-project/creduce">C-Reduce</a> - Tool that takes a large C or C++ program that has a property of interest (such as triggering a compiler bug) and automatically produces a much smaller C/C++ program that has the same property.</li>
+<li><a href="https://github.com/hexagonal-sun/bic">bic</a> - C interpreter and API explorer. (<a href="https://news.ycombinator.com/item?id=20950865">HN</a>)</li>
+<li><a href="https://github.com/llvm-mirror/clang">clang</a> - Compiler front-end for the C family of languages (C, C++, Objective-C, and Objective-C++) which is built as part of the LLVM compiler infrastructure project.</li>
+<li><a href="https://github.com/jyn514/rcc">rcc</a> - C compiler written in Rust, with a focus on good error messages.</li>
+<li><a href="http://renesd.blogspot.com/2019/09/post-modern-c-tooling.html">Post modern C tooling (2019)</a></li>
+<li><a href="https://bootstrapping.miraheze.org/wiki/Main_Page#Small_C_Compilers">Small C Compilers</a> (<a href="https://news.ycombinator.com/item?id=21210087">HN</a>)</li>
+<li><a href="https://www.cprogramming.com/">Learn C and C++ Programming</a></li>
+<li><a href="https://github.com/rui314/8cc">Small C Compiler</a> - Intended to support all C11 language features while keeping the code as small and simple as possible.</li>
+<li><a href="https://github.com/TheAlgorithms/C">All Algorithms implemented in C</a></li>
+<li><a href="https://github.com/Ericsson/codechecker">CodeChecker</a> - Analyzer tooling, defect database and viewer extension for the Clang Static Analyzer and Clang Tidy.</li>
+<li><a href="http://maplant.com/gc.html">Writing a Simple Garbage Collector in C (2014)</a> (<a href="https://news.ycombinator.com/item?id=21794327">HN</a>) (<a href="https://news.ycombinator.com/item?id=35495886">HN</a>)</li>
+<li><a href="https://github.com/mkirchner/gc">gc</a> - Simple, zero-dependency garbage collection for C. (<a href="https://news.ycombinator.com/item?id=21841368">HN</a>)</li>
+<li><a href="http://fabiensanglard.net/c/">To become a good C programmer</a> (<a href="https://news.ycombinator.com/item?id=22325088">HN</a>)</li>
+<li><a href="https://www.bell-labs.com/usr/dmr/www/chist.html">Development of the C Language (1993)</a> (<a href="https://lobste.rs/s/hba9nn/development_c_language_1993">Lobsters</a>) (<a href="https://www.bell-labs.com/usr/dmr/www/chist.pdf">PDF</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=22519876">Ask HN: How do I learn C properly? (2020)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=22711391">HN: Static Analysis in GCC 10 (2020)</a></li>
+<li><a href="https://words.steveklabnik.com/c-is-not-how-the-computer-works-can-lead-to-inefficient-code">“C is not how the computer works” can lead to inefficient code (2019)</a> (<a href="https://news.ycombinator.com/item?id=21355463">HN</a>)</li>
+<li><a href="https://github.com/lotabout/write-a-C-interpreter">Write a C interpreter</a> - Write a simple interpreter of C. Inspired by c4 and largely based on it..</li>
+<li><a href="https://github.com/tree-sitter/tree-sitter-c">tree-sitter-c</a> - C grammar for tree-sitter. Adapted from this C99 grammar.</li>
+<li><a href="https://github.com/ingve/awesome-clang">Awesome Clang</a></li>
+<li><a href="https://news.ycombinator.com/item?id=22865357">Tell HN: C Experts Panel – Ask us anything about C (2020)</a></li>
+<li><a href="https://flak.tedunangst.com/post/embedding-binary-objects-in-c">Embedding Binary Objects in C</a> (<a href="https://news.ycombinator.com/item?id=22888318">HN</a>)</li>
+<li><a href="https://blog.josephmorag.com/posts/mcc0/">Implementing a LLVM Micro C compiler in Haskell</a> (<a href="https://news.ycombinator.com/item?id=27394857">HN</a>)</li>
+<li><a href="http://250bpm.com/blog:4">Why should I have written ZeroMQ in C, not C++ (2012)</a></li>
+<li><a href="https://github.com/Bfgeshka/awesome-c">Awesome C</a></li>
+<li><a href="https://www.cs.princeton.edu/~appel/papers/memmgr.pdf">Verified sequential malloc/free</a> (<a href="https://news.ycombinator.com/item?id=23046356">HN</a>)</li>
+<li><a href="http://libcello.org/learn/a-fat-pointer-library">Fat pointers in C using libcello</a> (<a href="https://news.ycombinator.com/item?id=23016001">HN</a>)</li>
+<li><a href="https://brennan.io/2020/05/08/meson/">Embracing modularity with Meson (2020)</a></li>
+<li><a href="https://www.cs.kent.ac.uk/people/staff/srk21/research/papers/kell17some-preprint.pdf">Some Were Meant for C - The Endurance of an Unmanageable Language (2017)</a> (<a href="https://lobste.rs/s/o0xtns/some_were_meant_for_c">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=26300199">HN</a>)</li>
+<li><a href="https://www.youtube.com/playlist?list=PLvdK1vRmp8wMzH4w_8sQ30NKU3Bt4Cc-M">Developing a programming language in C (2020)</a></li>
+<li><a href="https://github.com/grassator/mass">Mass (Meta Assembly) Language</a> - Compiler for a new language focusing on compile-time execution and no LLVM dependency.</li>
+<li><a href="https://brennan.io/2020/05/24/userspace-cooperative-multitasking/">Implementing simple cooperative threads in C (2020)</a> (<a href="https://news.ycombinator.com/item?id=23293642">HN</a>)</li>
+<li><a href="https://github.com/elliotchance/c2go">c2go</a> - Tool for transpiling C to Go.</li>
+<li><a href="https://github.com/vmchale/cpkg">cpkg</a> - Build tool for C with a particular emphasis on cross compilation. It is configured using Dhall.</li>
+<li><a href="http://www.avabodh.com/cin/cin.html">C Internals</a> (<a href="https://news.ycombinator.com/item?id=23376357">HN</a>)</li>
+<li><a href="https://github.com/csmith-project/creduce">C-Reduce</a> - Tool that takes a large C or C++ program that has a property of interest (such as triggering a compiler bug) and automatically produces a much smaller C/C++ program that has the same property. (<a href="http://embed.cs.utah.edu/creduce/">Web</a>)</li>
+<li><a href="https://github.com/marxin/cvise">C-Vise</a> - Super-parallel Python port of the C-Reduce.</li>
+<li><a href="https://github.com/carlini/printf-tac-toe">C implementation of Tic-Tac-Toe in a single call to printf</a> (<a href="https://news.ycombinator.com/item?id=23445546">HN</a>) (<a href="https://www.reddit.com/r/programming/comments/gy8igu/tictactoe_in_a_single_call_to_printf_in_c/">Reddit</a>)</li>
+<li><a href="https://bowero.nl/blog/2020/06/09/how-the-most-upvoted-c-question-was-another-question/">How the most upvoted C question was another question (2020)</a> (<a href="https://lobste.rs/s/m34tye/how_most_upvoted_c_question_was_another">Lobsters</a>)</li>
+<li><a href="https://lldb.llvm.org/">LLDB Debugger</a> - Next generation, high-performance debugger.</li>
+<li><a href="https://nigeltao.github.io/blog/2020/dumbindent.html">Dumbindent: When 93% of the Time was Spent in Clang-Format (2020)</a> (<a href="https://lobste.rs/s/xau5m4/dumbindent_when_93_time_was_spent_clang">Lobsters</a>)</li>
+<li><a href="https://birb007.github.io/blog/2019/12/15/c-is-archaic.html">C is archaic (2019)</a></li>
+<li><a href="https://www.kernel.org/doc/Documentation/process/coding-style.rst">Linux kernel coding style in C</a></li>
+<li><a href="https://github.com/rizsotto/Constantine">Constantine</a> - Toy project to learn how to write Clang plugin.</li>
+<li><a href="https://bellard.org/tcc/">Tiny C Compiler</a> (<a href="https://news.ycombinator.com/item?id=23617461">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=23633583">C performance mystery: delete unused string constant (2020)</a></li>
+<li><a href="https://utcc.utoronto.ca/~cks/space/blog/unix/MainKernelAndUserAPI">C's main() is one of the places where Unix's user and kernel APIs differ</a> (<a href="https://lobste.rs/s/pdiisx/c_s_main_is_one_places_where_unix_s_user">Lobsters</a>)</li>
+<li><a href="https://dannas.name/standard-c-loop-idioms">Standard C loop idioms (2020)</a></li>
+<li><a href="https://thephd.github.io/your-c-compiler-and-standard-library-will-not-help-you">Why the C Language Will Never Stop You from Making Mistakes (2020)</a></li>
+<li><a href="https://briancallahan.net/blog/20200812.html">Can we do better than our C compiler?</a> (<a href="https://news.ycombinator.com/item?id=24139943">HN</a>)</li>
+<li><a href="https://cyclone.thelanguage.org/">Cyclone</a> - Safe dialect of C.</li>
+<li><a href="http://ccodearchive.net/">C Code Archive Network</a> (<a href="https://github.com/rustyrussell/ccan">Code</a>)</li>
+<li><a href="https://www.pixelstech.net/article/1390482950-do-%7B-%7D-while-%280%29-in-macros">do {...} while (0) in macros (2014)</a> (<a href="https://lobste.rs/s/whezna/do_while_0_macros">Lobsters</a>)</li>
+<li><a href="https://www.simple-cc.org/">Simple C Compiler</a></li>
+<li><a href="https://softwarefoundations.cis.upenn.edu/vc-current/">Verifiable C (2020)</a></li>
+<li><a href="https://axelforsman.tk/2020/08/24/rust-style-futures-in-c.html">Rust-style futures in C (2020)</a></li>
+<li><a href="https://cor3ntin.github.io/posts/c/">The problem with C compatibility in C++ (2020)</a> (<a href="https://lobste.rs/s/e27sea/problem_with_c">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=24352258">HN</a>)</li>
+<li><a href="http://cslibrary.stanford.edu/101/EssentialC.pdf">Essential C (2003)</a> (<a href="https://news.ycombinator.com/item?id=24356246">HN</a>) (<a href="https://news.ycombinator.com/item?id=30566118">HN</a>)</li>
+<li><a href="https://modernc.gforge.inria.fr/">Modern C</a> (<a href="https://news.ycombinator.com/item?id=24361469">HN</a>) (<a href="https://lobste.rs/s/01brvr/modern_c">Lobsters</a>)</li>
+<li><a href="http://www.c-faq.com/">C FAQ</a></li>
+<li><a href="https://wozniak.ca/blog/2018/06/25/1/index.html">Massacring C Pointers (2018)</a> (<a href="https://news.ycombinator.com/item?id=24376622">HN</a>) (<a href="https://lobste.rs/s/gim6hg/massacring_c_pointers_2018">Lobsters</a>)</li>
+<li><a href="https://digitalmars.com/articles/C-biggest-mistake.html">C’s Biggest Mistake (2009)</a> (<a href="https://lobste.rs/s/3nebjo/c_s_biggest_mistake_2009">Lobsters</a>)</li>
+<li><a href="https://gustedt.gitlabpages.inria.fr/defer/">Defer Reference Implementation for C</a> (<a href="https://news.ycombinator.com/item?id=24643034">HN</a>)</li>
+<li><a href="https://github.com/rui314/chibicc">Chibicc</a> - Small C Compiler. (<a href="https://news.ycombinator.com/item?id=24676851">HN</a>)</li>
+<li><a href="https://liuliu.me/eyes/loading-csv-file-at-the-speed-limit-of-the-nvme-storage/">Loading CSV File at the Speed Limit of the NVMe Storage (2020)</a> (<a href="https://lobste.rs/s/zksa0f/loading_csv_file_at_speed_limit_nvme">Lobsters</a>)</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/j3j4s9/what_makes_c_hard_to_compile/">What Makes C Hard to Compile (2020)</a></li>
+<li><a href="https://wingolog.org/archives/2020/10/13/malloc-as-a-service">malloc as a service (2020)</a></li>
+<li><a href="https://sqlite.org/src/doc/trunk/doc/lemon.html">The Lemon Parser Generator</a> - LALR parser generator for C.</li>
+<li><a href="https://blog.0x972.info/?d=2014/11/13/10/40/50-how-does-a-debugger-work">How Does a C Debugger Work? (2014)</a> (<a href="https://news.ycombinator.com/item?id=24814854">HN</a>)</li>
+<li><a href="https://github.com/SheLLVM/SheLLVM">SheLLVM</a> - Collection of LLVM transform and analysis passes to write shellcode in regular C.</li>
+<li><a href="https://bowero.nl/blog/2020/10/25/defining-c-macros-the-right-way/">Defining C macros the right way (2020)</a> (<a href="https://lobste.rs/s/ubh34r/defining_c_macros_right_way">Lobsters</a>)</li>
+<li><a href="https://ericlippert.com/2020/02/27/hundred-year-mistakes/">Hundred year mistakes (2020)</a> (<a href="https://lobste.rs/s/f3grxk/hundred_year_mistakes">Lobsters</a>)</li>
+<li><a href="https://github.com/jserv/MazuCC">MazuCC</a> - Minimalist C compiler with x86_64 code generation.</li>
+<li><a href="https://github.com/jserv/shecc">shecc</a> - Self-hosting and educational C compiler.</li>
+<li><a href="https://github.com/jserv/amacc">AMaCC</a> - Small C Compiler generating ELF executable Arm architecture, supporting JIT execution.</li>
+<li><a href="https://matt.sh/howto-c">How to C (as of 2016)</a></li>
+<li><a href="https://river.codes/demystifying-malloc/">Demystifying malloc (2020)</a></li>
+<li><a href="https://research.nccgroup.com/2020/11/10/past-present-and-future-of-effective-c/">Past, Present and Future of Effective C (2020)</a></li>
+<li><a href="https://github.com/DQNEO/8cc.go">C compiler written in Go</a></li>
+<li><a href="https://github.com/aep/zz">ZetZ</a> - Formally Verified Dialect of C. (<a href="https://www.infoq.com/news/2020/02/zz-formal-verified-c-dialect/">Article</a>)</li>
+<li><a href="https://thephd.github.io/editing-the-c-standard">Editing the C Standard (2020)</a> (<a href="https://news.ycombinator.com/item?id=25086673">HN</a>)</li>
+<li><a href="https://prilik.com/blog/post/c-is-not-dependency-free/">C Is Not Dependency Free (2020)</a></li>
+<li><a href="https://blog.joren.ga/programming/best-of-c">Best aspects of C language (2020)</a> (<a href="https://news.ycombinator.com/item?id=25124012">HN</a>) (<a href="https://lobste.rs/s/hjrgrk/best_aspects_c_language">Lobsters</a>)</li>
+<li><a href="https://github.com/c3lang/c3c">C3 Language Compiler</a> - C3 is a C-like language trying to be "an incremental improvement over C" rather than a whole new language. (<a href="https://news.ycombinator.com/item?id=27876570">HN</a>)</li>
+<li><a href="https://github.com/coccinelle/coccinelle">Coccinelle</a> - Allows programmers to easily write some complex style-preserving source-to-source transformations on C source code, like for instance to perform some refactorings.</li>
+<li><a href="https://github.com/wbowling/rcc">rcc</a> - Basic c compiler written in rust.</li>
+<li><a href="https://norasandler.com/2017/11/29/Write-a-Compiler.html">Writing a C Compiler (2017)</a> (<a href="https://github.com/nlsandler/write_a_c_compiler">Code</a>)</li>
+<li><a href="https://stackoverflow.com/questions/599365/what-is-your-favorite-c-programming-trick">What is your favorite C programming trick?</a> (<a href="https://news.ycombinator.com/item?id=25176531">HN</a>)</li>
+<li><a href="https://github.com/mkirchner/linked-list-good-taste">Linus Torvalds' good taste argument for linked lists, explained</a> (<a href="https://news.ycombinator.com/item?id=25326552">HN</a>)</li>
+<li><a href="https://github.com/aguinet/dragonffi">DragonFFI</a> - C Foreign Function Interface (FFI) library written in C++ and based on Clang/LLV.</li>
+<li><a href="https://github.com/aguinet/purectypes">PureCTypes</a> - Pure-python package to describe portable C structures.</li>
+<li><a href="https://securitylab.github.com/research/now-you-c-me-part-two">Now you C me, now you don't, part two: exploiting the in-between (2020)</a></li>
+<li><a href="https://github.com/f0lg0/c-ds-algos">Data Structures and Algorithms in C (implementations and notes)</a></li>
+<li><a href="https://not.cafe/2020/10/12/getting-started-with-c-programming.html">Getting started with C programming a lightning-fast start for absolute beginners (2020)</a> (<a href="https://news.ycombinator.com/item?id=25442165">HN</a>)</li>
+<li><a href="https://github.com/anael-seghezzi/CToy">C-Toy</a> - Interactive C coding environment.</li>
+<li><a href="https://github.com/michaelforney/cproc">cproc</a> - C11 compiler using QBE as a backend. (<a href="https://news.ycombinator.com/item?id=28242024">HN</a>)</li>
+<li><a href="https://justine.lol/cosmopolitan/index.html">Cosmopolitan Libc</a> - Build-once run-anywhere C library. (<a href="https://github.com/jart/cosmopolitan">Code</a>) (<a href="https://news.ycombinator.com/item?id=25556286">HN</a>) (<a href="https://justine.lol/cosmopolitan/">HN 2</a>) (<a href="https://news.ycombinator.com/item?id=26273960">HN 3</a>) (<a href="https://justine.storage.googleapis.com/ape.html">Actually Portable Executable</a>) (<a href="https://lobste.rs/s/xnqpyp/cosmopolitan_c_library">Lobsters</a>) (<a href="https://lobste.rs/s/2dtkdo/cosmopolitan_v2_1">Lobsters</a>) (<a href="https://github.com/shmup/awesome-cosmopolitan">Awesome</a>)</li>
+<li><a href="https://www.learn-c.org/">Learn C</a> - Free Interactive C Tutorial.</li>
+<li><a href="https://sasha-f.medium.com/why-mmap-is-faster-than-system-calls-24718e75ab37">Why mmap is faster than system calls (2019)</a> (<a href="https://news.ycombinator.com/item?id=25701959">HN</a>)</li>
+<li><a href="https://github.com/gotranspile/cxgo">CxGo</a> - Tool for translating C source code to Go.</li>
+<li><a href="https://github.com/Wafelack/wng">Wanager</a> - Package manager and project manager for the C &amp; C++ programming languages.</li>
+<li><a href="https://inst.eecs.berkeley.edu//~cs61c/resources/HarveyNotesC1-3.pdf">B. Harvey's Intro to C (2007)</a></li>
+<li><a href="https://github.com/drh/lcc">lcc</a> - Retargetable Compiler for ANSI C. (<a href="https://drh.github.io/lcc/">Web</a>)</li>
+<li><a href="https://github.com/thepowersgang/rust-cc">C Compiler/Parser written in Rust</a></li>
+<li><a href="https://github.com/minio/c2goasm">c2goasm</a> - C to Go Assembly.</li>
+<li><a href="https://github.com/csvitlik/static_analysis_tools">List of C static analysis tools</a></li>
+<li><a href="https://github.com/jnz/q3vm">Q3VM</a> - Single file (vm.c) bytecode virtual machine/interpreter for C-language input.</li>
+<li><a href="https://gist.github.com/zeux/3ce4fcc3a43072b4315abde95319ecb6">How does Clang 2.7 hold up in 2021?</a> (<a href="https://news.ycombinator.com/item?id=25976855">HN</a>)</li>
+<li><a href="https://fredrikj.net/blog/2021/01/developing-mathematical-software-in-c/">Developing mathematical software in C (2021)</a></li>
+<li><a href="https://computing.llnl.gov/tutorials/pthreads/">POSIX Threads Programming</a> (<a href="https://news.ycombinator.com/item?id=26085373">HN</a>)</li>
+<li><a href="https://beej.us/guide/bgc/html/split/index.html">Beej's Guide to C Programming</a> (<a href="https://github.com/beejjorgensen/bgc">Code</a>) (<a href="http://beej.us/guide/bgc/pdf/bgc_usl_c_1.pdf">PDF</a>) (<a href="https://news.ycombinator.com/item?id=26911399">HN</a>) (<a href="https://news.ycombinator.com/item?id=34946811">HN</a>)</li>
+<li><a href="https://bellard.org/otcc/">Obfuscated Tiny C Compiler</a> (<a href="https://news.ycombinator.com/item?id=26141124">HN</a>)</li>
+<li><a href="http://angelix.io/">Angelix</a> - Semantics-based test-driven automated program repair tool for C programs. (<a href="https://github.com/mechtaev/angelix">Code</a>)</li>
+<li><a href="https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-954.html">Inline and Sideline Approaches for Low-Cost Memory Safety in C (2021)</a></li>
+<li><a href="https://github.com/microsoft/checkedc">Checked C</a> - Adds static and dynamic checking to C to detect or prevent common programming errors such as buffer overruns and out-of-bounds memory accesses. (<a href="https://news.ycombinator.com/item?id=26190403">HN</a>) (<a href="https://news.ycombinator.com/item?id=34084455">HN</a>)</li>
+<li><a href="https://flapenguin.me/elf-dt-hash">ELF: symbol lookup via DT_HASH (2017)</a></li>
+<li><a href="https://ahgamut.github.io/c/2021/02/27/ape-cosmo/">Actually Portable Executables (2021)</a> (<a href="https://news.ycombinator.com/item?id=26292166">HN</a>)</li>
+<li><a href="https://gavinhoward.com/2021/02/rust-zig-and-the-futility-of-replacing-c/">Rust, Zig, and the Futility of "Replacing" C (2021)</a> (<a href="https://lobste.rs/s/1iiifg/rust_zig_futility_replacing_c">Lobsters</a>)</li>
+<li><a href="https://github.com/git/git/blob/master/banned.h">Git's list of banned C functions</a> (<a href="https://news.ycombinator.com/item?id=26347867">HN</a>)</li>
+<li><a href="https://github.com/x509cert/banned/blob/master/banned.h">Microsoft's list of banned C functions</a> (<a href="https://news.ycombinator.com/item?id=26353025">HN</a>)</li>
+<li><a href="https://github.com/Vexu/arocc">Aro</a> - C compiler written in Zig. (<a href="https://news.ycombinator.com/item?id=30214485">HN</a>)</li>
+<li><a href="https://daniel.haxx.se/blog/2021/03/09/half-of-curls-vulnerabilities-are-c-mistakes/">Half of curl’s vulnerabilities are C mistakes (2021)</a> (<a href="https://lobste.rs/s/3efzcx/half_curl_s_vulnerabilities_are_c">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=26396323">HN</a>)</li>
+<li><a href="https://quuxplusone.github.io/blog/2021/03/12/gets-considered-harmful-duh/">C's removal of <code>gets</code> could have been done better (2021)</a></li>
+<li><a href="https://rachelbythebay.com/w/2021/03/24/comp/">Compile times, and why "the obvious" might not be so (2021)</a> (<a href="https://lobste.rs/s/ounjyq/compile_times_why_obvious_might_not_be_so">Lobsters</a>)</li>
+<li><a href="https://github.com/diffblue/cbmc">CBMC</a> - Bounded Model Checker for C and C++ programs. (<a href="http://www.cprover.org/cbmc/">Web</a>)</li>
+<li><a href="https://iafisher.com/blog/2020/06/type-safe-generics-in-c">Type-safe generic data structures in C (2020)</a></li>
+<li><a href="https://www.youtube.com/watch?v=QpAhX-gsHMs">Modern C and What We Can Learn from It (2021)</a> (<a href="https://news.ycombinator.com/item?id=27059976">HN</a>)</li>
+<li><a href="https://johnysswlab.com/the-price-of-dynamic-memory-allocation/">The price of dynamic memory: Allocation (2020)</a></li>
+<li><a href="https://justine.lol/endian.html">The Byte Order Fiasco (2021)</a> (<a href="https://lobste.rs/s/celegm/byte_order_fiasco">Lobsters</a>)</li>
+<li><a href="https://github.com/microsoft/snmalloc">snmalloc</a> - High-performance allocator.</li>
+<li><a href="https://interrupt.memfault.com/blog/opaque-pointers">Practical Design Patterns: Opaque Pointers and Objects in C (2021)</a> (<a href="https://lobste.rs/s/zkpczs/practical_design_patterns_opaque">Lobsters</a>)</li>
+<li><a href="https://github.com/xoreaxeaxeax/movfuscator">Movfuscator</a> - Compile C into only mov instructions. (<a href="https://news.ycombinator.com/item?id=27202801">HN</a>) (<a href="https://news.ycombinator.com/item?id=28176410">HN</a>)</li>
+<li><a href="https://www.yodaiken.com/2021/05/19/undefined-behavior-in-c-is-a-reading-error/">Undefined behavior in C is a reading error (2021)</a> (<a href="https://lobste.rs/s/zmxvml/undefined_behavior_c_is_reading_error">Lobsters</a>)</li>
+<li><a href="https://github.com/larmel/lacc">lacc</a> - Simple, self-hosting C compiler.</li>
+<li><a href="https://plv.mpi-sws.org/refinedc/paper.pdf">RefinedC: Automating the Foundational Verification of C Code with Refined Ownership Types (2021)</a> (<a href="https://news.ycombinator.com/item?id=27265329">HN</a>)</li>
+<li><a href="https://floooh.github.io/2019/09/27/modern-c-for-cpp-peeps.html">Modern C for C++ Peeps (2019)</a> (<a href="https://news.ycombinator.com/item?id=34287562">HN</a>)</li>
+<li><a href="http://libdill.org/structured-concurrency.html">Libdill: Structured Concurrency for C (2016)</a> (<a href="https://news.ycombinator.com/item?id=27357295">HN</a>)</li>
+<li><a href="https://momentsingraphics.de/ToyRenderer1KeepItSimple.html">Goodbye C++, Hello C (2021)</a> (<a href="https://news.ycombinator.com/item?id=27637266">HN</a>)</li>
+<li><a href="https://github.com/AbsInt/CompCert">CompCert</a> - Formally-verified C compiler. (<a href="https://compcert.org/">Web</a>) (<a href="https://news.ycombinator.com/item?id=27648735">HN</a>)</li>
+<li><a href="https://mazzo.li/posts/c-performance-anecdote.html">When static makes your C code 10 times faster (2021)</a> (<a href="https://news.ycombinator.com/item?id=27729377">HN</a>) (<a href="https://lobste.rs/s/puknrj/when_static_makes_your_c_code_10_times">Lobsters</a>)</li>
+<li><a href="https://gopiandcode.uk/logs/log-certified-synthesis.html">Goodbye C developers: The future of programming with certified program synthesis (2021)</a> (<a href="https://lobste.rs/s/yl1klr/goodbye_c_developers_future_programming">Lobsters</a>)</li>
+<li><a href="https://hirrolot.github.io/posts/macros-on-steroids-or-how-can-pure-c-benefit-from-metaprogramming.html">Macros on Steroids, Or: How Can Pure C Benefit From Metaprogramming (2021)</a></li>
+<li><a href="https://arxiv.org/pdf/2107.10533.pdf">CGuard: Efficient Spatial Safety for C (2021)</a></li>
+<li><a href="http://www.ioccc.org/">IOCCC</a> - The International Obfuscated C Code Contest. (<a href="http://www.ioccc.org/winners.html">Winners</a>)</li>
+<li><a href="https://arxiv.org/abs/2107.11912">Performance vs Programming Effort between Rust and C on Multicore Architectures: Case Study in N-Body (2021)</a></li>
+<li><a href="https://lwn.net/SubscriberLink/864521/d704bdcced0c5c60/">Strict memcpy() bounds checking for the kernel (2021)</a> (<a href="https://news.ycombinator.com/item?id=28015263">HN</a>)</li>
+<li><a href="https://nullprogram.com/blog/2021/07/30/">strcpy: a niche function you don't need (2021)</a> (<a href="https://lobste.rs/s/3fxmpq/strcpy_niche_function_you_don_t_need">Lobsters</a>)</li>
+<li><a href="http://www.literateprogramming.com/ifdefs.pdf">#ifdef Considered Harmful, or Portability Experience with C News (1992)</a></li>
+<li><a href="https://github.com/riicchhaarrd/ocean">Ocean</a> - Programming language lik C that compiles into a x86 ELF executable. (<a href="https://news.ycombinator.com/item?id=28048528">HN</a>)</li>
+<li><a href="https://blog.joren.ga/vla-bad">The (too) many pitfalls of VLA in C (2021)</a></li>
+<li><a href="https://www.chiark.greenend.org.uk/~sgtatham/cdescent/">The Descent to C (2013)</a> (<a href="https://news.ycombinator.com/item?id=28378627">HN</a>)</li>
+<li><a href="https://thephd.dev/c-the-improvements-june-september-virtual-c-meeting">Progress on C23 (2021)</a> (<a href="https://news.ycombinator.com/item?id=28423793">HN</a>) (<a href="https://thephd.dev/c-the-improvements-june-september-virtual-c-meeting">Lobsters</a>)</li>
+<li><a href="https://github.com/eliben/pycparser">pycparser</a> - Complete C99 parser in pure Python.</li>
+<li><a href="https://github.com/arithy/packcc">PackCC</a> - Parser generator for C.</li>
+<li><a href="https://www.youtube.com/watch?v=vFB0Ot-ZdIM">Why is C Faster Than My Language? (2021)</a></li>
+<li><a href="https://www.teamten.com/lawrence/style/">Elements of C Style</a></li>
+<li><a href="https://github.com/ned14/pcpp">pcpp</a> - C99 preprocessor written in pure Python.</li>
+<li><a href="https://github.com/apankrat/notes/tree/master/fast-case-conversion">Fast character case conversion (or how to compress sparse arrays)</a> (<a href="https://news.ycombinator.com/item?id=28854808">HN</a>)</li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2851.pdf">Proposal to add constexpr to C (2021)</a> (<a href="https://news.ycombinator.com/item?id=28861672">HN</a>)</li>
+<li><a href="https://github.com/jethrogb/rust-cexpr">rust-cexpr</a> - C expression parser and evaluator.</li>
+<li><a href="https://beej.us/guide/bgc/html/split/goto.html">When to Use Goto</a> (<a href="https://news.ycombinator.com/item?id=28943153">HN</a>)</li>
+<li><a href="https://www.netmeister.org/blog/return-printf.html">There is no 'printf' (2021)</a> (<a href="https://news.ycombinator.com/item?id=28931457">HN</a>)</li>
+<li><a href="https://github.com/dyu/ffi-overhead">Comparing the c ffi overhead on various programming languages</a></li>
+<li><a href="https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buzz">55GiB/s FizzBuzz</a> (<a href="https://news.ycombinator.com/item?id=29031488">HN</a>) (<a href="https://lobste.rs/s/ploajb/high_throughput_fizz_buzz_31gib_fizz_buzz">Lobsters</a>)</li>
+<li><a href="https://lemire.me/blog/2021/10/27/in-c-how-do-you-know-if-the-dynamic-allocation-succeeded/">In C, how do you know if the dynamic allocation succeeded?</a> (<a href="https://news.ycombinator.com/item?id=29123678">HN</a>)</li>
+<li><a href="https://github.com/cc65/cc65">cc65</a> - Freeware C compiler for 6502 based systems. (<a href="https://cc65.github.io/doc/">Docs</a>)</li>
+<li><a href="https://simonbyrne.github.io/notes/fastmath/">Beware of fast-math (2021)</a> (<a href="https://news.ycombinator.com/item?id=29201473">HN</a>)</li>
+<li><a href="https://hal.archives-ouvertes.fr/hal-01633123/document">A Simple, Possibly Correct LR Parser for C11 (2017)</a></li>
+<li><a href="https://www.youtube.com/watch?v=zuegQmMdy8M">Pointers in C / C++ [Full Course] (2020)</a></li>
+<li><a href="https://github.com/alexfru/SmallerC">Smaller C</a> - Simple and small single-pass C compiler.</li>
+<li><a href="https://github.com/agavrel/42_CheatSheet">Comprehensive guide to 50 years of evolution of strict C programming</a> (<a href="https://news.ycombinator.com/item?id=29347623">HN</a>)</li>
+<li><a href="https://multun.net/obscure-c-features.html">Some obscure C features (2019)</a> (<a href="https://lobste.rs/s/p0vejb/some_obscure_c_features">Lobsters</a>)</li>
+<li><a href="https://www.andreinc.net/2021/12/01/writing-a-simple-vm-in-less-than-125-lines-of-c">Writing a register based VM in less than 125 lines of C code (2021)</a> (<a href="https://news.ycombinator.com/item?id=29492183">HN</a>)</li>
+<li><a href="https://github.com/nasa/ogma">Ogma</a> - Tool to facilitate the integration of safe runtime monitors into other systems. Extends Copilot, a high-level runtime verification framework that generates hard real-time C99 code.</li>
+<li><a href="https://github.com/moehriegitt/vastringify">Type-Safe Printf For C</a> (<a href="https://news.ycombinator.com/item?id=29528571">HN</a>)</li>
+<li><a href="https://github.com/vickenty/lang-c">Lang-C</a> - Lightweight C parser for Rust.</li>
+<li><a href="https://marc.info/?l=git&amp;m=124111702609723&amp;w=2">Why Is C Faster Than Java (2009)</a> (<a href="https://news.ycombinator.com/item?id=29659266">HN</a>)</li>
+<li><a href="https://graphitemaster.github.io/aau/">Almost Always Unsigned (2022)</a> (<a href="https://news.ycombinator.com/item?id=29766658">HN</a>)</li>
+<li><a href="http://ryanhileman.info/posts/lib43">C Runtime Overhead (2015)</a> (<a href="https://news.ycombinator.com/item?id=29783585">HN</a>)</li>
+<li><a href="https://engineering.backtrace.io/2021-12-19-bounded-dynamicism-with-cross-modifying-code/">Ridiculously fast feature flags (2021)</a> (<a href="https://lobste.rs/s/hgzqs6/ridiculously_fast_feature_flags">Lobsters</a>)</li>
+<li><a href="https://github.com/cil-project/cil">CIL</a> - C Intermediate Language.</li>
+<li><a href="https://subethasoftware.com/2022/01/18/c-structures-and-padding-and-sizeof/">C structures and padding and sizeof (2022)</a> (<a href="https://lobste.rs/s/ooxh7n/c_structures_padding_sizeof">Lobsters</a>)</li>
+<li><a href="https://elektron.sigsegv.ch/articles/1/centralizing-resource-cleanup-paths-in-c/">Centralizing Resource Cleanup Paths in C</a> (<a href="https://lobste.rs/s/jkx47x/centralizing_resource_cleanup_paths_c">Lobsters</a>)</li>
+<li><a href="https://devblogs.microsoft.com/oldnewthing/20220207-00/?p=106223">Finding the average of two unsigned integers without overflow (2022)</a> (<a href="https://news.ycombinator.com/item?id=30252263">HN</a>)</li>
+<li><a href="https://github.com/MatthieuDartiailh/pyclibrary">PyClibrary</a> - C parser and bindings automation for Python.</li>
+<li><a href="https://p403n1x87.github.io/running-c-unit-tests-with-pytest.html">Running C unit tests with pytest (2022)</a></li>
+<li><a href="https://arxiv.org/abs/2201.13394">A Formal Model of Checked C (2022)</a> (<a href="https://news.ycombinator.com/item?id=30321535">HN</a>)</li>
+<li><a href="https://twitter.com/__phantomderp/status/1494801365297676293">C meeting is over. C23 added the following (2022)</a> (<a href="https://news.ycombinator.com/item?id=30395016">HN</a>)</li>
+<li><a href="https://briancallahan.net/blog/20220220.html">I wrote the least-C C program I could (2022)</a> (<a href="https://news.ycombinator.com/item?id=30412654">HN</a>)</li>
+<li><a href="https://begriffs.com/posts/2018-11-15-c-portability.html">C Portability Lessons from Weird Machines (2018)</a> (<a href="https://news.ycombinator.com/item?id=30417802">HN</a>)</li>
+<li><a href="https://lwn.net/SubscriberLink/885941/01fdc39df2ecc25f/">Moving the Linux Kernel to Modern C (2022)</a> (<a href="https://news.ycombinator.com/item?id=30459634">HN</a>) (<a href="https://lobste.rs/s/hl5ty0/moving_kernel_modern_c">Lobsters</a>) (<a href="https://www.reddit.com/r/programming/comments/t1mjwn/linus_torvalds_prepares_to_move_the_linux_kernel/">Reddit</a>)</li>
+<li><a href="https://felix-knorr.net/blog/using_gdb_directly.html">Debugging with GDB (2022)</a> (<a href="https://news.ycombinator.com/item?id=30512302">HN</a>)</li>
+<li><a href="https://www.sourceware.org/gdb/current/onlinedocs/gdb.html">Debugging with GDB</a> (<a href="https://news.ycombinator.com/item?id=30737509">HN</a>)</li>
+<li><a href="http://perso.b2b2c.ca/~sarrazip/dev/cmoc.html">CMOC</a> - 6809 cross-compiler for a C-like language.</li>
+<li><a href="https://lovesegfault.com/posts/c-arrays-are-not-pointers/">C Arrays Are Not Pointers (2021)</a></li>
+<li><a href="https://thephd.dev/to-save-c-we-must-save-abi-fixing-c-function-abi">To Save C, We Must Save ABI (2022)</a> (<a href="https://news.ycombinator.com/item?id=30660528">HN</a>)</li>
+<li><a href="https://nullprogram.com/blog/2022/03/13/">A flexible, lightweight, spin-lock barrier (2022)</a></li>
+<li><a href="https://gankra.github.io/blah/c-isnt-a-language/">C Isn't A Programming Language Anymore (2022)</a> (<a href="https://lobste.rs/s/w9sotc/c_isn_t_programming_language_anymore">Lobsters</a>) (<a href="https://www.reddit.com/r/ProgrammingLanguages/comments/tg55ow/c_isnt_a_programming_language_anymore_faultlore/">Reddit</a>) (<a href="https://twitter.com/Gankra_/status/1504208394802061326">Tweet</a>) (<a href="https://www.reddit.com/r/rust/comments/tp37m4/c_isnt_a_programming_language_anymore_faultlore/">Reddit</a>)</li>
+<li><a href="https://gist.github.com/fay59/5ccbe684e6e56a7df8815c3486568f01">Mildly Interesting Quirks of C</a> (<a href="https://news.ycombinator.com/item?id=33680239">HN</a>)</li>
+<li><a href="https://github.com/qeedquan/gosubc">SubC</a> - Simple subset of C originally written by Nils Holms for teaching newcomers how to write a compiler.</li>
+<li><a href="https://github.com/goplus/c2go">c2go</a> - Convert C to Go.</li>
+<li><a href="https://austinhenley.com/blog/cosine.html">Implementing cosine in C from scratch (2020)</a> (<a href="https://news.ycombinator.com/item?id=30844872">HN</a>)</li>
+<li><a href="https://nostarch.com/writing-c-compiler">Writing a C Compiler Book</a> (<a href="https://norasandler.com/2022/03/29/Write-a-C-Compiler-the-Book.html">Article</a>)</li>
+<li><a href="https://twitter.com/thingskatedid/status/1510451564749619203">Kate's C AMA (2022)</a></li>
+<li><a href="https://github.com/NunoDasNeves/haskell-c-compiler">Haskell C Compiler</a> - Learning Haskell for the first time and using it to write a simple C compiler.</li>
+<li><a href="https://briancallahan.net/blog/20220330.html">I wrote a peephole optimizer for QBE (2022)</a> (<a href="https://lobste.rs/s/jztimq/i_wrote_peephole_optimizer_for_qbe">Lobsters</a>)</li>
+<li><a href="https://nullprogram.com/blog/2018/05/27/">When FFI Function Calls Beat Native C (2018)</a> (<a href="https://news.ycombinator.com/item?id=30895444">HN</a>)</li>
+<li><a href="https://documentation.suse.com/sbp/server-linux/pdf/SBP-GCC-11_color_en.pdf">Advanced Optimization and New Capabilities of GCC 11</a></li>
+<li><a href="https://github.com/francisrstokes/tiny-c-projects">Tiny C Projects</a> - Collection of small C projects - usually a minimal example of something interesting.</li>
+<li><a href="https://news.ycombinator.com/item?id=30957273">Old C code – how to upgrade it? (2022)</a></li>
+<li><a href="https://ach.srht.site/minipeg">Minipeg</a> - Parser generator for C.</li>
+<li><a href="https://github.com/vegesm/c72">C72</a> - Port of the earliest C compiler to x86 (2021). (<a href="https://news.ycombinator.com/item?id=30981549">HN</a>)</li>
+<li><a href="https://github.com/lasarus/C-Compiler">C17 compiler written from scratch in C</a></li>
+<li><a href="https://github.com/aligrudi/neatcc">Neatcc</a> - Small arm/x86(-64) C compiler.</li>
+<li><a href="https://github.com/bobrippling/ucc-c-compiler">C-implemented C compiler</a></li>
+<li><a href="https://www.andreinc.net/2022/04/10/a-blog-that-is-a-single-executable-binary">A blog that is a single executable binary (2022)</a> (<a href="https://news.ycombinator.com/item?id=31081049">HN</a>)</li>
+<li><a href="https://github.com/mirror/tinycc">Tiny C Compiler</a> - Smallest ANSI C compiler.</li>
+<li><a href="https://github.com/hedronvision/bazel-compile-commands-extractor">Awesome tooling for Bazel users of the C language family</a></li>
+<li><a href="http://www.catb.org/esr/structure-packing/">The Lost Art of Structure Packing (2014)</a> (<a href="https://news.ycombinator.com/item?id=31182449">HN</a>)</li>
+<li><a href="https://github.com/kukrimate/cc3">Self-hosting C compiler</a></li>
+<li><a href="https://github.com/oriansj/stage0/blob/master/stage2/cc_x86.s">Minimal C compiler in x86 assembly</a> (<a href="https://news.ycombinator.com/item?id=31244150">HN</a>)</li>
+<li><a href="https://github.com/oriansj/stage0">Set of minimal dependency bootstrap binaries</a> - Goal of creating a bootstrapping path to a C compiler capable of compiling GCC, with only the explicit requirement of a single 1 KByte binary or less.</li>
+<li><a href="https://www.devever.net/~hl/cprec">A game for learning C operator precedence</a> (<a href="https://lobste.rs/s/4z37uj/game_for_learning_c_operator_precedence">Lobsters</a>)</li>
+<li><a href="https://www.andreinc.net/2022/05/01/4-integers-are-enough-to-write-a-snake-game">4 integers are enough to write a Snake Game (2022)</a> (<a href="https://lobste.rs/s/o80uoz/4_integers_are_enough_write_snake_game">Lobsters</a>)</li>
+<li><a href="https://nullprogram.com/blog/2022/05/14/">A lock-free, concurrent, generic queue in 32 bits (2022)</a> (<a href="https://news.ycombinator.com/item?id=31384602">HN</a>)</li>
+<li><a href="https://justine.lol/ftrace/">Logging C Functions (2022)</a> (<a href="https://news.ycombinator.com/item?id=31443198">Lobsters</a>)</li>
+<li><a href="https://ja.nsommer.dk/articles/linux-and-tiny-c-compiler-in-the-browser-part-one.html">Linux and Tiny C Compiler in the browser (2022)</a></li>
+<li><a href="https://github.com/WebKit/WebKit/blob/main/Source/bmalloc/libpas/Documentation.md">All About Libpas, Phil's Super Fast Malloc</a> (<a href="https://news.ycombinator.com/item?id=31581727">HN</a>)</li>
+<li><a href="https://hirrolot.github.io/posts/pretty-printable-enumerations-in-pure-c.html">Pretty-Printable Enumerations in Pure C (2022)</a></li>
+<li><a href="https://github.com/ltcmelo/psychec">Psyche-C</a> - Compiler frontend for the C programming language.</li>
+<li><a href="https://renato.athaydes.com/posts/testing-building-c-with-zig.html">Testing and building C projects with Zig (2022)</a></li>
+<li><a href="https://github.com/facebookincubator/clangir">ClangIR (CIR)</a> - New high-level IR for clang.</li>
+<li><a href="https://nullprogram.com/blog/2022/06/26/">Assertions should be more debugger-oriented (2022)</a></li>
+<li><a href="https://nwcpp.org/talks/2022/modules_in_c.pdf">Adding Modules to C in 10 Lines of Code</a> (<a href="https://news.ycombinator.com/item?id=31881413">HN</a>)</li>
+<li><a href="https://briancallahan.net/blog/20220629.html">OpenBSD has two new C compilers: chibicc and kefir (2022)</a> (<a href="https://news.ycombinator.com/item?id=31930718">HN</a>)</li>
+<li><a href="https://github.com/goblint/analyzer">Goblint</a> - Static analysis framework for C.</li>
+<li><a href="https://github.com/protopopov1122/kefir">Kefir C compiler</a> - Implementation of C17 language compiler from scratch.</li>
+<li><a href="https://github.com/TotallyNotChase/typeclass-interface-pattern">Polymorphism through Typeclasses / Interface / Traits in C</a></li>
+<li><a href="https://github.com/huawenyu/Design-Patterns-in-C">Practical design patterns in C</a></li>
+<li><a href="https://github.com/Beariish/little">little</a> - Small, fast, easily embeddable language implemented in C.</li>
+<li><a href="https://thephd.dev/finally-embed-in-c23">Embed is in C23 (2022)</a> (<a href="https://news.ycombinator.com/item?id=32201951">HN</a>) (<a href="https://lobste.rs/s/vwqjil/finally_embed_c">Lobsters</a>)</li>
+<li><a href="https://tratt.net/laurie/blog/2022/whats_the_most_portable_way_to_include_binary_blobs_in_an_executable.html">What's the most portable way to include binary blobs in an executable? (2022)</a> (<a href="https://news.ycombinator.com/item?id=32222161">HN</a>)</li>
+<li><a href="https://mccue.dev/pages/7-27-22-c-errors">The different ways to handle errors in C (2022)</a> (<a href="https://lobste.rs/s/8mqgal/different_ways_handle_errors_c">Lobsters</a>)</li>
+<li><a href="https://github.com/llvm/clangir">ClangIR (CIR)</a> - New high-level IR for clang.</li>
+<li><a href="https://lemon.rip/w/c99-vla-tricks/">C99 doesn't need function bodies, or 'VLAs are Turing complete' (2022)</a> (<a href="https://news.ycombinator.com/item?id=32343608">HN</a>)</li>
+<li><a href="https://thephd.dev/c23-is-coming-here-is-what-is-on-the-menu">C23 is Finished: Here is What is on the Menu (2022)</a> (<a href="https://news.ycombinator.com/item?id=32352569">HN</a>)</li>
+<li><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/CAPIsEffectsOfMalloc">The pervasive effects of C's malloc() and free() on C APIs (2022)</a> (<a href="https://news.ycombinator.com/item?id=32376542">HN</a>)</li>
+<li><a href="https://idiomdrottning.org/sexpc">sexpc</a> - C as S-expressions. (<a href="https://lobste.rs/s/mfdofb/sexpc_c_as_s_expressions">Lobsters</a>)</li>
+<li><a href="https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative">The case against an alternative to C (2022)</a> (<a href="https://news.ycombinator.com/item?id=32392161">Lobsters</a>)</li>
+<li><a href="https://nullprogram.com/blog/2022/08/08/">The quick and practical "MSI" hash table (2022)</a></li>
+<li><a href="https://250bpm.com/blog:56/index.html">Advanced Metaprogramming in C: A select statement (2022)</a> (<a href="https://news.ycombinator.com/item?id=32427137">HN</a>)</li>
+<li><a href="https://dl.acm.org/doi/10.1145/2647508.2647528">TruffleC: C implementation on top of JVM (2014)</a></li>
+<li><a href="https://250bpm.com/blog:4/">Why should I have written ZeroMQ in C, not C++ (2012)</a> (<a href="https://news.ycombinator.com/item?id=32445394">HN</a>)</li>
+<li><a href="https://github.com/chkoreff/Fexl">Fexl</a> - Function EXpression Language.</li>
+<li><a href="https://www.acepace.net/integerQuiz/">C Integer Quiz</a> (<a href="https://news.ycombinator.com/item?id=32712017">HN</a>)</li>
+<li><a href="https://jeskin.net/blog/getting-started-with-cosmopolitan-libc/">Tips to Get Started with Cosmopolitan Libc (2022)</a></li>
+<li><a href="https://www.jefftk.com/p/prototyping-in-c">Prototyping in C (2022)</a></li>
+<li><a href="https://blog.regehr.org/archives/1393">Teaching C (2016)</a> (<a href="https://news.ycombinator.com/item?id=32798826">HN</a>)</li>
+<li><a href="https://github.com/thradams/cake">Cake</a> - C23 compiler frond end written from scratch in C.</li>
+<li><a href="https://github.com/SWPFlow/C-Project-Based-Tutorials">C Project Based Tutorials</a></li>
+<li><a href="https://www.cc4e.com/">C Programming for Everybody</a> (<a href="https://github.com/csev/cc4e">Code</a>)</li>
+<li><a href="https://nullprogram.com/blog/2022/10/03/">Illuminating synchronization edges for ThreadSanitizer (2022)</a></li>
+<li><a href="https://stackoverflow.com/questions/7825055/what-does-the-operator-do-in-c">What does the ??!??! operator do in C?</a> (<a href="https://news.ycombinator.com/item?id=33101401">HN</a>)</li>
+<li><a href="https://github.com/woodrush/lambda-8cc">Lambda-8cc</a> - x86 C Compiler Written in Untyped Lambda Calculus. (<a href="https://news.ycombinator.com/item?id=33115719">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=33130533">Ask HN: Best book to learn C in 2022?</a></li>
+<li><a href="https://nostarch.com/bare-metal-c">Bare Metal C (2022)</a></li>
+<li><a href="https://codeofhonor.substack.com/p/learn-enough-c-to-survive">Learn enough C to survive (2022)</a> (<a href="https://news.ycombinator.com/item?id=33229162">HN</a>)</li>
+<li><a href="https://ahgamut.github.io/2022/10/23/debugging-c-with-cosmo/">Debugging C with Cosmopolitan Libc (2022)</a> (<a href="https://news.ycombinator.com/item?id=33312012">HN</a>)</li>
+<li><a href="https://macoy.me/blog/programming/LinkerLoaderIntro">Bringing a dynamic environment to C: My linker project (2022)</a> (<a href="https://lobste.rs/s/rtwvka/bringing_dynamic_environment_c_my_linker">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=33368991">HN</a>)</li>
+<li><a href="https://github.com/Znurre/dz">FluenC</a> - Modern, functional-first, C inspired language, with a focus on simplicity.</li>
+<li><a href="https://github.com/shuosc/Come">Come</a> - C like language and its compiler.</li>
+<li><a href="https://github.com/ohkimur/the-c-programming-language-2nd-edition-solutions">C Programming Language 2nd Edition - Solutions</a></li>
+<li><a href="https://github.com/jafarlihi/clex">clex</a> - Simple lexer generator for C. (<a href="https://lobste.rs/s/lasyib/github_jafarlihi_clex_clex_is_simple">Lobsters</a>)</li>
+<li><a href="https://faultlore.com/blah/c-isnt-a-language/">C Isn't a Programming Language Anymore (2022)</a> (<a href="https://news.ycombinator.com/item?id=33509223">HN</a>)</li>
+<li><a href="https://www.reddit.com/r/embedded/comments/ypktfv/what_tool_do_you_use_to_document_your_code_in_c/">What tool do you use to document your code in C language? (2022)</a></li>
+<li><a href="https://github.com/jafarlihi/cparse">cparse</a> - LR parser generator for C.</li>
+<li><a href="https://daniel.haxx.se/blog/2022/11/17/considering-c99-for-curl/">Considering C99 for curl (2022)</a> (<a href="https://news.ycombinator.com/item?id=33704054">HN</a>)</li>
+<li><a href="https://github.com/mattjbird/clanger">C compiler written in Swift</a></li>
+<li><a href="http://blog.pkh.me/p/37-gcc-undefined-behaviors-are-getting-wild.html">GCC undefined behaviors are getting wild (2022)</a></li>
+<li><a href="https://tmewett.com/c-tips/">Everything I wish I knew when learning C (2022)</a> (<a href="https://news.ycombinator.com/item?id=33773043">HN</a>)</li>
+<li><a href="https://github.com/tyfkda/xcc">XCC</a> - Toy C compiler for x86-64/aarch64/wasm.</li>
+<li><a href="https://wingolog.org/archives/2022/12/10/a-simple-semi-space-collector">Simple semi-space collector (2022)</a></li>
+<li><a href="https://thephd.dev/conformance-should-mean-something-fputc-and-freestanding">Conformance Should Mean Something - fputc, and Freestanding (2022)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=34105770">Ask HN: Learn C in 2023?</a></li>
+<li><a href="https://streaming.media.ccc.de/jev22/relive/49151">50 years of C, the good, the bad and the ugly (2022)</a></li>
+<li><a href="https://github.com/noti0na1/socc">SOCC</a> - Simple C Compiler in OCaml.</li>
+<li><a href="http://deavmi.assigned.network/research/">Explicit sequencing of C programs</a></li>
+<li><a href="https://dotat.at/@/2023-01-10-qsbr.html">Safe memory reclamation for BIND (2023)</a></li>
+<li><a href="https://interrupt.memfault.com/blog/zero-to-main-1">From Zero to main(): Bare metal C (2019)</a> (<a href="https://news.ycombinator.com/item?id=34459053">HN</a>)</li>
+<li><a href="https://people.kernel.org/kees/bounded-flexible-arrays-in-c">Bounded Flexible Arrays in C (2023)</a></li>
+<li><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/CAsAbstractMachine">C was not created as an abstract machine (2023)</a> (<a href="https://news.ycombinator.com/item?id=34623007">HN</a>) (<a href="https://lobste.rs/s/cnuxq6/c_was_not_created_as_abstract_machine">Lobsters</a>)</li>
+<li><a href="https://github.com/sysprog21/lab0-c">C Programming Lab: Assessing Your C Programming Skills</a></li>
+<li><a href="https://gavinhoward.com/2023/02/why-i-use-c-when-i-believe-in-memory-safety/">Why I Use C When I Believe in Memory Safety (2023)</a> (<a href="https://news.ycombinator.com/item?id=34662666">HN</a>)</li>
+<li><a href="https://nullprogram.com/blog/2023/02/12/">Let's write a setjmp (2023)</a> (<a href="https://lobste.rs/s/cbbv9z/let_s_write_setjmp">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=34760828">HN</a>)</li>
+<li><a href="https://arxiv.org/abs/2302.02384">CBMC: The C Bounded Model Checker (2023)</a></li>
+<li><a href="https://blog.joren.ga/less-known-c">Few lesser known tricks, quirks and features of C</a> (<a href="https://lobste.rs/s/if8osu/few_lesser_known_tricks_quirks_features_c">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=34855331">HN</a>)</li>
+<li><a href="https://dorinlazar.ro/220710-trying-to-modernize-goaccess.en/">Lessons learnt while trying to modernize some C code (2022)</a></li>
+<li><a href="https://blog.joren.ga/gotophobia-harmful">GOTOphobia considered harmful (in C) (2023)</a> (<a href="https://lobste.rs/s/hiteri/gotophobia_considered_harmful_c">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=34943952">HN</a>)</li>
+<li><a href="https://www.kernel.org/doc/html/v6.2/process/volatile-considered-harmful.html#volatile-considered-harmful">Why the “volatile” type class should not be used</a></li>
+<li><a href="https://www.andreinc.net/2023/02/01/demystifying-bitwise-ops">Demystifying bitwise operations, a gentle C tutorial (2023)</a> (<a href="https://news.ycombinator.com/item?id=35010447">HN</a>)</li>
+<li><a href="https://github.com/ifduyue/musl/blob/master/src/math/__cos.c">Cosine Implementation in C</a> (<a href="https://news.ycombinator.com/item?id=35381968">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=35441886">Ask HN: If Unix is written in C, how did they run C before Unix? (2023)</a></li>
+<li><a href="https://justine.lol/mmap/">Using mmap to make LLaMA load faster (2023)</a> (<a href="https://lobste.rs/s/r6awrd/edge_ai_just_got_faster">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=35455930">HN</a>)</li>
+<li><a href="https://www.deusinmachina.net/p/c-strings-and-my-slow-descent-to">C Strings and my slow descent to madness (2023)</a> (<a href="https://news.ycombinator.com/item?id=35467367">HN</a>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

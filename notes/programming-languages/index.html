@@ -1,0 +1,1650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../misc/libreoffice/">
+      
+      
+        <link rel="next" href="assembly/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Programming languages - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#programming-languages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programming languages
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Programming languages
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c/c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c/c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lisp/carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lisp/common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lisp/janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lisp/lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lisp/racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lisp/scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="programming-languages">Programming languages</h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<p>There is a <a href="https://briansteffens.github.io/2017/02/20/from-math-to-machine.html">great article</a> that goes over how one program can be written in different languages from the most abstract level of Math to Haskell to C to Assembly to actual machine code.</p>
+<p><a href="https://github.com/yallop/effects-bibliography">Effects bibliography</a> is a nice read.</p>
+<p><a href="https://github.com/Eliah-Lakhin/lady-deirdre">Lady Deirdre</a> is interesting for making IDE for your language.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><a href="https://twitter.com/tangled_zans/status/1441434927149420547">I have a very concrete approach for creating categorical models/semantics for PLs. I express the syntax as a GADT, wrap it with a free(r) monad, then work with the resulting kleisli category.</a></li>
+<li><a href="https://twitter.com/lexi_lambda/status/1533445067381387268">In general, our software benefits when we use as few languages as possible, because programming languages have such powerful network effects. Embedded DSLs are usually strongly preferable to freestanding ones because we get to reuse so much knowledge and infrastructure.</a></li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/learn-anything/programming-languages">Awesome programming languages</a></li>
+<li><a href="https://sites.google.com/site/steveyegge2/tour-de-babel">Tour de Babel</a> - Funny de tour of programming languages.</li>
+<li><a href="https://steshaw.org/plt/">Programming Language Theory</a></li>
+<li><a href="https://www.youtube.com/watch?v=vzLK_xE9Zy8">Conal Elliott - Teaching New Tricks to Old Programs (2017)</a></li>
+<li><a href="https://github.com/analysis-tools-dev/static-analysis">Awesome static analysis</a> - Static analysis tools for all programming languages, build tools, config files and more.</li>
+<li><a href="https://github.com/kaxap/arl">Lists of most popular repositories for most favored programming languages</a></li>
+<li><a href="https://github.com/dylanbeattie/rockstar">Rockstar</a> - Idiomatic Rockstar <a href="https://github.com/dylanbeattie/rockstar#examples">FizzBuzz implementation</a> is the best thing ever.</li>
+<li><a href="http://twelf.org/wiki/Main_Page">Twelf</a> - Language used to specify, implement, and prove properties of deductive systems such as programming languages and logics.</li>
+<li><a href="https://githut.info/">GitHut</a> - Place to discover languages on GitHub.</li>
+<li><a href="https://eli.twhegreenplace.net/2018/type-inference/">Type inference (2018)</a></li>
+<li><a href="https://maxhallinan.com/posts/2018/12/07/little-languages/">Little Languages</a> - <a href="https://lobste.rs/s/5vvvzj/little_languages">(Lobsters)</a></li>
+<li><a href="https://github.com/plfa/tspl">Course page Types and Semantics for Programming Languages (2018)</a></li>
+<li><a href="https://github.com/mathiasbynens/small">Smallest possible syntactically valid files of different types</a></li>
+<li><a href="http://www.ccs.neu.edu/home/matthias/7480-s17/">History of Programming Languages course</a> (<a href="https://github.com/nuprl/hopl-s2017">GitHub repo</a>)</li>
+<li><a href="https://hackernoon.com/the-programming-language-im-looking-for-948d93f7a396">The Programming Language I’m Looking For (2018)</a></li>
+<li><a href="http://parellagram.com/posts/tools">Go, Tooling, and New Languages (2016)</a></li>
+<li><a href="https://blog.acolyer.org/2019/01/25/programming-paradigms-for-dummies-what-every-programmer-should-know/">Programming paradigms for dummies: what every programmer should know (2019)</a></li>
+<li><a href="http://www.cs.cmu.edu/~rwh/papers/paradigms/paradigm.pdf">What, if anything, is a programming paradigm? (2017)</a></li>
+<li><a href="https://github.com/andrejbauer/plzoo">Programming Languages Zoo</a> - Collection of implementations of miniature programming languages. (<a href="https://plzoo.andrej.com/">Web</a>)</li>
+<li><a href="https://maxhallinan.com/posts/2019/02/15/thinking-in-a-language/">Thinking in a Language (2019)</a></li>
+<li><a href="https://lobste.rs/s/mcwvhn/what_are_some_niche_features_you_d_like_see">What are some niche features you'd like to see in more languages? (2019)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=19504453">Ask HN: What programming language should I learn next? (2019)</a></li>
+<li><a href="https://arxiv.org/abs/1905.00402">Next-Paradigm Programming Languages: What Will They Look Like and What Changes Will They Bring?</a> (<a href="https://news.ycombinator.com/item?id=19803379">HN</a>)</li>
+<li><a href="https://github.com/github/semantic">Semantic</a> - Haskell library and command line tool for parsing, analyzing, and comparing source code.</li>
+<li><a href="https://artur-martsinkovskyi.github.io//2019/dsls-are-hoax/">DSLs for non-programmers are a hoax (2019)</a> (<a href="https://news.ycombinator.com/item?id=20007813">HN</a>)</li>
+<li><a href="http://thume.ca/2019/04/29/comparing-compilers-in-rust-haskell-c-and-python/">Comparing the Same Project in Rust, Haskell, C++, Python, Scala and OCaml (2019)</a> (<a href="https://news.ycombinator.com/item?id=20192645">HN</a>)</li>
+<li><a href="https://github.com/leachim6/hello-world">Hello, World!</a> - Hello world in every computer language.</li>
+<li><a href="https://exercism.io/my/tracks">Exercism Language Tracks</a></li>
+<li><a href="https://github.com/zxqfl/TabNine/">TabNine</a> - All-language ML autocompleter.</li>
+<li><a href="https://lobste.rs/s/2cw6ov/say_something_you_dislike_about_language">Say something you dislike about a language you love (2019)</a></li>
+<li><a href="https://lobste.rs/s/hib1ui/say_something_nice_about_programming">Say something nice about a programming language you dislike (2019)</a></li>
+<li><a href="https://github.com/comby-tools/comby">comby</a> - Tool for changing code across many languages.</li>
+<li><a href="https://www.youtube.com/watch?v=43XaZEn2aLc">On the Expressive Power of Programming Languages by Shriram Krishnamurthi [PWLConf 2019]</a> (<a href="https://pwlconf.org/2019/shriram-krishnamurthi/">Web</a>) (<a href="https://news.ycombinator.com/item?id=25091705">HN</a>)</li>
+<li><a href="https://www.jwz.org/doc/worse-is-better.html">The Rise of 'Worse is Better' by Richard Gabriel</a></li>
+<li><a href="https://www.youtube.com/watch?v=3yVc5t-g-VU">"All the Languages Together" by Amal Ahmed (2018)</a></li>
+<li><a href="https://github.com/rsms/co">Co</a> - Programming language and optimizing compiler written in TypeScript. (<a href="https://rsms.me/co/doc/">Doc</a>)</li>
+<li><a href="http://web.eecs.umich.edu/~comar/courses/ui-for-pl/">User Interfaces for Programming Languages course (2019)</a></li>
+<li><a href="https://github.com/fplab/ui-for-pl">User Interfaces for Programming Languages: The Compendium</a></li>
+<li><a href="http://www.cs.cornell.edu/courses/cs6110/2018sp/">Advanced Programming Languages Cornell Course (2018)</a></li>
+<li><a href="https://cs.brown.edu/~sk/Publications/Papers/Published/fffkbmt-programmable-prog-lang/paper.pdf">A Programmable Programming Language (2018)</a> (<a href="https://news.ycombinator.com/item?id=21763407">HN</a>)</li>
+<li><a href="https://www.infoq.com/presentations/panel-future-languages/">Panel: the Future of Languages (2019)</a></li>
+<li><a href="https://www.youtube.com/watch?v=iO633Om2QmU">Programming Language Tourism: Leave Python and see the world (2019)</a></li>
+<li><a href="http://www.softwarepreservation.org/projects/apl/Books/APROGRAMMING%20LANGUAGE">A programming language by Kenneth E. Iverson book (1962)</a></li>
+<li><a href="https://factorcode.org/">Factor</a> - Practical stack language. (<a href="https://news.ycombinator.com/item?id=22053857">HN</a>)</li>
+<li><a href="https://factorcode.org/slava/dls.pdf">Factor: a dynamic stack-based programming language paper</a></li>
+<li><a href="https://rosettacode.org/wiki/Quine">Quine</a> - Self-referential program that can, without any external access, output its own source.</li>
+<li><a href="https://github.com/comby-tools/comby/">Comby</a> - Structural code search and replace for every language. (<a href="https://comby.dev/">Web</a>) (<a href="https://lobste.rs/s/lvv8lj/comby_tool_for_changing_code">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=31413533">HN</a>)</li>
+<li><a href="https://lobste.rs/s/mrl19l/what_would_programming_language">Lobsters: What would a programming language designed from the ground-up for a multi-core world look like? (2020)</a></li>
+<li><a href="https://www.cs.cmu.edu/~rwh/pfpl/2nded.pdf">Practical Foundations for Programming Languages</a></li>
+<li><a href="https://lobste.rs/s/ya4ajj/what_language_do_you_prefer_for_new">What language do you prefer for new project starts? (2020)</a></li>
+<li><a href="https://www.progsbase.com/blog/flow-charts-of-programming-language-constructs/">Flow-Charts of Programming Language Constructs (2020)</a> (<a href="https://news.ycombinator.com/item?id=22326669">HN</a>)</li>
+<li><a href="https://github.com/marcpaq/b1fipl">Bestiary of Single-File Implementations of Programming Languages</a></li>
+<li><a href="https://github.com/uber/NEAL">NEAL</a> - Language-independent code analysis tool that aims to enable more people to write quality enforcement rules.</li>
+<li><a href="https://hillelwayne.com/post/influential-dead-languages/">Most(ly dead) Influential Programming Languages (2020)</a> (<a href="https://news.ycombinator.com/item?id=22690229">HN</a>)</li>
+<li><a href="http://samth.github.io/">Sam Tobin-Hochstadt's research</a></li>
+<li><a href="https://github.com/akkartik/mu">Mu</a> - Minimal-dependency hobbyist computing stack (everything above the processor and OS kernel). (<a href="http://akkartik.name/post/neighborhood">Mu's neighborhood</a>) (<a href="https://lobste.rs/s/l74gwy/mu_s_neighborhood">Lobsters</a>)</li>
+<li><a href="http://akkartik.name/post/mu-2019-1">Mu: A minimal hobbyist computing stack (2019)</a></li>
+<li><a href="https://github.com/apbendi/bitsyspec">Bitsy</a> - Best language to implement when writing your first compiler or interpreter.</li>
+<li><a href="https://github.com/brendanzab/codespan">codespan-reporting</a> - Beautiful diagnostic reporting for text-based programming languages.</li>
+<li><a href="https://lobste.rs/s/z6n6pd/what_language_learn_during_quarantine">What language to learn during quarantine? (2020)</a></li>
+<li><a href="https://soc.me/languages/type-annotations">Language designers, use <code>ident: Type</code>, not <code>Type ident</code> (2017)</a> (<a href="https://lobste.rs/s/5gqmcj/language_designers_use_ident_type_not">Lobsters</a>)</li>
+<li><a href="https://jadon.io/blog/row-polymorphism">Row Polymorphism without the Jargon (2020)</a> (<a href="https://lobste.rs/s/obftqz/row_polymorphism_without_jargon">Lobsters</a>)</li>
+<li><a href="http://ps.informatik.uni-tuebingen.de/publications/schuster19zero.pdf">Zero-cost Effect Handlers by Staging (Technical Report) (2019)</a></li>
+<li><a href="https://arxiv.org/pdf/1911.04026.pdf">A generic imperative language for polynomial time (2020)</a></li>
+<li><a href="http://www.cs.cornell.edu/andru/papers/yizhou-dissertation.pdf">Designing flexible, modular linguistic abstractions (2019)</a></li>
+<li><a href="https://staticanalysis.org/nsad2019/papers/NSAD2019_paper_2_WM.pdf">An abstract domain for objects in dynamic programming languages (2019)</a></li>
+<li><a href="https://arxiv.org/pdf/1911.04523.pdf">A Simple Differentiable Programming Language (2020)</a></li>
+<li><a href="https://www.hillelwayne.com/post/learning-a-language/">The Hard Part of Learning a Language (2020)</a> (<a href="https://lobste.rs/s/rcdj1z/hard_part_learning_language">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=23347357">HN</a>)</li>
+<li><a href="https://github.com/theronic/hoist">Hoist</a> - Visual programming language inspired by Excel &amp; Datalog.</li>
+<li><a href="https://esoteric.codes/">Esoteric.Codes</a> - Languages, platforms, and systems that break from the norms of computing.</li>
+<li><a href="https://github.com/jeanqasaur/learn-programming-languages">Resources for the working programmer to learn more about the fundamentals and theory of programming languages</a></li>
+<li><a href="https://www.cs.bham.ac.uk/~pbl/papers/thesisqmwphd.pdf">Call-By-Push-Value</a> - New programming language paradigm, based on the slogan “a value is, a computation does".</li>
+<li><a href="https://github.com/returntocorp/semgrep">Semgrep</a> - Tool for easily detecting and preventing bugs and anti-patterns in your codebase. (<a href="https://semgrep.dev/">Web</a>) (<a href="https://news.ycombinator.com/item?id=26904951">HN</a>)</li>
+<li><a href="http://www.softwarepreservation.org/projects/ALGOL/book/Randell_ALGOL_60_Implementation_1964.pdf">Algol 60 implementation (1964)</a></li>
+<li><a href="https://github.com/google/codesearch">Code Search</a> - Tool for indexing and then performing regular expression searches over large bodies of source code. (<a href="https://lobste.rs/s/g7mntu/codesearch_fast_indexed_regexp_search">Lobsters</a>)</li>
+<li><a href="https://github.com/google/zoekt">Zoekt</a> - Fast text search engine, intended for use with source code.</li>
+<li><a href="https://h3rald.com/articles/10-more-programming-languages/">10 more programming languages worth checking out (2018)</a></li>
+<li><a href="http://cshandley.co.uk/JasonHulance/">A Beginner's Guide to Amiga E</a> (<a href="https://lobste.rs/s/jwuebp/beginner_s_guide_amiga_e">Lobsters</a>)</li>
+<li><a href="https://createlang.rs/">Create your own programming language with Rust</a> (<a href="https://github.com/ehsanmok/create-your-own-lang-with-rust">Code</a>)</li>
+<li><a href="https://dl.acm.org/toc/pacmpl/2020/4/HOPL">History of Programming Languages, Vol 4 (2020)</a> (<a href="https://lobste.rs/s/4v54rw/history_programming_languages_vol_4">Lobsters</a>)</li>
+<li><a href="http://plast-lab.github.io/">PLaST research group</a> - Focuses on applied programming languages and software engineering.</li>
+<li><a href="https://eng.uber.com/piranha/">Piranha: An Open Source Tool to Automatically Delete Stale Code (2020)</a> (<a href="https://news.ycombinator.com/item?id=23516823">HN</a>)</li>
+<li><a href="https://about.sourcegraph.com/blog/performance-improvements-in-precise-code-intel">Performance improvements in precise code intel (2020)</a></li>
+<li><a href="https://stefan-marr.de/2020/06/efficient-and-safe-implementations-of-dynamic-languages/">An Introduction to Efficient and Safe Implementations of Dynamic Languages (2020)</a></li>
+<li><a href="https://www.reddit.com/r/AskProgramming/comments/hgtaqb/whats_your_favorite_programming_language_and_what/">What's your favorite programming language and what feature makes it your favorite? (2020)</a></li>
+<li><a href="https://marcobonvini.com/modelica/2020/06/29/all-about-modelica.html">All about Modelica: An equation-based language for modeling physical systems (2020)</a> (<a href="https://news.ycombinator.com/item?id=23690788">HN</a>)</li>
+<li><a href="https://ptls.dev/tutorials/factorsVM.html">Writing a VM for a Small Stack-Base Language in Pointless</a> (<a href="https://lobste.rs/s/sdsr2y/writing_vm_for_small_stack_base_language">Lobsters</a>)</li>
+<li><a href="http://www.cs.nott.ac.uk/~pszgmh/popl.pdf">Principles of Programming Languages – Graham Hutton</a></li>
+<li><a href="https://app.clowdr.org/conference/popl2021">Principles of Programming Languages (POPL) 2021 Videos</a></li>
+<li><a href="http://www.cs.utexas.edu/users/EWD/transcriptions/EWD06xx/EWD667.html">Dijkstra: On the foolishness of "natural language programming"</a> (<a href="https://twitter.com/GabrielG439/status/1279178769949798400">Tweet</a>)</li>
+<li><a href="http://www.dis.uniroma1.it/~degiacom/CogRobCourse01/NielsonNielson.ps">Semantics with Applications: A Formal Introduction</a></li>
+<li><a href="https://www.cin.ufpe.br/~if721/intranet/TheFormalSemanticsofProgrammingLanguages.pdf">The Formal Semantics of Programming Languages: An Introduction (1993)</a></li>
+<li><a href="https://github.com/GavinMendelGleason/programming_semantics">Semantics of Programming Languages in Agda</a></li>
+<li><a href="https://www.gingerbill.org/article/2020/06/21/the-ownership-semantics-flaw/">The Fatal Flaw of Ownership Semantics (2020)</a></li>
+<li><a href="https://www.pyret.org/pyret-code/index.html">The Pyret Code; or A Rationale for the Pyret Programming Language</a> (<a href="https://lobste.rs/s/j0i8au/pyret_code_rationale_for_pyret">Lobsters</a>)</li>
+<li><a href="http://blog.ielliott.io/sized-hkts/">Statically Sized Higher-kinded Polymorphism (2020)</a> (<a href="https://lobste.rs/s/vlndlq/statically_sized_higher_kinded">Lobsters</a>)</li>
+<li><a href="https://steveklabnik.com/writing/the-language-strangeness-budget">The language strangeness budget (2015)</a></li>
+<li><a href="https://erkin.party/blog/190208/spaghetti/">Family spaghetti of programming languages (2019)</a></li>
+<li><a href="http://matt.might.net/articles/programming-with-continuations--exceptions-backtracking-search-threads-generators-coroutines/">Continuations by example: Exceptions, time-traveling search, threads, and more (2020)</a> (<a href="https://news.ycombinator.com/item?id=23859278">HN</a>)</li>
+<li><a href="http://www.cs.cmu.edu/~popl-interviews/">People of Programming Languages</a></li>
+<li><a href="http://abstract.ece.cmu.edu/peopleOfPLDI/">People of Language Design and Implementation</a></li>
+<li><a href="http://steshaw.org/hm/">Hindley-Milner Type Inference (2012)</a> (<a href="https://news.ycombinator.com/item?id=23794691">HN</a>)</li>
+<li><a href="https://ai.facebook.com/blog/deep-learning-to-translate-between-programming-languages">Deep learning to translate between programming languages (2020)</a> (<a href="https://news.ycombinator.com/item?id=23914465">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=23956851">Ask HN: What are you using new programming languages for? (2020)</a></li>
+<li><a href="https://thesephist.com/posts/pl/">Build your own programming language (2020)</a></li>
+<li><a href="https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf">A Foundation for Typed Concatenative Languages (2017)</a> - Presents a sound and complete type inference algorithm.</li>
+<li><a href="https://robert.ocallahan.org/2020/08/what-is-minimal-set-of-optimizations.html">What Is The Minimal Set Of Optimizations Needed For Zero-Cost Abstraction? (2020)</a></li>
+<li><a href="https://repl.it/talk/announcements/Programming-Language-Jam-Let-the-hacking-begin/49105">Kicking Off the Repl.it Programming Language Jam (2020)</a> (<a href="https://news.ycombinator.com/item?id=24113863">HN</a>)</li>
+<li><a href="https://overcast.fm/+LfVPfUqoc">Structure and Interpretation of Computer Programs with Hal Abelson (2019)</a></li>
+<li><a href="https://github.com/ak3n/modules-papers">Collection of papers on modules</a></li>
+<li><a href="https://analysis-tools.dev/">Analysis Tools</a> - Most Popular Analysis Tools by Programming Language. (<a href="https://github.com/analysis-tools-dev/dynamic-analysis">Code</a>)</li>
+<li><a href="https://buttondown.email/hillelwayne/archive/whats-the-deal-with-message-passing-anyway/">What's the Deal with Message Passing, Anyway (2020)</a> (<a href="https://lobste.rs/s/k0lx87/what_s_deal_with_message_passing_anyway">Lobsters</a>)</li>
+<li><a href="https://frantic.im/no-strings">Things that are not strings (2020)</a> (<a href="https://lobste.rs/s/wjpj6n/things_are_not_strings">Lobsters</a>)</li>
+<li><a href="https://www.youtube.com/playlist?list=PLyrlk8Xaylp4fOgwO5RUTrpgSA_HRjDMW">ICFP 2020</a></li>
+<li><a href="http://eopl3.com/">Essentials of Programming Languages</a> (<a href="https://github.com/mwand/eopl3">Code</a>) (<a href="https://news.ycombinator.com/item?id=24324653">HN</a>) (<a href="https://github.com/qdwang/eopl">Code in Racket</a>) (<a href="https://github.com/chenyukang/eopl">Solutions in Scheme</a>)</li>
+<li><a href="http://uwplse.org/">UW PLSE</a> - University of Washington Programming Languages and Software Engineering. (<a href="https://github.com/uwplse">GitHub</a>)</li>
+<li><a href="https://matklad.github.io//2020/09/13/your-language-sucks.html">Your Language Sucks, It Doesn’t Matter (2020)</a> (<a href="https://lobste.rs/s/zp2pqd/your_language_sucks_it_doesn_t_matter">Lobsters</a>)</li>
+<li><a href="https://greenlab.di.uminho.pt/wp-content/uploads/2017/10/sleFinal.pdf">Energy Efficiency across Programming Languages (2017)</a> (<a href="https://news.ycombinator.com/item?id=24642134">HN</a>)</li>
+<li><a href="https://ai.facebook.com/blog/deep-learning-to-translate-between-programming-languages/">Deep learning to translate between programming languages (2020)</a></li>
+<li><a href="https://blog.sigplan.org/2020/07/29/increasing-the-impact-of-pl-research/">Increasing the Impact of PL Research (2020)</a></li>
+<li><a href="https://www.coursera.org/learn/programming-languages">Programming Languages course by Dan Grossman</a> (<a href="https://github.com/chuabingquan/programming-languages-coursera">Answers</a>)</li>
+<li><a href="https://github.com/replit/polygott">Polygott</a> - Base Docker image for the Repl.it evaluation server.</li>
+<li><a href="https://www.youtube.com/watch?v=nWTvXbQHwWs">Chris Lattner: The Future of Computing and Programming Languages (2020)</a> (<a href="https://lexfridman.com/chris-lattner-2/">Web</a>) (<a href="https://news.ycombinator.com/item?id=24823384">HN</a>)</li>
+<li><a href="https://porges.github.io/programming-history/">History of Programming Language Topics</a> (<a href="https://github.com/Porges/programming-history">Code</a>)</li>
+<li><a href="https://signalsandthreads.com/language-design/">Language Design with Leo White (2020)</a> (<a href="https://lobste.rs/s/udstbt/dynamically_bound_goto_considered">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=24876465">HN</a>)</li>
+<li><a href="https://arzg.github.io/lang/">Make a Language Using Rust</a> (<a href="https://news.ycombinator.com/item?id=25026419">HN</a>)</li>
+<li><a href="http://neilmitchell.blogspot.com/2020/11/turing-incomplete-languages.html">Turing Incomplete Languages (2020)</a></li>
+<li><a href="https://pages.cs.wisc.edu/~loris/papers/popl21.pdf">Semantics-Guided Synthesis (2020)</a></li>
+<li><a href="https://lukeplant.me.uk/blog/posts/less-powerful-languages/">We need less powerful languages (2015)</a> (<a href="https://news.ycombinator.com/item?id=25090816">HN</a>)</li>
+<li><a href="https://twitter.com/jjcarett2/status/1321110900040994822">Learn languages that are not Java, Python and C++ (2020)</a></li>
+<li><a href="https://arxiv.org/abs/1912.04719">PLIERS: A Process that Integrates User-Centered Methods into Programming Language Design (2020)</a></li>
+<li><a href="https://cseweb.ucsd.edu/~npolikarpova/publications/icfp20-lifty.pdf">Liquid information flow control</a></li>
+<li><a href="https://github.com/JakeWheat/teaberry">teaberry</a> - Learning project to implement a typed functional programming language/dialect of ML, which aims to be accessible and usable like Python is.</li>
+<li><a href="https://github.com/AdaCore/langkit">Langkit</a> - Tool whose purpose is to make it easy to create syntactic and semantic analysis engines. Language creation framework.</li>
+<li><a href="https://github.com/sergioramos/remark-prism">remark-prism</a> - Syntax highlighter for markdown code blocks using Prism.</li>
+<li><a href="https://github.com/bytecodealliance/simplejit-demo">JIT compiler and runtime for a toy language, using Cranelift</a></li>
+<li><a href="https://sean.heelan.io/2020/11/18/phd-thesis-greybox-automatic-exploit-generation-for-heap-overflows-in-language-interpreters/">PhD Thesis: Greybox Automatic Exploit Generation for Heap Overflows (2020)</a></li>
+<li><a href="https://github.com/stereobooster/programming-languages-genealogical-tree">Programming languages genealogical tree</a></li>
+<li><a href="https://www.youtube.com/watch?v=Wp9XD5FKZ2c">Q&amp;A with Programming Language Beta Users (2020)</a></li>
+<li><a href="https://dannypsnl.github.io/write-a-programming-language/">Write You a Programming Language</a> (<a href="https://github.com/dannypsnl/write-a-programming-language">Code</a>)</li>
+<li><a href="https://github.com/dannypsnl/plt-research">PLT research</a> - Collection of PLT researching.</li>
+<li><a href="http://rigaux.org/language-study/concepts-history.html">History of programming languages concepts</a></li>
+<li><a href="http://rigaux.org/language-study/index.html">Programming Languages Study</a></li>
+<li><a href="https://github.com/pietervdvn/ALGT">ALGT</a> - Abstract Language Generation Tool.</li>
+<li><a href="https://andreabergia.com/stack-based-virtual-machines/">Stack Based Virtual Machines (2015)</a> (<a href="https://lobste.rs/s/1acll7/stack_based_virtual_machines_2015">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=25550776">HN</a>)</li>
+<li><a href="https://drewdevault.com/2020/12/25/How-to-design-a-new-programming-language.html">How to design a new programming language from scratch (2020)</a> (<a href="https://lobste.rs/s/vs08dv/how_design_new_programming_language_from">Lobsters</a>)</li>
+<li><a href="https://floooh.github.io/2020/08/23/sokol-bindgen.html">Automatic Language Bindings (2020)</a> (<a href="https://lobste.rs/s/5l0ntj/automatic_language_bindings">Lobsters</a>)</li>
+<li><a href="https://alexhumphreys.github.io/language-resources.html">Language resources</a> - Links on how to learn how to create programming languages.</li>
+<li><a href="http://grammarware.net/text/2020/dsl-adoption.pdf">Reflections on the Lack of Adoption of Domain Specific Languages</a> (<a href="https://news.ycombinator.com/item?id=25568703">HN</a>)</li>
+<li><a href="https://lobste.rs/s/ritbgc/what_glue_lanugages_do_you_use_like">Lobsters: What "glue" lanugages do you use/like? (2021)</a></li>
+<li><a href="https://github.com/codr7/alang">Build your own programming language in C++</a> (<a href="https://news.ycombinator.com/item?id=25652865">HN</a>)</li>
+<li><a href="https://github.com/ronreiter/interactive-tutorials">Interactive Tutorials for programming languages</a></li>
+<li><a href="https://pygments.org/">Pygments</a> - Generic syntax highlighter written in Python. (<a href="https://github.com/pygments/pygments">Code</a>)</li>
+<li><a href="https://github.com/pamellies/models-of-programming-languages">Models of Programming Languages</a></li>
+<li><a href="https://quizzical-dijkstra-2acb9c.netlify.app/ferrum/">Designing an actor-based programming language (2020)</a></li>
+<li><a href="https://github.com/sourcegraph/codeintellify">CodeIntellify</a> - Adds code intelligence to code views on the web.</li>
+<li><a href="https://github.com/go-enry/go-enry">go-enry</a> - Faster file programming language detector.</li>
+<li><a href="http://rigaux.org/language-study/scripting-language/">Scriptometer</a> - Measuring the ease of SOP (Script-Oriented Programming) of programming languages.</li>
+<li><a href="https://github.com/u235axe/FeOFu">FeOFu - Compiler Seminar</a> - Ideas that would lead to better compilers for existing languages, better future programming languages, better APIs and better performance software solutions in the future.</li>
+<li><a href="https://research.cs.queensu.ca/home/jana/PL/">Theory and Practice of Programming Languages</a> (<a href="https://github.com/lexi-lambda/racket-higher-rank">Racket implementation</a>)</li>
+<li><a href="https://github.com/mame/quine-relay">Quine Relay</a> - Ruby program that generates Rust program that generates Scala program that generates.</li>
+<li><a href="https://akr.am/languages/">Language Graph</a> - Shows a graph where the nodes are programming languages and the edges are compilers. (<a href="https://github.com/mohd-akram/languages">Code</a>)</li>
+<li><a href="https://github.com/GumTreeDiff/gumtree">GumTree</a> - Complete framework to deal with source code as trees and compute differences between them.</li>
+<li><a href="https://github.com/github/linguist">Linguist</a> - Library is used on GitHub.com to create languages used breakdowns.</li>
+<li><a href="https://joern.io/">Joern</a> - Open-Source Code Querying Engine. (<a href="https://github.com/ShiftLeftSecurity/joern">Code</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=c4Z25DJusuo">ATS or Why Linear Types are the Future of Systems Programming (2021)</a></li>
+<li><a href="https://nebelwelt.net/files/21ASPLOS.pdf">Enclosure: Language-Based Restriction of Untrusted Libraries</a></li>
+<li><a href="https://www.cis.upenn.edu/~plclub/">Programming Languages Group @ Penn</a></li>
+<li><a href="https://github.com/codereport/SICP-2020">SICP Book Notes</a></li>
+<li><a href="https://language.donghwi.dev/">Language Explorer</a> - Explore 650+ programming languages, visualized based on paradigm influence relationships between languages.</li>
+<li><a href="http://cs.brown.edu/research/plt/">Brown University PLT</a> (<a href="https://github.com/brownplt">GitHub</a>)</li>
+<li><a href="https://blog.royalsloth.eu/posts/dsl-might-be-the-answer/">DSL might be the answer (2021)</a></li>
+<li><a href="https://www.youtube.com/watch?v=f0ouXATi25Iindex=8">PL Funding Panel with the Creators of Elm, Elixir, and Julia (2021)</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLS2jJcAXR9IgLdhf2C74ms_aS4mZKuZJ1">#PLTalk - YouTube</a></li>
+<li><a href="https://github.com/prathyvsh/pl-catalog">Programming Languages for Enthusiasts</a></li>
+<li><a href="http://msp.cis.strath.ac.uk/">Mathematically Structured Programming Group @ University of Strathclyde</a></li>
+<li><a href="https://github.com/jeanqasaur/women-in-programming-languages-research">Women in Programming Languages and Software Engineering Research</a></li>
+<li><a href="https://erikbern.com/2018/08/30/i-dont-want-to-learn-your-garbage-query-language.html">I don't want to learn your query language (2018)</a> (<a href="https://news.ycombinator.com/item?id=26410047">HN</a>)</li>
+<li><a href="https://lobste.rs/s/qjrgq4/what_s_your_experience_been_writing">Lobsters: What's your experience been writing language tools? (2021)</a></li>
+<li><a href="https://benhoyt.com/writings/count-words/">Performance comparison: counting words in Python, Go, C++, C, AWK, Forth, and Rust (2021)</a> (<a href="https://news.ycombinator.com/item?id=26463967">HN</a>) (<a href="https://lobste.rs/s/3byl7t/performance_comparison_counting_words">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=32214419">HN</a>)</li>
+<li><a href="https://esoteric.codes/blog/what-programming-language-would-yoko-ono-write">What Programming Language Would Yoko Ono Create? (2021)</a></li>
+<li><a href="https://dev.to/awwsmm/20-intriguing-unusual-and-goofy-programming-languages-238f">20 Intriguing, Unusual, and Goofy Programming Languages (2019)</a></li>
+<li><a href="https://fsl.tools/">FSL.tools</a> - Programming language to make complex Finite State Machines easy to create and maintain.</li>
+<li><a href="https://lobste.rs/s/vnc7u4/language_evangelists_why_should_i_use">Language evangelists, why should I use [language]? (2021)</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/234286.1057810">A history of ALGOL 68</a></li>
+<li><a href="https://blog.chewxy.com/2021/03/25/bnfs/">The BNF Dream (2021)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=26657907">Ask HN: How to study programming language theory as a non CS student? (2021)</a></li>
+<li><a href="https://github.com/google/wuffs/blob/main/doc/wuffs-the-language.md">Wuffs the Language</a> (<a href="https://lobste.rs/s/kuv1lj/wuffs_language">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=26731305">HN</a>)</li>
+<li><a href="https://www.dawn-lang.org/posts/introducing-dawn-(part-1)/">Introducing Dawn (Part 1) (2021)</a> (<a href="https://lobste.rs/s/rqc2sj/introducing_dawn_part_1">Lobsters</a>)</li>
+<li><a href="https://www.dawn-lang.org/">Dawn languagea</a></li>
+<li><a href="https://evincarofautumn.blogspot.com/2012/02/why-concatenative-programming-matters.html">Why concatenative programming matters (2012)</a></li>
+<li><a href="https://github.com/jeanqasaur/pltalk">PLTalk links</a></li>
+<li><a href="http://siek.blogspot.com/2012/07/crash-course-on-notation-in-programming.html">Crash Course on Notation in Programming Language Theory (2012)</a></li>
+<li><a href="http://www.p-cos.net/documents/s32008.pdf">Reflection for the Masses</a> (<a href="https://github.com/namin/3-proto-lisp">Code</a>)</li>
+<li><a href="https://www.haskellforall.com/2021/04/the-end-of-history-for-programming.html">The end of history for programming (2021)</a></li>
+<li><a href="https://github.com/alilleybrinker/langs-in-rust">Langs In Rust</a> - List of programming languages implemented in Rust, for inspiration.</li>
+<li><a href="https://rena.to/blog/demystifying-interpreters">Demystifying interpreters (2020)</a></li>
+<li><a href="https://pldi21.sigplan.org/">PLDI 2021</a></li>
+<li><a href="https://github.com/numtide/treefmt">treefmt</a> - One CLI to format the code tree.</li>
+<li><a href="https://abhinavsarkar.net/posts/implementing-co-1/">Implementing Co, a Small Interpreted Language With Coroutines #1: The Parser (2021)</a></li>
+<li><a href="https://github.com/alecthomas/langx">Playground for PL ideas</a></li>
+<li><a href="https://www.nongnu.org/gzz/gi/gi.html">A Gentle Introduction to Ted Nelson's ZigZag Structure (2002)</a> (<a href="https://news.ycombinator.com/item?id=27210008">HN</a>)</li>
+<li><a href="https://github.com/yuewang-cuhk/awesome-programming-language-pretraining-papers">Recent Advances in Programming Language Pre-Trained Models (PL-PTMs)</a></li>
+<li><a href="https://github.com/Sereal/Sereal">Sereal</a> - Fast, compact, schema-less, binary serialization and deserialization oriented towards dynamic languages.</li>
+<li><a href="https://github.com/wilbowma/multi-lang-comp">Compilation as Multi-Language Semantics</a></li>
+<li><a href="https://github.com/jeanqasaur/dsl-syllabus-fall-2016">Domain-Specific Languages Syllabus (2016)</a></li>
+<li><a href="https://queue.acm.org/detail.cfm?id=3468263">Schrödinger's Code: Undefined behavior in theory and practice (2021)</a></li>
+<li><a href="https://riju.codes/">Riju</a> - Fast online playground for every programming language. (<a href="https://github.com/raxod502/riju">Code</a>)</li>
+<li><a href="https://github.com/2teez/plyg">plyg</a> - Playground to safely try out different programming languages in a single file.</li>
+<li><a href="https://github.com/barghouthi/cs704">Principles of Programming Languages Course Notes</a></li>
+<li><a href="https://news.ycombinator.com/item?id=27549463">Ask HN: Projects for learning a language? (2021)</a></li>
+<li><a href="https://github.com/langium/langium">Langium</a> - Language engineering tool with built-in support for the Language Server Protocol.</li>
+<li><a href="https://research.swtch.com/plmm">Programming Language Memory Models</a> (<a href="https://news.ycombinator.com/item?id=27750610">HN</a>)</li>
+<li><a href="https://www.cs.cmu.edu/~crary/819-f09/Landin66.pdf">The next 700 programming languages (1966)</a> (<a href="https://lobste.rs/s/mgugbx/next_700_programming_languages_1966">Lobsters</a>)</li>
+<li><a href="https://healeycodes.com/creating-the-golfcart-programming-language/">Creating the Golfcart Programming Language (2021)</a></li>
+<li><a href="https://programming-journal.org/2022/6/4/">Sham: A DSL for Fast DSLs (2021)</a></li>
+<li><a href="https://www.hhyu.org/posts/generator_and_continuation/">Beautiful ideas in programming: generators and continuations (2021)</a> (<a href="https://news.ycombinator.com/item?id=28034486">HN</a>)</li>
+<li><a href="https://github.com/terryyin/lizard">Lizard</a> - Code complexity analyser without caring about the C/C++ header files or Java imports, supports most of the popular languages.</li>
+<li><a href="https://plum-umd.github.io/abstracting-definitional-interpreters/">Abstracting Definitional Interpreters: Functional Pearl</a> (<a href="https://github.com/plum-umd/abstracting-definitional-interpreters">Code</a>)</li>
+<li><a href="https://github.com/langjam/langjam">Lang Jam</a> - Create a programming language in a weekend. (<a href="https://news.ycombinator.com/item?id=28021161">HN</a>)</li>
+<li><a href="https://github.com/westes/flex">flex</a> - Tool for generating scanners: programs which recognize lexical patterns in text.</li>
+<li><a href="https://twitter.com/mgattozzi/status/1422196566568341504">Programming languages where you define control flow in terms of state machines</a></li>
+<li><a href="https://scattered-thoughts.net/writing/implicit-ordering-in-relational-languages/">Implicit ordering in relational languages (2021)</a></li>
+<li><a href="https://imba.io/">Imba</a> - Friendly full-stack programming language for the web that compiles to performant JavaScript. (<a href="https://github.com/imba/imba">Code</a>) (<a href="https://news.ycombinator.com/item?id=28207662">HN</a>) (<a href="https://github.com/imba/imba-vite-template">Vite template</a>)</li>
+<li><a href="https://github.com/flatt-security/shisho">Shisho</a> - Lightweight static analyzer for several programming languages.</li>
+<li><a href="https://hyperthings.garden/posts/2021-06-20/hell-is-other-repls.html">Hell Is Other REPLs (2021)</a> (<a href="https://news.ycombinator.com/item?id=28345617">HN</a>)</li>
+<li><a href="http://paulgraham.com/weird.html">Weird Languages (2021)</a> (<a href="https://news.ycombinator.com/item?id=28336891">HN</a>)</li>
+<li><a href="https://github.com/facebookincubator/Glean">Glean</a> - System for collecting, deriving and working with facts about source code. (<a href="https://glean.software/">Web</a>) (<a href="https://news.ycombinator.com/item?id=28365880">HN</a>)</li>
+<li><a href="https://github.com/yoeo/guesslang">Guesslang</a> - Detects the programming language of a given source code. (<a href="https://guesslang.readthedocs.io/en/latest/">Docs</a>)</li>
+<li><a href="http://www.cs.toronto.edu/~matz/dissertation/matzDissertation-latex2html/node6.html">Dispatch Techniques</a> (<a href="https://lobste.rs/s/ux0e7f/dispatch_techniques">Lobsters</a>)</li>
+<li><a href="https://danluu.com/boring-languages/">A defense of boring languages (2015)</a> (<a href="https://lobste.rs/s/akoiot/defense_boring_languages_2015">Lobsters</a>)</li>
+<li><a href="https://www.cbui.dev/how-to-rapidly-improve-at-any-programming-language/">How to Rapidly Improve at Any Programming Language (2016)</a> (<a href="https://news.ycombinator.com/item?id=28577371">HN</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=3HsI4__8RQM&amp;list=PLyrlk8Xaylp6Q52MwsRZBUSIRL3wOk_k1&amp;index=5">First-class Names for Effect Handlers (2021)</a></li>
+<li><a href="https://lobste.rs/s/ulvsxt/is_it_better_teach_beginner_coders_low">Is it better to teach beginner coders a low level or a high level language as their first language? (2021)</a></li>
+<li><a href="https://cuddly-octo-palm-tree.com/posts/2021-06-19-cwafi-1/">Cuddly, Octo-Palm Tree: Cheap interpreter, part 1: overview (2021)</a></li>
+<li><a href="https://github.com/scottrogowski/code2flow">Code2flow</a> - Generates call graphs for dynamic programming language.</li>
+<li><a href="https://madhadron.com/posts/seven_languages.html">The seven programming ur-languages (2021)</a> (<a href="https://lobste.rs/s/kwpyt8/seven_programming_ur_languages">Lobsters</a>)</li>
+<li><a href="https://bernsteinbear.com/pl-resources/">Programming languages resources</a></li>
+<li><a href="https://blog.polybdenum.com/2021/10/03/implicit-overflow-considered-harmful-and-how-to-fix-it.html">Implicit Overflow Considered Harmful (and how to fix it) (2021)</a> (<a href="https://lobste.rs/s/5tuhxf/implicit_overflow_considered_harmful">Lobsters</a>)</li>
+<li><a href="https://github.com/microsoft/verona">Project Verona</a> - Research programming language for concurrent ownership. (<a href="https://microsoft.github.io/verona/">Web</a>) (<a href="https://lobste.rs/s/bh2epv/project_verona">Lobsters</a>)</li>
+<li><a href="https://john.cs.olemiss.edu/~dwilkins/Seminar/S05/winogradPL.pdf">Beyond ProgrammingLanguages (1979)</a> (<a href="https://lobste.rs/s/k0cucj/beyond_programming_languages_1979">Lobsters</a>)</li>
+<li><a href="https://github.com/tree-sitter/tree-sitter-graph">tree-sitter-graph</a> - Construct graphs from parsed source code.</li>
+<li><a href="https://ajrouvoet.github.io/files/thesis.pdf">Correct by Construction Language Implementations (2021)</a> (<a href="https://twitter.com/PerezJorgeA_/status/1448902148264284164">Tweet</a>)</li>
+<li><a href="https://twitter.com/jplubin/status/1449159815058522115">How do you write code in statically-typed functional programming languages (2021)</a></li>
+<li><a href="https://github.com/ftomassetti/LangSandbox">LangSandbox</a> - Project to illustrate how to build a programming language.</li>
+<li><a href="https://arxiv.org/abs/2110.03806v1">Toward a Theory of Programming Language and Reasoning Assistant Design: Minimizing Cognitive Load (2021)</a></li>
+<li><a href="https://github.com/Crell/enum-comparison">Comparison of enumerations and similar features in different languages</a></li>
+<li><a href="https://queue.acm.org/detail.cfm?id=3487021">Static Analysis: An Introduction (2021)</a></li>
+<li><a href="https://queue.acm.org/detail.cfm?id=3487022">Static Analysis at GitHub (2021)</a></li>
+<li><a href="https://cacm.acm.org/magazines/2022/2/258227-static-analysis-at-github/fulltext">Static Analysis at GitHub (2022)</a></li>
+<li><a href="https://twitter.com/ellenkorbes/status/1452437940299309063">Most accessible programming language (2021)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=29092998">Ask HN: If you designed a new programming language, what would its features be? (2021)</a></li>
+<li><a href="https://glot.io/">glot.io</a> - Open source pastebin with runnable snippets and API. (<a href="https://github.com/glotcode/glot-www">Code</a>)</li>
+<li><a href="https://jesper.sikanda.be/posts/1001-syntax-representations.html">1001 Representations of Syntax with Binding (2021)</a> (<a href="https://www.reddit.com/r/ProgrammingLanguages/comments/qnm5n6/1001_representations_of_syntax_with_binding/">Reddit</a>)</li>
+<li><a href="https://chigraph.io/">Chigraph</a> - Visual systems language for beginners compiled using LLVM. (<a href="https://github.com/chigraph/chigraph">Code</a>)</li>
+<li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html">Which programming language is fastest?</a> - Website that shows toy-program performance measurements for ~24 language implementations. (<a href="https://salsa.debian.org/benchmarksgame-team/benchmarksgame">Code</a>)</li>
+<li><a href="https://twitter.com/sunshowers6/status/1457162357591838721">What's your favorite GC-based language? (2021)</a></li>
+<li><a href="https://snarky.ca/programming-language-selection-is-a-form-of-premature-optimization/">Selecting a programming language can be a form of premature optimization (2021)</a></li>
+<li><a href="https://www.youtube.com/watch?v=Dz4q_bNDqfo">Shawn Wang - Growing a Meta-Language (2021)</a></li>
+<li><a href="https://arxiv.org/abs/1908.09681">Kindly Bent to Free Us (2019)</a></li>
+<li><a href="https://github.com/microsoft/power-fx">Microsoft Power Fx</a> - Low-code general purpose programming language based on spreadsheet-like formulas. (<a href="https://powerapps.microsoft.com/en-us/blog/power-fx-open-source-now-available/">Article</a>) (<a href="https://news.ycombinator.com/item?id=29261413">HN</a>)</li>
+<li><a href="https://blog.sigplan.org/2021/11/18/undefined-behavior-deserves-a-better-reputation/">Undefined Behavior deserves a better reputation (2021)</a> (<a href="https://lobste.rs/s/llbhtg/undefined_behavior_deserves_better">Lobsters</a>)</li>
+<li><a href="https://runno.dev/">Runno</a> - Helps you make runnable code examples that can be embedded in web pages. (<a href="https://github.com/taybenlor/runno">Code</a>)</li>
+<li><a href="http://micsymposium.org/mics_2009_proceedings/mics2009_submission_72.pdf">Pattern matching in concatenative programming languages (2009)</a></li>
+<li><a href="https://github.com/SVF-tools/SVF">Static Value-Flow Analysis Framework for Source Code</a></li>
+<li><a href="http://steve-yegge.blogspot.com/2008/05/dynamic-languages-strike-back.html">Dynamic Languages Strike Back (2008)</a></li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/r28x49/are_there_any_ml_style_languages_with_no_runtime/">Are there any ML style languages with no runtime? (2021)</a></li>
+<li><a href="https://github.com/zesterer/tao">Tao</a> - Statically-typed functional programming language.</li>
+<li><a href="https://www.ralfj.de/blog/2021/11/24/ub-necessary.html">Do we really need Undefined Behavior? (2021)</a> (<a href="https://news.ycombinator.com/item?id=29435263">HN</a>)</li>
+<li><a href="https://github.com/NerdWalletOSS/shepherd">Shepherd</a> - Utility for applying code changes across many repositories.</li>
+<li><a href="https://www.youtube.com/watch?v=l2R1PTGcwrE">"Incremental, zero-config Code Nav using stack graphs" by Douglas Creager (2021)</a> (<a href="https://dcreager.net/talks/2021-strange-loop/">Web</a>)</li>
+<li><a href="https://mukulrathi.com/create-your-own-programming-language/intro-to-compiler/">How I wrote my own "proper" programming language (2020)</a></li>
+<li><a href="https://github.com/pfalcon/awesome-program-analysis">Awesome Program Analysis</a></li>
+<li><a href="https://arxiv.org/abs/1808.08330">Code Generation for Higher Inductive Types (2018)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=29590681">Ask HN: How would a programming language look if designed by non-programmer (2021)</a></li>
+<li><a href="https://twitter.com/phil_eaton/status/1472389751223246854">Nice esoteric compilers (2021)</a></li>
+<li><a href="https://hillelwayne.com/talks/esolangs/">A Brief Introduction to Esoteric Languages (2021)</a> (<a href="https://www.youtube.com/watch?v=cQ7bcCrJMHc">Video</a>)</li>
+<li><a href="https://github.com/ostera/awesome-alt-langs">Awesome Alt Languages</a></li>
+<li><a href="https://queue.acm.org/detail.cfm?id=2721993">Go Static or Go Home (2015)</a> - In the end, dynamic systems are simply less secure.</li>
+<li><a href="https://dev.to/redbar0n/features-of-a-dream-programming-language-cio">Features of a dream programming language (2021)</a> (<a href="https://news.ycombinator.com/item?id=29716998">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=29715237">Ask HN: What is your favorite programming language and why? (2021)</a></li>
+<li><a href="https://github.com/FrankHB/pl-docs">Programing Language Documentations</a></li>
+<li><a href="https://arxiv.org/abs/2112.14679">Profile Guided Optimization without Profiles: A Machine Learning Approach (2021)</a></li>
+<li><a href="https://arxiv.org/abs/2112.14714">Automated Code Optimization with E-Graphs (2021)</a> (<a href="https://news.ycombinator.com/item?id=29775477">HN</a>)</li>
+<li><a href="https://github.com/Tencent/CodeAnalysis">Tencent Cloud Code Analysis (TCA)</a> - Code comprehensive analysis platform, which includes three components: server, web and client.</li>
+<li><a href="https://zverok.substack.com/p/what-you-can-learn-by-merely-writing">What you can learn by merely writing a programming language changelog (2022)</a></li>
+<li><a href="https://github.com/twitter/sqrl">SQRL</a> - Safe, Stateful Rules Language for Event Streams.</li>
+<li><a href="http://neugierig.org/software/blog/2022/01/rethinking-errors.html">Rethinking errors, warnings, and lints (2022)</a></li>
+<li><a href="https://www.youtube.com/watch?v=iPVoCTgvi8M">C++ Concepts vs Rust Traits vs Haskell Typeclasses vs Swift Protocols - Conor Hoekstra - ACCU 2021</a> (<a href="https://accu.org/conf-docs/PDFs_2021/conor_hoekstra_c_concepts_vs_haskell_typeclasses_vs_rust_traits_vs_swift_protocols.pdf">Slides</a>)</li>
+<li><a href="https://zverok.substack.com/p/following-the-programming-language">Following the programming language evolution, and taking it personally (2022)</a> (<a href="https://lobste.rs/s/ciqons/following_programming_language">Lobsters</a>)</li>
+<li><a href="https://gankra.github.io/blah/deinitialize-me-maybe/">Destroy All Values: Designing Deinitialization in Programming Languages (2022)</a></li>
+<li><a href="https://hirrolot.github.io/posts/why-static-languages-suffer-from-complexity#">Why Static Languages Suffer From Complexity (2022)</a> (<a href="https://lobste.rs/s/h7gkoe/why_static_languages_suffer_from">Lobsters</a>)</li>
+<li><a href="https://viralinstruction.com/posts/defense/">In defense of complicated programming languages (2022)</a> (<a href="https://news.ycombinator.com/item?id=30046053">HN</a>)</li>
+<li><a href="https://github.com/brundonsmith/bagel">Bagel</a> - Programming language designed for JavaScript programmers to write reactive UIs, using a paradigm where stateful procedures and pure functions are mutually exclusive categories. (<a href="https://www.brandons.me/blog/the-bagel-language">Article</a>) (<a href="https://www.brandons.me/blog/bagel-bites">Update</a>) (<a href="https://www.brandons.me/blog/bagel-bites-refinement">Bagel Bites: Type Refinement</a>)</li>
+<li><a href="https://tomassetti.me/domain-specific-languages/">The complete guide to (external) Domain Specific Languages</a></li>
+<li><a href="https://github.com/facebook/sapp">SAPP</a> - Post Processor for Facebook Static Analysis Tools.</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/seu238/concise_language_to_write_an_interpreter_for/">Concise language to write an interpreter for? (2022)</a></li>
+<li><a href="https://github.com/ChessMax/awesome-programming-languages">Awesome programming languages</a></li>
+<li><a href="https://lobste.rs/s/if8hle/have_you_found_side_effects_problem_by">Have you found side-effects a problem by increasing complexity in your code bases? (2022)</a></li>
+<li><a href="https://graphene.teknologiumum.com/">Graphene</a> - Create and share beautiful code snippets. (<a href="https://github.com/teknologi-umum/graphene">Code</a>)</li>
+<li><a href="https://github.com/tyhal/crie">crie</a> - Using a mix of other tools and libraries to create a dead simple meta-linter and formatter.</li>
+<li><a href="https://www.codeshiftcommunity.com/docs/">CodeshiftCommunity</a> - Community-owned global registry and documentation hub for codemods. (<a href="https://github.com/CodeshiftCommunity/CodeshiftCommunity">Code</a>)</li>
+<li><a href="https://programming-language-benchmarks.vercel.app/">Programming Language and compiler Benchmarks</a> (<a href="https://github.com/hanabi1224/Programming-Language-Benchmarks">Code</a>)</li>
+<li><a href="https://github.com/kostya/benchmarks">Benchmarks of different languages</a></li>
+<li><a href="https://github.com/SimonKagstrom/kcov">Kcov</a> - Code coverage tester for compiled languages, Python and Bash.</li>
+<li><a href="https://groups.seas.harvard.edu/courses/cs152/2022sp/">CS 152: Programming Languages Course (2022)</a> (<a href="https://github.com/HarvardPL/cs152-lecture-code">Code</a>)</li>
+<li><a href="https://rachelbythebay.com/w/2022/02/20/return/">Returning Values and Errors (2022)</a> (<a href="https://news.ycombinator.com/item?id=30409472">HN</a>) (<a href="https://lobste.rs/s/8dnc9w/returning_values_errors">Lobsters</a>)</li>
+<li><a href="https://flamegraph.com/">flamegraph.com</a> - Upload and Share Interactive Flamegraphs.</li>
+<li><a href="https://cs.lmu.edu/~ray/notes/languagedesignnotes/">So you want to design a programming language (2017)</a> (<a href="https://news.ycombinator.com/item?id=30481035">HN</a>)</li>
+<li><a href="https://esolangpark.vercel.app/">Esolang Park</a> - Online visual debugger for esoteric languages. (<a href="https://github.com/nilaymaj/esolang-park">Code</a>) (<a href="https://news.ycombinator.com/item?id=30479320">HN</a>)</li>
+<li><a href="http://www.cse.chalmers.se/~russo/publications_files/haskell21.pdf">Practical Normalization by Evaluation for EDSLs</a></li>
+<li><a href="https://matt.might.net/articles/best-programming-languages/">Advanced Programming Languages</a></li>
+<li><a href="https://github.com/thoughtbot/complexity">complexity</a> - Calculate an approximation of code complexity per file in a language-agnostic way.</li>
+<li><a href="https://harelang.org/">Hare</a> - Systems programming language designed to be simple, stable, and robust. (<a href="https://sr.ht/~sircmpwn/hare/">Code</a>)</li>
+<li><a href="https://drewdevault.com/2022/03/13/Why-am-I-working-in-private.html">Why am I building a programming language in private? (2022)</a> (<a href="https://news.ycombinator.com/item?id=30662430">HN</a>)</li>
+<li><a href="https://github.com/markelog/eclectica">Eclectica</a> - Unifies management of any language under one cohesive and minimalistic interface.</li>
+<li><a href="https://github.com/Gankra/abi-checker">ABI-Checker</a> - Automate testing that two languages/compilers agree on ABIs for the purposes of.</li>
+<li><a href="https://github.com/demfabris/gistit">Gistit</a> - Quick and easy code snippet sharing tool. (<a href="https://gistit.vercel.app/">Web</a>)</li>
+<li><a href="https://twitter.com/josevalim/status/1504558398095990788">Languages with native support for tables</a></li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/thcqko/a_list_of_new_budding_programming_languages_and/">List of new budding programming languages and their interesting features (2022)</a></li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/tibrzi/generics_syntax_in_different_languages/">Generics syntax in different languages (2022)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=30745047">Ask HN: Are you using actors in production? Why/Why not? (2022)</a></li>
+<li><a href="https://ccs.neu.edu/~jrslepak/Dissertation.pdf">A Typed Programming Language: The Semantics of Rank Polymorphism (2020)</a> (<a href="https://arxiv.org/abs/1907.00509">Paper</a>)</li>
+<li><a href="https://onelinerhub.com/">OneLinerHub</a> - Open source code library. (<a href="https://github.com/Onelinerhub/onelinerhub">Code</a>)</li>
+<li><a href="https://m00natic.github.io/lisp/manual-jit.html">Uniform Structured Syntax, Metaprogramming and Run-time Compilation</a></li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/tsqamc/most_interesting_languages_to_learn_from/">Most interesting languages to learn (from)? (2022)</a></li>
+<li><a href="https://verdagon.dev/blog/surprising-weak-refs">Surprising Weak-Ref Implementations: Swift, Obj-C, C++, Rust, and Vale (2022)</a></li>
+<li><a href="https://www.dmitrysoshnikov.education/p/programming-languages-design-ultimate-bundle2">Programming Languages Design: Ultimate Bundle</a></li>
+<li><a href="https://github.com/trailofbits/it-depends">It-Depends</a> - Tool to automatically build a dependency graph and Software Bill of Materials (SBOM) for packages and arbitrary source code repositories.</li>
+<li><a href="https://github.com/mergestat/treequery">treequery</a> - Run Tree-sitter queries on source code.</li>
+<li><a href="https://github.com/jelmer/awesome-codemods">Awesome Codemods</a> - Curated list of tools that can fix your code for you.</li>
+<li><a href="https://www.spoofax.dev/">Spoofax</a> - Open-source language designer's workbench with everything you need for designing your next textual (domain-specific) programming language. (<a href="https://github.com/metaborg/spoofax">Code</a>)</li>
+<li><a href="https://codestat.dev/">Codestat.dev</a> - Stats from 2M open-source repositories. (<a href="https://news.ycombinator.com/item?id=30940251">HN</a>) (<a href="https://github.com/sourcegraph/codestat.dev">Code</a>)</li>
+<li><a href="https://github.com/google/copybara">Copybara</a> - Tool for transforming and moving code between repositories. Used at Google.</li>
+<li><a href="https://github.com/ott-lang/ott">Ott</a> - Tool for writing definitions of programming languages and calculi.</li>
+<li><a href="https://newsletter.papersyoumightlove.pl/">PL Papers You Might Love Newsletter</a></li>
+<li><a href="https://github.com/kdr-aus/ogma">ogma</a> - Scripting language focused on processing tabular data.</li>
+<li><a href="https://github.com/massCodeIO/massCode">massCode</a> - Free and open source code snippets manager for developers. (<a href="https://masscode.io/">Web</a>)</li>
+<li><a href="https://codeimage.dev/">CodeImage</a> - Create elegant screenshots of your source code. (<a href="https://github.com/riccardoperra/codeimage">Code</a>) (<a href="https://twitter.com/riccardoperra0/status/1603412081054810112">Tweet</a>)</li>
+<li><a href="https://github.com/namin/metaprogramming">Course on Metaprogramming</a></li>
+<li><a href="https://github.com/matsuyoshi30/germanium">Germanium</a> - Generate image from source code.</li>
+<li><a href="https://github.com/nuprl/10PL">10 papers that all PhD students in programming languages ought to know</a></li>
+<li><a href="https://github.com/languagetool-org/languagetool">LanguageTool</a> - Style and Grammar Checker for 25+ Languages.</li>
+<li><a href="https://castillodel.github.io/compile-time-evaluation/">Compile time evaluation in Nim, Zig, Rust and C++ (2022)</a> (<a href="https://www.reddit.com/r/Zig/comments/u6f05z/compile_time_evaluation_in_nim_zig_rust_and_c/">Reddit</a>) (<a href="https://news.ycombinator.com/item?id=31160234">HN</a>)</li>
+<li><a href="https://github.com/replit/prybar">Prybar</a> - Universal interpreter front-end. Same interface, same REPL, different languages.</li>
+<li><a href="https://arxiv.org/abs/2011.13127">Copy-and-Patch Compilation: A fast compilation algorithm for high-level languages and bytecode (2020)</a></li>
+<li><a href="https://github.com/BenBrock/reple">Reple</a> - "Replay-based" REPLs for compiled languages.</li>
+<li><a href="https://github.com/mwerezak/sphinx-lang">Sphinx</a> - Dynamically typed programming language that is inspired by Lua and Python, and implemented entirely in Rust. (<a href="https://news.ycombinator.com/item?id=31149332">HN</a>)</li>
+<li><a href="https://www.avestura.dev/blog/ideal-programming-language">What's a good general-purpose programming language? (2022)</a> (<a href="https://www.reddit.com/r/ProgrammingLanguages/comments/uc9hsl/whats_a_good_generalpurpose_programming_language/">Reddit</a>)</li>
+<li><a href="https://github.com/ganelson/inform">Inform 7</a> - Programming language for creating interactive fiction, using natural language syntax. (<a href="https://news.ycombinator.com/item?id=31196063">HN</a>) (<a href="https://intfiction.org/t/inform-7-v10-1-0-is-now-open-source/55674">OSS release post</a>)</li>
+<li><a href="https://sr.ht/~duangle/scopes/">Scopes</a> - Retargetable programming language &amp; infrastructure.</li>
+<li><a href="https://typesanitizer.com/blog/scope-sets.html">Scope Sets as a Piñata for Name Resolution (2021)</a></li>
+<li><a href="https://typesanitizer.com/blog/ad-hoc-polymorphism.html">Principled Ad-Hoc Polymorphism (2018)</a></li>
+<li><a href="https://github.com/mortie/langbot">Langbot</a> - Run code from many programming languages.</li>
+<li><a href="https://github.com/effekt-lang/effekt">Effekt</a> - Research language with effect handlers and lightweight effect polymorphism. (<a href="https://effekt-lang.org/">Web</a>)</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/uhtxqi/worst_design_decisions_youve_ever_seen/">Worst Design Decisions You've Ever Seen in Programming Languages (2022)</a></li>
+<li><a href="https://exercism.org/">Exercism</a> - Develop fluency in over 55 programming languages with our unique blend of learning, practice and mentoring. (<a href="https://twitter.com/exercism_io">Twitter</a>) (<a href="https://github.com/exercism">GitHub</a>)</li>
+<li><a href="https://github.com/wooorm/starry-night">Starry Night</a> - Syntax highlighting, like GitHub.</li>
+<li><a href="https://kevincox.ca/2022/05/13/wrong-by-default/">Wrong by Default (2022)</a></li>
+<li><a href="https://codetoimg.com/">Code to Image Converter</a> (<a href="https://github.com/rohidisdev/code-to-img">Code</a>)</li>
+<li><a href="https://github.com/hkust-taco/mlscript">MLscript</a> - Principal Type Inference for Object-Oriented Programming in a Boolean Algebra of Types.</li>
+<li><a href="https://www.thecodedmessage.com/posts/2022-05-11-programming-multiparadigm/">Can you have too many programming language features? (2022)</a></li>
+<li><a href="https://diku-dk.github.io/pltc/">Programming Languages and Theory of Computation</a></li>
+<li><a href="https://ayende.com/blog/197282-B/modern-programming-languages-require-generics">Modern programming languages require generics (2022)</a> (<a href="https://news.ycombinator.com/item?id=31492180">HN</a>)</li>
+<li><a href="https://www.passerine.io/">Passerine</a> - Small extensible programming language designed for concise expression with little code. (<a href="https://lobste.rs/s/fvaycc/passerine_programming_language">Lobsters</a>)</li>
+<li><a href="https://github.com/nschloe/so-trends">StackOverflow trends</a></li>
+<li><a href="https://www.haskellforall.com/2022/06/the-appeal-of-bidirectional-type.html">The appeal of bidirectional type-checking (2022)</a> (<a href="https://lobste.rs/s/mhdvzh/appeal_bidirectional_type_checking">Lobsters</a>)</li>
+<li><a href="https://computingwithinlimits.org/2022/papers/limits22-final-Schuler.pdf">A Pattern Language for the LIMITS Community (2022)</a></li>
+<li><a href="https://github.com/robertmuth/awesome-low-level-programming-languages">Awesome low level programming languages</a></li>
+<li><a href="https://github.com/YorickPeterse/inko">Inko</a> - Statically-typed, safe, object-oriented programming languages for writing concurrent programs.</li>
+<li><a href="https://wastebin-pkue.onrender.com/">wastebin</a> - Minimal pastebin shamelessly copied from bin. (<a href="https://github.com/matze/wastebin">Code</a>)</li>
+<li><a href="http://journal.stuffwithstuff.com/2013/04/17/well-done/">Well Done: A Sentinel Value (2013)</a></li>
+<li><a href="https://github.com/glato/emerge">Emerge</a> - Code analysis tool to gather insights about source code structure, metrics, dependencies and complexity of software projects.</li>
+<li><a href="http://axisofeval.blogspot.com/2011/04/whats-condition-system-and-why-do-you.html">What's a condition system and why do you want one? (2011)</a> (<a href="https://lobste.rs/s/q8lz7a/what_s_condition_system_why_do_you_want_one">Lobsters</a>)</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/vofiyv/thoughts_on_infectious_systems_asyncawait_and_pure/">Thoughts on infectious systems: async/await and pure</a> (<a href="https://lobste.rs/s/jnm7jz/thoughts_on_infectious_systems_async">Lobsters</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=M763xHjsPk4">Jai vs Odin systems programming languages (Non-spicy takes!) (2022)</a></li>
+<li><a href="http://journal.stuffwithstuff.com/2012/06/12/multimethods-global-scope-and-monkey-patching/">Multimethods, Global Scope, and Monkey-Patching (2012)</a></li>
+<li><a href="https://matklad.github.io//2022/07/10/almost-rules.html">Almost Rules (2022)</a> (<a href="https://lobste.rs/s/ckntjg/almost_rules">Lobsters</a>)</li>
+<li><a href="https://buttondown.email/hillelwayne/archive/six-programming-languages-id-like-to-see/">Six Programming Languages I'd Like to See (2022)</a> (<a href="https://lobste.rs/s/gao7dp/six_programming_languages_i_d_like_see">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=32081808">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=32092943">Ask HN: What do you code when learning a new language/framework? (2022)</a></li>
+<li><a href="https://concatenative.org/wiki/view/Concatenative%20language/Concatenation%20is%20composition">Concatenation is composition</a> (<a href="https://news.ycombinator.com/item?id=32115672">HN</a>)</li>
+<li><a href="https://www.reddit.com/r/rust/comments/w1jepg/other_languages_with_rusts_eums/">Languages with Rust's eums</a></li>
+<li><a href="https://github.com/ruippeixotog/quicksort">Quicksort implemented in different languages</a></li>
+<li><a href="https://github.com/EarlGray/language-incubator">Language Incubator</a> - Learning compilers, interpreters, code generation, virtual machines, assemblers, JITs, etc.</li>
+<li><a href="https://github.com/LightAndLight/ipso">ipso</a> - Functional scripting language.</li>
+<li><a href="https://news.ycombinator.com/item?id=32398181">Ask HN: How to make a native GUI with a modern language? (2022)</a></li>
+<li><a href="https://sr.ht/~duangle/scopes/">Scopes</a> - Retargetable programming language &amp; infrastructure. (<a href="https://sr.ht/~duangle/scopes/">Lobsters</a>)</li>
+<li><a href="https://github.com/HerringtonDarkholme/ast-grep">ASTGrep</a> - Fast and easy tool for code searching, linting, rewriting at large scale. Written in Rust. (<a href="https://ast-grep.github.io/">Web</a>) (<a href="https://github.com/ast-grep">GitHub</a>)</li>
+<li><a href="https://github.com/GetTech-io/awesome-actor">Awesome Actor Model</a></li>
+<li><a href="https://github.com/roc-lang/roc">Roc</a> - Language for making delightful software.</li>
+<li><a href="https://github.com/maximecb/kavascript">KavaScript</a> - Minimalistic dynamically-typed programming language for didactic purposes.</li>
+<li><a href="https://marcellerusu.com/blog/peacock-bind-patterns">Peacock | Bind Patterns</a> (<a href="https://lobste.rs/s/aaxyc0/peacock_bind_patterns">Lobsters</a>)</li>
+<li><a href="https://jank-lang.org/">Jank</a> - Clojure/LLVM/Gradual Typing language. (<a href="https://github.com/jank-lang/jank">Code</a>) (<a href="https://lobste.rs/s/jhtyx6/jank_programming_language_clojure_llvm">Lobsters</a>)</li>
+<li><a href="https://pldb.com/">PLDB</a> - Programming Language Database. (<a href="https://github.com/breck7/pldb">Code</a>) (<a href="https://news.ycombinator.com/item?id=32619671">HN</a>)</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/x5soly/book_recommendations_after_reading_crafting/">Book recommendations after reading "crafting interpreters" (2022)</a></li>
+<li><a href="https://github.com/imteekay/programming-language-research">Programming Language Research</a></li>
+<li><a href="https://github.com/johnridesabike/acutis">Acutis</a> - Declarative, type-safe template language.</li>
+<li><a href="https://icfpcontest2022.github.io/">ICFP Contest 2022</a> (<a href="https://twitter.com/icfpcontest2022">Twitter</a>)</li>
+<li><a href="https://github.com/brendanzab/language-garden">Language garden</a> - Some toy programming language implementations, mostly implemented in OCaml.</li>
+<li><a href="https://liquify.dev/playground/prettify">Prettify</a> - Code beautification tool for formatting HTML, Liquid, JavaScript, TypeScript, CSS/SCSS and more. (<a href="https://github.com/panoply/prettify">Code</a>)</li>
+<li><a href="https://github.com/odin-lang/Odin">Odin</a> - General-purpose programming language with distinct typing, built for high performance, modern systems, and built-in data-oriented data types. (<a href="https://graphitemaster.github.io/odin_review/">Review</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=32807730">What would be your “perfect” programming language? (2022)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=32836113">Ask HN: What is the coding exercise you use to explore a new language? (2022)</a></li>
+<li><a href="https://semantic-domain.blogspot.com/2022/09/the-golden-age-of-pl-research.html">The Golden Age of PL Research (2022)</a></li>
+<li><a href="https://cs.brown.edu/courses/csci1730/2012/">Brown CS: Programming Languages Course (2012)</a></li>
+<li><a href="https://www.val-lang.dev/">Val</a> - Research programming language to explore the concepts of mutable value semantics and generic programming for high-level systems programming. (<a href="https://github.com/val-lang/val">Code</a>)</li>
+<li><a href="https://arxiv.org/abs/2012.10086">Program Analysis (an Appetizer) (2020)</a></li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/xma1jp/useful_lesserused_languages/">Useful lesser-used languages? (2022)</a></li>
+<li><a href="http://sigplan.github.io/">SIGPLAN: Special Interest Group on Programming Languages</a> (<a href="https://github.com/SIGPLAN/SIGPLAN.github.io">Code</a>)</li>
+<li><a href="https://bertrandmeyer.com/2022/09/28/introduction-theory-programming-languages-full-book-now-freely-available/">Introduction to the Theory of Programming Languages (1991)</a> (<a href="https://lobste.rs/s/rp4vn4/introduction_theory_programming">Lobsters</a>)</li>
+<li><a href="https://codelanguageconverter.com/">Code Language Converter</a> - Convert code to other languages using AI.</li>
+<li><a href="https://github.com/Water-Melon/Melang">Melang</a> - Script language of preemptive scheduling coroutine in single thread.</li>
+<li><a href="https://github.com/duo-lang/duo-lang">Duo</a> - Research language focused on the combination of subtyping, type inference and type-theoretic dualities.</li>
+<li><a href="https://github.com/THUDM/CodeGeeX">CodeGeeX</a> - Open Multilingual Code Generation Model.</li>
+<li><a href="https://luisthiamnye.substack.com/p/adventures-in-dynamic-software-visualisations">Adventures in Dynamic Software, Visualisations, Creating a JVM Language, UI, and More (2022)</a></li>
+<li><a href="https://www.cs.umd.edu/class/fall2022/cmsc430/index.html">CMSC 430: Design and Implementation of Programming Languages (2022)</a> (<a href="https://news.ycombinator.com/item?id=33093666">HN</a>)</li>
+<li><a href="https://morepablo.com/2022/09/so-you-re-using-a-weird-language.html">So you're using a weird language (2022)</a> (<a href="https://news.ycombinator.com/item?id=33102582">HN</a>)</li>
+<li><a href="https://github.com/ravern/sandbox">Technical exercises and experiments</a></li>
+<li><a href="https://github.com/sourcegraph/scip">SCIP Code Intelligence Protocol</a> - Language-agnostic protocol for indexing source code, which can be used to power code navigation functionality such as Go to definition, Find references, and Find implementations.</li>
+<li><a href="https://github.com/alexferrari88/codestrings">codestrings</a> - Extracts all the strings from your source code.</li>
+<li><a href="https://codefol.io/posts/the-hundred-year-programming-language/">The Hundred-Year Programming Language (2022)</a></li>
+<li><a href="https://codegolf.stackexchange.com/questions/246224/simplified-piet-interpreter/246281#246281">Simplified Piet interpreter written in Python</a></li>
+<li><a href="https://austinhenley.com/blog/learnanotherpl.html">Why is it hard to learn another programming language? (2022)</a> (<a href="https://lobste.rs/s/gvfpzb/why_is_it_hard_learn_another_programming">Lobsters</a>)</li>
+<li><a href="https://verdagon.dev/blog/when-to-use-memory-safe-part-1">When to Use Memory Safe Languages (2022)</a> (<a href="https://lobste.rs/s/strz2g/when_use_memory_safe_languages">Lobsters</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=8Ab3ArE8W3s">"Stop Writing Dead Programs" by Jack Rusher (Strange Loop 2022)</a> (<a href="https://news.ycombinator.com/item?id=33251799">HN</a>) (<a href="https://news.ycombinator.com/item?id=33270235">HN</a>) (<a href="https://lobste.rs/s/exmdxa/stop_writing_dead_programs">Lobsters</a>)</li>
+<li><a href="https://cs.lmu.edu/~ray/notes/syntaxdesign/">Syntax Design</a> (<a href="https://news.ycombinator.com/item?id=33247115">HN</a>) (<a href="https://lobste.rs/s/4n0kz8/syntax_design">Lobsters</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=_IgqJr8jG8M">Concatenative Programming: From Ivory to Metal (2017)</a> (<a href="https://lobste.rs/s/jcousj/concatenative_programming_from_ivory">Lobsters</a>)</li>
+<li>[What Operators Do You WISH Programming Languages Had? (2022)(https://www.reddit.com/r/ProgrammingLanguages/comments/ya87l1/what_operators_do_you_wish_programming_languages/)</li>
+<li><a href="https://www.reddit.com/r/rust/comments/yasu2l/im_creating_my_own_compiled_language_in_rust_any/">Tips on performance when building programming language in Rust (2022)</a></li>
+<li><a href="https://github.com/losvedir/transit-lang-cmp">Programming language comparison by reimplementing the same transit data app</a> (<a href="https://news.ycombinator.com/item?id=33307059">HN</a>)</li>
+<li><a href="https://news.ycombinator.com/item?id=33354036">Which programming paradigm had the most impact on you as an engineer and why? (2022)</a></li>
+<li><a href="https://twitter.com/rsms/status/1586735989514326016">System level language considerations (2022)</a></li>
+<li><a href="https://github.com/mica-lang/mica">Mica</a> - Simple, human-friendly, embeddable scripting language.</li>
+<li><a href="http://www.om-language.org/">Om</a> - Novel, maximally-simple concatenative language. (<a href="https://news.ycombinator.com/item?id=33382397">HN</a>)</li>
+<li><a href="https://github.com/SerenityOS/jakt">Jakt</a> - Memory-safe systems programming language.</li>
+<li><a href="https://github.com/egoist/dropcode">Dropcode</a> - Simple and lightweight code snippet manager.</li>
+<li><a href="https://github.com/nineties/amber">Amber</a> - Language for High-Level Programming with Self-Extension.</li>
+<li><a href="https://github.com/mlochbaum/Singeli">Singeli</a> - Domain-specific language for building SIMD algorithms with flexible abstractions and control over every instruction emitted.</li>
+<li><a href="https://twitter.com/abanduk/status/1589767455060426757">Designing a programming system/language to never break backwards compatibility while allowing the system to evolve</a></li>
+<li><a href="https://github.com/frank-lang/frank">Frank</a> - Strict functional programming language with a bidirectional effect type system designed from the ground up around a novel variant of Plotkin and Pretnar's effect handler abstraction.</li>
+<li><a href="https://github.com/return/malbolge">Malbolge</a> - Self-modifying programming language that is made to be deliberately difficult to program in and close to impossible to read.</li>
+<li><a href="https://github.com/oxidecomputer/p4">P4 Compiler</a></li>
+<li><a href="https://github.com/elves/elvish">Elvish</a> - Expressive Programming Language + Versatile Interactive Shell.</li>
+<li><a href="https://grenouillebouillie.wordpress.com/2022/05/09/the-hidden-cost-of-exception-handling/">The Cost of Exception Handling (2022)</a> (<a href="https://news.ycombinator.com/item?id=33557022">HN</a>)</li>
+<li><a href="https://github.com/skx/go.vm">go.vm</a> - Simple virtual machine - compiler &amp; interpreter - written in Go.</li>
+<li><a href="https://github.com/matijapretnar/millet">Millet</a> - ML-like pure functional language that can be used as a template for creating your own language.</li>
+<li><a href="https://github.com/garrigue/certint">Certified Interpreter for ML with Structural Polymorphism</a></li>
+<li><a href="https://github.com/cloudcmds/tamarin">Tamarin</a> - Fun and pragmatic scripting language written in Go. May be used as a CLI or embedded as a library.</li>
+<li><a href="https://github.com/plundering/plunder-reference">Plunder</a> - Programming model that makes it possible to have programs that "run forever", eliminating the need for a separate storage abstraction.</li>
+<li><a href="https://github.com/buzz-language/buzz">Buzz</a> - Strongly typed scripting language written in Zig. (<a href="https://news.ycombinator.com/item?id=33690989">HN</a>)</li>
+<li><a href="https://chreke.com/little-languages.html">Little Languages Are The Future Of Programming (2022)</a> (<a href="https://lobste.rs/s/tsh7jd/little_languages_are_future_programming">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=33693472">HN</a>)</li>
+<li><a href="https://github.com/nathro/AutoTransform">AutoTransform</a> - Framework for large-scale, automated code modification in a production environment.</li>
+<li><a href="https://www.dannyvankooten.com/blog/2022-12-rewriting-interpreter-rust/">(Re)writing an interpreter in Rust (2022)</a> (<a href="https://news.ycombinator.com/item?id=33704206">HN</a>)</li>
+<li><a href="https://github.com/dustinblackman/languagetool-code-comments">languagetool-code-comments</a> - Integrates the LanguageTool API to parse, spell check, and correct the grammar of your code comments.</li>
+<li><a href="https://github.com/eclipse/omr">Eclipse OMR</a> - Cross platform components for building reliable, high performance language runtimes.</li>
+<li><a href="https://ayazhafiz.com/articles/22/simple-flow-refinement-of-anonymous-sum-types">Simple Refinement of Anonymous Sum Types in Pattern Matches (2022)</a></li>
+<li><a href="https://rust-hosted-langs.github.io/book/introduction.html">Writing Interpreters in Rust: a Guide</a> (<a href="https://news.ycombinator.com/item?id=33758578">HN</a>)</li>
+<li><a href="https://github.com/google/rune">Rune</a> - Programming language developed to test ideas for improving security and efficiency. (<a href="https://news.ycombinator.com/item?id=33761193">HN</a>)</li>
+<li><a href="https://lemire.me/blog/2022/09/30/a-review-of-elementary-data-types-numbers-and-strings/">A review of elementary data types : numbers and strings (2022)</a></li>
+<li><a href="https://r2c.dev/blog/2022/static-analysis-speed/">Need for speed: static analysis version (2022)</a></li>
+<li><a href="https://www.tweag.io/blog/2022-12-01-higherorderness-is-interaction/">Higher-orderness is first-order interaction (2022)</a></li>
+<li><a href="https://6502.is-a.dev/posts/aoc-2022/">Building an interpreter for my programming language with ChatGPT (2022)</a> (<a href="https://news.ycombinator.com/item?id=33851586">HN</a>)</li>
+<li><a href="https://github.com/forrestchang/gptlang">Create a programming language in ChatGPT</a></li>
+<li><a href="https://github.com/TodePond/DreamBerd">DreamBerd</a> - Perfect programming language.</li>
+<li><a href="https://arxiv.org/abs/2211.16597">Right and wrong: ten choices in language design (2022)</a> (<a href="https://lobste.rs/s/6eh9oh/right_wrong_ten_choices_language_design">Lobsters</a>)</li>
+<li><a href="https://github.com/betaveros/noulith">Noulith</a> - Pareto-optimal choice for quick-and-dirty scripts. (<a href="https://news.ycombinator.com/item?id=33975556">HN</a>) (<a href="https://lobste.rs/s/h1bm09/noulith_new_programming_language">Lobsters</a>)</li>
+<li><a href="https://github.com/streetsidesoftware/cspell">CSpell</a> - Spell Checker for Code.</li>
+<li><a href="https://github.com/jrfonseca/gprof2dot">gprof2dot</a> - Converts profiling output to a dot graph.</li>
+<li><a href="https://www.plai.org/">Programming Languages: Application and Interpretation</a> (<a href="https://news.ycombinator.com/item?id=33927021">HN</a>)</li>
+<li><a href="https://github.com/Vyxal/Vyxal">Vyxal</a> - Golfing language that has aspects of traditional programming languages - terse, elegant, readable.</li>
+<li><a href="https://man.sr.ht/~icefox/garnet/generics.md">Garnet: The Generics Problem</a> (<a href="https://lobste.rs/s/hot5by/garnet_generics_problem">Lobsters</a>)</li>
+<li><a href="https://dmitrykandalov.com/coroutines-as-threads">Coroutines As Threads (2018)</a></li>
+<li><a href="https://www.hillelwayne.com/post/influential-dead-languages/">Ten influential programming languages (2020)</a> (<a href="https://news.ycombinator.com/item?id=34040397">HN</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=OAIqCpqszVw">Jonathan Blow - Programming Language Q&amp;A (2022)</a></li>
+<li><a href="https://huggingface.co/spaces/bigcode/santacoder-demo">SantaCoder: New 1.1B code model for generation and infilling</a></li>
+<li><a href="https://raku-advent.blog/2022/12/23/sigils-2/">Language design: providing guarantees (Rust) vs communicating intent (Raku)</a> (<a href="https://www.reddit.com/r/rust/comments/ztlhf4/language_design_providing_guarantees_rust_vs/">Reddit</a>)</li>
+<li><a href="https://github.com/fubark/cyber">Cyber</a> - Fast, efficient, and concurrent scripting language. (<a href="https://cyberscript.dev/">Web</a>) (<a href="https://lobste.rs/s/v8edeu/cyber_is_new_language_for_fast_efficient">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=34553236">HN</a>)</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/zw3tn8/compilation_speed/">Compilation Speed discussed (2022)</a></li>
+<li><a href="https://github.com/MrSmith33/vox">Vox</a> - Small and fast JIT/AOT compiler with zero dependencies.</li>
+<li><a href="https://github.com/sno2/apscript">APScript</a> - Speedy interpreter for the AP Computer Science Principles pseudocode language built in Rust.</li>
+<li><a href="https://github.com/tpetricek/Teaching">Tomas Petricek's teaching on programming language design</a></li>
+<li><a href="https://github.com/anzen-lang/anzen">Anzen</a> - General purpose programming language that aims to make assignments easier to understand and manipulate.</li>
+<li><a href="https://github.com/cara-lang/compiler">Cara</a> - Programming language aiming to be pleasant to use and maintain while staying safe and dependable.</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/102r0ke/what_features_would_you_want_in_a_new_programming/">What features would you want in a new programming language? (2023)</a></li>
+<li><a href="https://buttondown.email/hillelwayne/archive/microfeatures-id-like-to-see-in-more-languages/">Microfeatures I'd like to see in more languages (2023)</a> (<a href="https://news.ycombinator.com/item?id=34266078">HN</a>) (<a href="https://lobste.rs/s/ilmbgu/microfeatures_i_d_like_see_more_languages">Lobsters</a>) (<a href="https://www.reddit.com/r/ProgrammingLanguages/comments/104lxrd/microfeatures_id_like_to_see_in_more_languages/">Reddit</a>)</li>
+<li><a href="https://github.com/hopv/vel">Vel</a> - Language for verified low-level software.</li>
+<li><a href="https://tratt.net/laurie/blog/2023/compiled_and_interpreted_languages_two_ways_of_saying_tomato.html">Compiled and Interpreted Languages: Two Ways of Saying Tomato (2023)</a></li>
+<li><a href="https://mort.coffee/home/fast-interpreters/">Faster virtual machines: Speeding up programming language execution (2023)</a> (<a href="https://news.ycombinator.com/item?id=34390348">HN</a>)</li>
+<li><a href="https://journal.stuffwithstuff.com/2023/01/03/type-checking-if-expressions/">Type Checking If Expressions (2023)</a></li>
+<li><a href="https://healeycodes.com/adding-for-loops-to-an-interpreter">Adding For Loops to an Interpreter (2023)</a> (<a href="https://www.reddit.com/r/ProgrammingLanguages/comments/10dikdx/adding_for_loops_to_an_interpreter/">Lobsters</a>)</li>
+<li><a href="http://www.squirrel-lang.org/">Squirrel</a> - High level imperative, object-oriented programming language. (<a href="https://github.com/albertodemichelis/squirrel">Code</a>)</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/10ewz92/what_does_it_mean_to_have_an_algebraic_type_system/">What does it mean to have an "algebraic" type system? (2023)</a></li>
+<li><a href="https://github.com/TroupeLang/Troupe">Troupe</a> - Programming language based on the actor model for concurrent and distributed programming that provides dynamic information flow control.</li>
+<li><a href="https://github.com/sylver-dev/sylver-cli">Sylver</a> - Language agnostic source code exploration and analysis. (<a href="https://lobste.rs/s/pyrmyn/i_made_multi_language_programmable">Lobsters</a>)</li>
+<li><a href="https://github.com/sagiegurari/duckscript">duckscript</a> - Simple, extendable and embeddable scripting language.</li>
+<li><a href="https://github.com/jdxcode/rtx">rtx</a> - Polyglot runtime manager. (<a href="https://lobste.rs/s/z1oxpp/rtx_runtime_executor_asdf_rust_clone">Lobsters</a>)</li>
+<li><a href="https://github.com/sine-fdn/garble-lang">Garble</a> - Turing-Incomplete Programming Language for Multi-Party Computation with Garbled Circuits.</li>
+<li><a href="https://github.com/inpla/inpla">Inpla: Interaction nets as a programming language</a></li>
+<li><a href="https://github.com/Vexu/bog">Bog</a> - Small, strongly typed, embeddable language. (<a href="https://news.ycombinator.com/item?id=34567815">HN</a>)</li>
+<li><a href="https://github.com/antirez/aocla/">Aocla</a> - Advent of Code toy language. (<a href="https://lobste.rs/s/jsso8q/aocla_small_stack_based_programming">Lobsters</a>)</li>
+<li><a href="https://arxiv.org/abs/2301.13779">FLAME: A small language model for spreadsheet formulas (2023)</a> (<a href="https://news.ycombinator.com/item?id=34607738">HN</a>)</li>
+<li><a href="https://github.com/Deltaphish/UwUpp">UwU</a> - Next generation esoteric language.</li>
+<li><a href="https://github.com/rsms/compis">Compis</a> - Contemporary systems programming language in the spirit of C.</li>
+<li><a href="https://volarjs.github.io/">Volar.js</a> - Embedded Language Tooling Framework. (<a href="https://github.com/volarjs/volar.js">Code</a>) (<a href="https://blog.vuejs.org/posts/volar-a-new-beginning.html">Article</a>)</li>
+<li><a href="https://borretti.me/article/wishlist-zero-cost-abstractions">A Wishlist of Zero-Cost Abstractions (2017)</a></li>
+<li><a href="https://github.com/vyorkin/tiger">Tiger</a> - Small imperative language that I'm writing while reading the Modern Compiler Implementation in ML.</li>
+<li><a href="https://okmij.org/ftp/Computation/variables-effects.html">Free Variables and Free Effects</a></li>
+<li><a href="https://blog.yossarian.net/2023/02/11/The-unsafe-language-doom-principle">The unsafe language doom principle (2023)</a> (<a href="https://lobste.rs/s/lalmzo/unsafe_language_doom_principle">Lobsters</a>)</li>
+<li><a href="https://abhinavsarkar.net/posts/implementing-co-3/">Implementing Co, a Small Language With Coroutines #3: Adding Coroutines (2023)</a> (<a href="https://lobste.rs/s/sotg8z/implementing_co_small_language_with">Lobsters</a>)</li>
+<li><a href="https://outerproduct.net/boring/2023-02-11_term-loop.html">Coping with nontermination: some thoughts on stopping loops (2023)</a></li>
+<li><a href="https://tratt.net/laurie/blog/2023/why_arent_programming_language_specifications_comprehensive.html">Why Aren't Programming Language Specifications Comprehensive? (2023)</a> (<a href="https://lobste.rs/s/nd9h3b/why_aren_t_programming_language">Lobsters</a>)</li>
+<li><a href="https://arxiv.org/abs/2302.05331">C-rusted: The Advantages of Rust, in C, without the Disadvantages (2023)</a> (<a href="https://lobste.rs/s/miuv2k/c_rusted_advantages_rust_c_without">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=34863784">HN</a>)</li>
+<li><a href="https://github.com/IORuntime/voxu">voxu</a> - Strongly and statically typed, memory-efficient functional programming language.</li>
+<li><a href="https://github.com/nanikamado/cotton">Cotton</a> - Simple functional programming language built with Rust.</li>
+<li><a href="https://lobste.rs/s/h4j3lg/killer_libraries">Lobsters: Killer libraries (2023)</a> (<a href="https://news.ycombinator.com/item?id=34895517">HN</a>)</li>
+<li><a href="https://arxiv.org/abs/2301.02308">The Usability of Advanced Type Systems: Rust as a Case Study (2023)</a> (<a href="https://news.ycombinator.com/item?id=34890787">HN</a>)</li>
+<li><a href="https://tigerbeetle.com/blog/2023-02-21-writing-high-performance-clients-for-tigerbeetle/">Writing high-performance clients for TigerBeetle (2023)</a></li>
+<li><a href="https://capitalex.codeberg.page/give-me-flexibility-and-give-me-types/">Give Me Flexibility and Give Me Types (2023)</a></li>
+<li><a href="https://eklitzke.org/stdout-buffering">Stdout Buffering (2016)</a></li>
+<li><a href="https://slightknack.dev/passerine/schedule/">Architecting Asynchronous Schedulers (2020)</a></li>
+<li><a href="https://tonsky.me/blog/clojure-sublimed-3/">Adventures in REPL Implementation (2023)</a> (<a href="https://news.ycombinator.com/item?id=35091917">HN</a>)</li>
+<li><a href="https://github.com/linkdd/letlang">Letlang</a> - Functional language with a powerful type system.</li>
+<li><a href="https://codeverter.vercel.app/">Codeverter</a> - Convert code to your programming language of choice. (<a href="https://github.com/TGlide/codeverter">Code</a>)</li>
+<li><a href="https://www.reddit.com/r/conlangs/comments/11rzkkb/what_conlangs_should_be_required_reading_for/">What conlangs should be "required reading" for someone thinking about making their own? And why? (2023)</a></li>
+<li><a href="https://github.com/alumina-lang/alumina">Alumina</a> - Imperative, general-purpose, statically typed, compiled system programming language.</li>
+<li><a href="https://github.com/plclub/cis6700-23sp">Advanced Topics in Programming Languages (2023)</a></li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/11ti9sc/what_are_the_issues_with_algebraic_effects/">What are the issues with algebraic effects? (2023)</a></li>
+<li><a href="https://github.com/JSAbrahams/mamba">Mamba</a> - Compiles to Python.</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/123sn1i/what_features_have_you_seen_in_a_pl_that_helped/">What features have you seen in a PL that helped encourage code re-use? (2023)</a></li>
+<li><a href="https://johnnysswlab.com/decreasing-the-number-of-memory-accesses-1-2/">Decreasing the number of memory accesses (2023)</a> (<a href="https://news.ycombinator.com/item?id=35383662">HN</a>)</li>
+<li><a href="https://brianmckenna.org/blog/verse_types">Type system of Fortnite's Verse language (2023)</a> (<a href="https://news.ycombinator.com/item?id=35363993">HN</a>)</li>
+<li><a href="https://github.com/moonrepo/proto">proto</a> - Multi-language version and dependency manager.</li>
+<li><a href="https://ai-code-translator.vercel.app/">AI Code Translator</a> - Use AI to translate code from one language to another.</li>
+<li><a href="https://github.com/stepchowfun/proofs/tree/main/proofs/AdmissibilityGraph">Admissibility graphs</a></li>
+<li><a href="https://www.typetheoryforall.com//2023/04/09/29-Jimmy-Koppel.html">Can PL theory make you a better software engineer? (2023)</a></li>
+<li><a href="https://blog.vero.site/post/noulith">Designing a Programming Language to Speedrun Advent of Code (2023)</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

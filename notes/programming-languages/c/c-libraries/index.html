@@ -1,0 +1,1356 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../standard-ml/">
+      
+      
+        <link rel="next" href="../c/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>C libraries - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c-libraries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C libraries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          C libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        C libraries
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    Graphics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    Math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto" class="md-nav__link">
+    Crypto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig-libraries/" class="md-nav__link">
+        Zig libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zig/zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="c-libraries">C libraries</h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<h2 id="web">Web</h2>
+<ul>
+<li><a href="https://github.com/Softmotions/iwnet">IWNET</a> - Pure C Asynchronous HTTP library with websockets, SSL, routing.</li>
+<li><a href="https://github.com/boazsegev/facil.io">facil.io</a> - C micro-framework for web applications.</li>
+<li><a href="https://github.com/armon/libart">libart</a> - Adaptive Radix Trees implemented in C.</li>
+<li><a href="https://github.com/jeremycw/httpserver.h">httpserver.h</a> - Single header library for writing non-blocking HTTP servers in C. (<a href="https://news.ycombinator.com/item?id=21777401">HN</a>)</li>
+<li><a href="https://github.com/rxi/dyad">Dyad.c</a> - Asynchronous networking for C.</li>
+<li><a href="https://github.com/lsalzman/enet">ENet</a> - Reliable UDP networking library. (<a href="http://enet.bespin.org/">Web</a>)</li>
+<li><a href="https://github.com/civetweb/civetweb">CivetWeb</a> - Embedded C/C++ web server.</li>
+<li><a href="https://libwebsockets.org/">Libwebsockets</a> - C library for implementing modern network protocols. (<a href="https://news.ycombinator.com/item?id=28439447">HN</a>)</li>
+<li><a href="https://github.com/h2o/picohttpparser">PicoHTTPParser</a> - Tiny, primitive, fast HTTP request/response parser.</li>
+<li><a href="https://github.com/kazuho/picoev">picoev</a> - Tiny, lightning fast event loop for network applications.</li>
+<li><a href="https://github.com/davidmoreno/onion">Onion</a> - C library to create simple HTTP servers and Web Applications.</li>
+<li><a href="https://github.com/cozis/xHTTP">xHTTP</a> - HTTP server library in a single C file. (<a href="https://news.ycombinator.com/item?id=31047082">HN</a>)</li>
+</ul>
+<h2 id="gui">GUI</h2>
+<ul>
+<li><a href="https://github.com/andlabs/libui/">libui</a> - Portable GUI library for C.</li>
+<li><a href="https://github.com/Immediate-Mode-UI/Nuklear">Nuklear</a> - Minimal-state, immediate-mode graphical user interface toolkit written in ANSI C. (<a href="https://news.ycombinator.com/item?id=26212787">HN</a>) (<a href="https://news.ycombinator.com/item?id=34106762">HN</a>)</li>
+<li><a href="https://github.com/lv2/pugl">Pugl</a> - Minimal portable API for embeddable GUIs.</li>
+<li><a href="https://github.com/sammycage/plutovg">PlutoVG</a> - Standalone 2D vector graphics library in C.</li>
+<li><a href="https://github.com/heroseh/vui">VUI</a> - Immediate UI library for C, designed to be easy to use &amp; customizable.</li>
+<li><a href="https://github.com/rxi/microui">microui</a> - Tiny immediate-mode UI library.</li>
+<li><a href="https://github.com/grimfang4/sdl-gpu">SDL_gpu</a> - Library for high-performance, modern 2D graphics with SDL written in C.</li>
+<li><a href="https://github.com/randrew/layout">Layout</a> - Single-file library for calculating 2D UI layouts using stacking boxes. Compiles as C99 or C++</li>
+</ul>
+<h2 id="graphics">Graphics</h2>
+<ul>
+<li><a href="https://github.com/cntools/rawdraw">rawdraw</a> - Fundamental Graphics Library.</li>
+<li><a href="https://github.com/lvgl/lvgl">LVGL</a> - Light and Versatile Graphics Library. (<a href="https://lvgl.io/">Web</a>)</li>
+<li><a href="https://github.com/Kode/Kinc">Kinc</a> - Modern low level game library and hardware abstraction.</li>
+<li><a href="https://github.com/freedesktop/cairo">Cairo</a> - Multi-platform 2D graphics library.</li>
+<li><a href="https://github.com/mackron/minidraw">minidraw</a> - Single file 2D graphics library written in C.</li>
+<li><a href="https://github.com/C-Chads/tinygl">TinyGL</a> - Penultimate portable graphics library.</li>
+<li><a href="https://github.com/raysan5/raygui">raygui</a> - Simple and easy-to-use immediate-mode GUI library. (<a href="https://news.ycombinator.com/item?id=30813000">HN</a>)</li>
+<li><a href="https://github.com/c-krit/ferox">Ferox</a> - Lightweight 2D collision detection and physics library written in C.</li>
+<li><a href="https://github.com/recp/gk">gk</a> - Graphics Kernel: flexible, highly configurable, extensible render engine (real time + offline).</li>
+<li><a href="https://github.com/recp/AssetKit">AssetKit</a> - Modern 2D/3D - Importer • Exporter • Util - Library.</li>
+<li><a href="https://github.com/tuupola/hagl">HAGL</a> - Hardware Agnostic Graphics Library for embedded.</li>
+<li><a href="https://github.com/adafruit/Adafruit-GFX-Library">Adafruit GFX</a> - Graphics library for all our displays, providing a common set of graphics primitives (points, lines, circles, etc.).</li>
+<li><a href="https://github.com/tsoding/olive.c">Olive.c</a> - Simple 2D Graphics Library for C. (<a href="https://tsoding.org/olive.c/">Demos</a>) (<a href="https://news.ycombinator.com/item?id=32932631">HN</a>)</li>
+<li><a href="https://github.com/zserge/fenster">Fenster</a> - Most minimal cross-platform GUI library. (<a href="https://zserge.com/posts/fenster/">Article</a>) (<a href="https://news.ycombinator.com/item?id=34500134">HN</a>)</li>
+<li><a href="https://github.com/libsdl-org/SDL">SDL</a> - Cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.</li>
+</ul>
+<h2 id="test">Test</h2>
+<ul>
+<li><a href="https://github.com/silentbicycle/greatest">greatest</a> - C testing library in 1 file. No dependencies, no dynamic allocation.</li>
+<li><a href="https://github.com/libcheck/check">Check</a> - Unit testing framework for C.</li>
+<li><a href="https://github.com/kr/ct">CT</a> - Easy Unit Testing for C.</li>
+<li><a href="https://github.com/ThrowTheSwitch/Unity">Unity Test</a> - Simple Unit Testing for C.</li>
+<li><a href="https://github.com/ThrowTheSwitch/CMock">CMock</a> - Mock/stub generator for C.</li>
+<li><a href="https://github.com/bvdberg/ctest">CTEST</a> - Unit test framework for software written in C/C++.</li>
+<li><a href="https://github.com/mortie/snow">Snow</a> - Testing library for C.</li>
+</ul>
+<h2 id="cli">CLI</h2>
+<ul>
+<li><a href="https://github.com/argtable/argtable3">Argtable3</a> - Single-file, ANSI C, command-line parsing library that parses GNU-style command-line options.</li>
+</ul>
+<h2 id="db">DB</h2>
+<ul>
+<li><a href="https://github.com/Softmotions/iowow">IOWOW</a> - C11 persistent key/value storage based on skip list data structure. (<a href="https://iowow.io/">Web</a>)</li>
+<li><a href="https://github.com/DavidLeeds/hashmap">hashmap</a> - Templated type-safe hashmap implementation in C using open addressing and linear probing for collision resolution.</li>
+<li><a href="https://github.com/CESNET/libyang">libyang</a> - YANG data modelling language parser and toolkit written (and providing API) in C.</li>
+</ul>
+<h2 id="math">Math</h2>
+<ul>
+<li><a href="https://github.com/fredrik-johansson/calcium">Calcium</a> - Exact real and complex numbers in C.</li>
+<li><a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> - High quality, portable, standalone C mathematical library.</li>
+<li><a href="https://github.com/flintlib/flint2">FLINT</a> - Fast Library for Number Theory.</li>
+</ul>
+<h2 id="crypto">Crypto</h2>
+<ul>
+<li><a href="https://github.com/mongodb/libmongocrypt">libmongocrypt</a> - C library for Client Side Encryption.</li>
+<li><a href="https://github.com/veorq/SipHash">SipHash</a> - Family of pseudorandom functions (PRFs) optimized for speed on short messages.</li>
+<li><a href="https://github.com/msotoodeh/curve25519">curve25519</a> - Highly efficient implementation of elliptic curve 25519.</li>
+<li><a href="https://github.com/OpenSC/libp11">libp11</a> - Abstract API to perform operations on cryptographic objects such as private keys, without requiring access to the objects themselves.</li>
+</ul>
+<h2 id="other">Other</h2>
+<ul>
+<li><a href="https://github.com/jemalloc/jemalloc">jemalloc</a> - General purpose malloc implementation that emphasizes fragmentation avoidance and scalable concurrency support.</li>
+<li><a href="https://swtch.com/libtask/">Libtask</a> - Coroutine Library for C and Unix.</li>
+<li><a href="https://github.com/antirez/sds">Simple Dynamic Strings</a></li>
+<li><a href="https://github.com/orangeduck/Cello">Cello</a> - Higher level programming in C. (<a href="http://libcello.org/">Web</a>) (<a href="https://news.ycombinator.com/item?id=22102533">HN</a>) (<a href="https://news.ycombinator.com/item?id=30564292">HN</a>)</li>
+<li><a href="https://github.com/sustrik/libdill">libdill</a> - Structured concurrency in C.</li>
+<li><a href="https://github.com/sustrik/libmill">Libmill</a> - Go-style concurrency in C. (<a href="http://libmill.org/index.html">Web</a>) (<a href="https://news.ycombinator.com/item?id=30699829">HN</a>)</li>
+<li><a href="https://github.com/RoaringBitmap/CRoaring">CRoaring</a> - Roaring bitmaps in C (and C++).</li>
+<li><a href="https://github.com/fungos/cr">cr.h</a> - Simple C Hot Reload Header-only Library.</li>
+<li><a href="https://github.com/jkuhlmann/cgltf">cgltf</a> - Single-file glTF 2.0 loader and writer written in C99.</li>
+<li><a href="https://github.com/JuliaStrings/utf8proc">utf8proc</a> - Clean C library for processing UTF-8 Unicode data.</li>
+<li><a href="https://github.com/floooh/sokol">Sokol</a> - Simple STB-style cross-platform libraries for C and C++, written in C.</li>
+<li><a href="https://github.com/shiyanhui/libcsp">libcsp</a> - Fast C concurrency library influenced by the CSP model. (<a href="https://news.ycombinator.com/item?id=22797286">HN</a>)</li>
+<li><a href="https://github.com/faragon/libsrt">libsrt</a> - C library for writing fast and safe C code, faster.</li>
+<li><a href="https://github.com/septag/sx">sx</a> - Portable base library for C programmers, designed for performance and simplicity.</li>
+<li><a href="https://github.com/Hirrolot/poica">poica</a> - ADTs with pattern matching and type introspection for pure C.</li>
+<li><a href="https://github.com/emoon/minifb">MiniFB</a> - Small cross platform library to create a frame buffer that you can draw pixels in. (<a href="https://news.ycombinator.com/item?id=24172362">HN</a>)</li>
+<li><a href="https://liblfds.org/">liblfds</a> - Portable, license-free, lock-free data structure library written in C.</li>
+<li><a href="https://github.com/managarm/mlibc">mlibc</a> - C standard library. (<a href="https://lobste.rs/s/jzckka/mlibc_portable_c_standard_library">Lobsters</a>)</li>
+<li><a href="https://github.com/mackron/miniaudio">miniaudio</a> - Single file audio playback and capture library written in C. (<a href="https://miniaud.io/">Web</a>)</li>
+<li><a href="https://github.com/stewartsmith/libeatmydata">libeatmydata</a> - LD_PRELOAD library that disables all forms of writing data safely to disk. fsync() becomes a NO-OP, O_SYNC is removed etc.</li>
+<li><a href="https://github.com/Snaipe/libcsptr">C Smart Pointers</a> - Attempt to bring smart pointer constructs to C programming language. (<a href="https://snai.pe/posts/c-smart-pointers">Article</a>)</li>
+<li><a href="https://github.com/Snaipe/Criterion">Criterion</a> - Dead-simple, yet extensible, C and C++ unit testing framework.</li>
+<li><a href="https://github.com/PortAudio/portaudio">PortAudio</a> - Cross-platform, open-source C language library for real-time audio input and output.</li>
+<li><a href="https://github.com/libevent/libevent">libevent</a> - Event notification library. (<a href="https://libevent.org/">Web</a>)</li>
+<li><a href="https://github.com/dvidelabs/flatcc">FlatCC</a> - FlatCC FlatBuffers in C for C.</li>
+<li><a href="https://github.com/libusb/libusb">libusb</a> - Cross-platform library to access USB devices. (<a href="https://libusb.info/">Web</a>)</li>
+<li><a href="https://github.com/lecram/gifenc">GIF encoder</a> - Small C library that can be used to create GIF animations.</li>
+<li><a href="https://github.com/nfc-tools/libnfc">libnfc</a> - Library which allows userspace application access to NFC devices. (<a href="http://nfc-tools.org/index.php/Main_Page">Web</a>)</li>
+<li><a href="https://github.com/Pithikos/C-Thread-Pool">C Thread Pool</a> - Minimal but advanced threadpool implementation.</li>
+<li><a href="https://github.com/ithewei/libhv">libhv</a> - Like libevent, libev, and libuv, libhv provides event-loop with non-blocking IO and timer, but simpler apis and richer protocols.</li>
+<li><a href="https://github.com/troydhanson/uthash">C macros for hash tables and more</a></li>
+<li><a href="https://github.com/graphitemaster/lambdapp">LambdaPP</a> - Anonymous functions in C.</li>
+<li><a href="https://github.com/metacall/core">Metacall</a> - Library for providing inter-language foreign function interface calls. (<a href="https://metacall.io/">Web</a>)</li>
+<li><a href="https://github.com/glouw/ctl">CTL</a> - C Template Library. (<a href="https://lobste.rs/s/9gc2ku/c_template_library">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=25576466">HN</a>)</li>
+<li><a href="https://github.com/AOMediaCodec/libavif">libavif</a> - Library for encoding and decoding .avif files.</li>
+<li><a href="https://github.com/libusual/libusual">libusual</a> - Modern C Environment. (<a href="https://libusual.github.io/">Web</a>)</li>
+<li><a href="https://github.com/mendsley/bsdiff">bsdiff/bspatch</a> - Libraries for building and applying patches to binary files.</li>
+<li><a href="https://github.com/ianlancetaylor/libbacktrace">libbacktrace</a> - C library that may be linked into a C/C++ program to produce symbolic backtraces.</li>
+<li><a href="https://github.com/Hirrolot/datatype99">Datatype99</a> - C99 with sum types. (<a href="https://news.ycombinator.com/item?id=26024482">HN</a>)</li>
+<li><a href="https://github.com/scandum/gridsort">gridsort</a> - Stable adaptive partitioning comparison sort.</li>
+<li><a href="https://github.com/tezc/sc">Common C libraries and data structures</a> (<a href="https://news.ycombinator.com/item?id=26109324">HN</a>) (<a href="https://news.ycombinator.com/item?id=31404201">HN</a>)</li>
+<li><a href="https://github.com/higan-emu/libco">libco</a> - Cooperative multithreading library written in C89.</li>
+<li><a href="https://github.com/hypre-space/hypre">HYPRE</a> - Parallel solvers for sparse linear systems featuring multigrid methods. (<a href="https://computing.llnl.gov/casc/hypre/">Web</a>)</li>
+<li><a href="https://libsdl.org/">Simple DirectMedia Layer (SDL)</a> - Cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware. (<a href="https://github.com/libsdl-org/SDL">Code</a>)</li>
+<li><a href="https://github.com/codeplea/tinyexpr">TinyExpr</a> - Small recursive descent parser and evaluation engine for math expressions. (<a href="https://codeplea.com/tinyexpr">Web</a>)</li>
+<li><a href="https://github.com/libusb/hidapi">HIDAPI</a> - Simple library for communicating with USB and Bluetooth HID devices on Linux, Mac and Windows.</li>
+<li><a href="https://github.com/edubart/minicoro">Minicoro</a> - Single-file library for using asymmetric coroutines in C.</li>
+<li><a href="https://github.com/sheredom/utf8.h">utf8.h</a> - Simple one header solution to supporting utf8 strings in C and C++.</li>
+<li><a href="https://github.com/Blosc/c-blosc2">C-Blosc2</a> - Fast, compressed and persistent data store library for C.</li>
+<li><a href="https://github.com/scandum/blitsort">Blitsort</a> - Rotate merge sort based on quadsort. (<a href="https://news.ycombinator.com/item?id=33810539">HN</a>)</li>
+<li><a href="https://github.com/alcover/stricks">Stricks</a> - Managed C strings library.</li>
+<li><a href="https://github.com/yasukata/zpoline">Zpoline</a> - Efficient and versatile system call hook mechanism.</li>
+<li><a href="https://github.com/tylov/STC">STC</a> - Modern, user friendly, generic, type-safe and fast C99 container library.</li>
+<li><a href="https://github.com/9fans/vx32">vx32</a> - Portable, efficient, safe execution of untrusted x86 code.</li>
+<li><a href="https://github.com/Hirrolot/metalang99">Metalang99</a> - Full-blown preprocessor metaprogramming.</li>
+<li><a href="https://github.com/eudoxia0/cmacro">cmacro</a> - Lisp macros for C. (<a href="https://news.ycombinator.com/item?id=32266462">HN</a>)</li>
+<li><a href="https://github.com/libuvc/libuvc">libuvc</a> - Cross-platform library for USB video devices.</li>
+<li><a href="https://github.com/P-p-H-d/mlib">mlib</a> - Library of generic and type safe containers in pure C language (C99 or C11) for a wide collection of container (comparable to the C++ STL).</li>
+<li><a href="https://github.com/hathach/tinyusb">TinyUSB</a> - Open source cross-platform USB stack for embedded system.</li>
+<li><a href="https://github.com/giaf/hpipm">HPIPM</a> - High-performance interior-point method solver for dense, optimal control- and tree-structured convex quadratic programs.</li>
+<li><a href="https://libs.suckless.org/libgrapheme/">libgrapheme</a> - Suckless Unicode string library. (<a href="https://lobste.rs/s/7wx1z4/libgrapheme_suckless_unicode_string">Lobsters</a>)</li>
+<li><a href="https://github.com/lemire/clhash">clhash</a> - C library implementing the ridiculously fast CLHash hashing function.</li>
+<li><a href="https://github.com/MrFrenik/gunslinger">Gunslinger</a> - C99, header-only framework for games and multimedia applications.</li>
+<li><a href="https://github.com/PsychoBird/Capere">Capere</a> - Apple Silicon hooking library written in C.</li>
+<li><a href="https://github.com/dcreager/libcork">libcork</a> - Simple, easily embeddable cross-platform C library. (<a href="https://libcork.io/">Docs</a>)</li>
+<li><a href="https://github.com/xhawk18/s_task">s_task</a> - Awaitable coroutine library for C.</li>
+<li><a href="https://github.com/rokath/trice">Trice</a> - Super fast and tiny embedded device C printf-like trace code (works also inside inerrupts) and real-time PC logging (trace ID visualization).</li>
+<li><a href="https://github.com/viega/hatrack">Hatrack</a> - Collection of hash tables for parallel programming, including lock-free, wait-free tables.</li>
+<li><a href="https://github.com/hack-different/libapplefw">DeviceTree</a> - Minimal code to deal with Apple's DeviceTree format.</li>
+<li><a href="https://github.com/ORNL/iris">IRIS</a> - Unified framework across multiple programming platforms.</li>
+<li><a href="https://github.com/stevengj/nlopt">NLopt</a> - Library for nonlinear local and global optimization, for functions with and without gradient information.</li>
+<li><a href="https://github.com/aklomp/base64">base64</a> - Fast Base64 stream encoder/decoder in C99, with SIMD acceleration.</li>
+<li><a href="https://github.com/RandyGaul/cute_headers">cute_headers</a> - Various single-file cross-platform C/C++ headers implementing self-contained libraries.</li>
+<li><a href="https://github.com/quartzjer/js0n">js0n</a> - Flexible Zero-Footprint JSON Parser in C.</li>
+<li><a href="https://github.com/compudj/librseq">librseq</a> - Library for Restartable Sequences.</li>
+<li><a href="https://github.com/cofyc/argparse">argparse</a> - Command-line arguments parsing library.</li>
+<li><a href="https://github.com/agenium-scale/nsimd">NSIMD</a> - Vectorization library that abstracts SIMD programming.</li>
+<li><a href="https://github.com/alcover/buffet">Buffet</a> - All-inclusive Buffer Type for C.</li>
+<li><a href="https://github.com/clibs/clib">clib</a> - Package manager for the C programming language. (<a href="https://www.clibs.org/">Web</a>) (<a href="https://news.ycombinator.com/item?id=30596005">HN</a>) (<a href="https://news.ycombinator.com/item?id=24182441">HN</a>)</li>
+<li><a href="https://github.com/PJK/libcbor">libcbor</a> - CBOR protocol implementation for C.</li>
+<li><a href="https://github.com/Hirrolot/interface99">Interface99</a> - Full-featured interfaces for C99.</li>
+<li><a href="https://github.com/icculus/SDL_sound">SDL_sound</a> - Abstract soundfile decoder.</li>
+<li><a href="https://musl.libc.org/">musl libc</a> - C standard library implementation for Linux. (<a href="https://wiki.musl-libc.org/">Wiki</a>) (<a href="https://github.com/somasis/musl-wiki">Wiki Code</a>)</li>
+<li><a href="https://github.com/DevSolar/pdclib">PDCLib</a> - Public Domain C Library.</li>
+<li><a href="https://github.com/toots/shine">Shine</a> - Fast fixed-point mp3 encoding.</li>
+<li><a href="https://github.com/nemequ/portable-snippets">Portable Snippets</a> - Collection of miscellaneous portable C snippets.</li>
+<li><a href="https://github.com/naasking/async.h">Async.h</a> - Stackless Async Subroutines for C.</li>
+<li><a href="https://github.com/fredrikwidlund/libreactor">libreactor</a> - Extendable event driven high performance C-abstractions.</li>
+<li><a href="https://github.com/rust-embedded-community/tinyrlibc">Tiny Rust libc</a> - Tiny C library written in Rust.</li>
+<li><a href="https://github.com/slembcke/Tina">Tina</a> - Tiny, header only, coroutine and fiber library.</li>
+<li><a href="https://github.com/antirez/rax">Rax</a> - ANSI C radix tree implementation.</li>
+<li><a href="https://github.com/h3adshotzz/libhelper">libhelper</a> - Library for parsing Image4 and Mach-O formats, and working with Files and LZFSE/LZSS compression.</li>
+<li><a href="https://github.com/quiet/quiet">Quiet</a> - Transmit data with sound. Includes binaries for soundcards and .wav files.</li>
+<li><a href="https://github.com/lemire/simdcomp">SIMDComp</a> - Simple C library for compressing lists of integers using binary packing.</li>
+<li><a href="https://github.com/andrewrk/libsoundio">libsoundio</a> - C library for cross-platform real-time audio input and output.</li>
+<li><a href="https://github.com/sharow/libconcurrent">libconcurrent</a> - Concurrent Programming Library (Coroutine) for C11.</li>
+<li><a href="https://github.com/hyperswarm/libudx">libudx</a> - Reliable, multiplex, and congestion controlled streams over udp.</li>
+<li><a href="https://github.com/ziglang/universal-headers">Universal Headers</a> - Distributes a set of C headers (.h files) that are compatible with widely used libcs for various targets.</li>
+<li><a href="https://github.com/drobilla/serd">Serd</a> - Lightweight C library for RDF syntax.</li>
+<li><a href="https://github.com/openvenues/libpostal">libpostal</a> - C library for parsing/normalizing street addresses around the world. Powered by statistical NLP and open geo data.</li>
+<li><a href="https://github.com/lifthrasiir/j40">J40</a> - Independent, self-contained JPEG XL decoder. (<a href="https://news.ycombinator.com/item?id=32885203">HN</a>)</li>
+<li><a href="https://github.com/google/nsync">nsync</a> - C library that exports various synchronization primitives, such as mutexes.</li>
+<li><a href="https://github.com/bminor/glibc">GNU C Library</a> - Standard system C library.</li>
+<li><a href="https://github.com/JCash/voronoi">jc_voronoi</a> - Fast C/C++ header only implementation for creating 2D Voronoi diagrams from a point set.</li>
+<li><a href="https://github.com/cloudwu/coroutine">coroutine</a> - Asymmetric coroutine library for C.</li>
+<li><a href="https://github.com/lloyd/yajl">YAJL</a> - Fast streaming JSON parsing library in C.</li>
+<li><a href="https://github.com/jvirkki/libbloom">libbloom</a> - Simple and small bloom filter implementation in plain C.</li>
+<li><a href="https://github.com/openslide/openslide">OpenSlide</a> - C library for reading virtual slide images.</li>
+<li><a href="https://gustedt.gitlabpages.inria.fr/c23-library/">C23 implications for C libraries (2022)</a></li>
+<li><a href="https://github.com/fefa4ka/linked_ring">Linked Ring Buffer Library</a></li>
+<li><a href="https://github.com/camel-cdr/cauldron">cauldron</a> - Collection of single-file C libraries and tools with the goal to be portable and modifiable.</li>
+<li><a href="https://github.com/wolkykim/qlibc">qLibc</a> - Simple and yet powerful C library providing generic data structures and algorithms.</li>
+<li><a href="https://github.com/barrust/bloom">bloom</a> - Bloom filter implementation.</li>
+<li><a href="https://github.com/AndersKaloer/Ring-Buffer">Ring-Buffer</a> - Simple ring buffer (circular buffer) designed for embedded systems.</li>
+<li><a href="https://lwn.net/SubscriberLink/920158/313ec4305df220bb/">Nolibc</a> - Minimal C-library replacement shipped with the kernel. (<a href="https://news.ycombinator.com/item?id=34479284">HN</a>)</li>
+<li><a href="https://github.com/darthcloud/BlueRetro">BlueRetro</a> - Multiplayer Bluetooth controllers adapter for retro video game consoles.</li>
+<li><a href="https://github.com/icculus/physfs">PhysicsFS</a> - Portable, flexible file i/o abstraction.</li>
+<li><a href="https://nullprogram.com/blog/2023/02/11/">My review of the C standard library in practice (2023)</a> (<a href="https://news.ycombinator.com/item?id=34752400">HN</a>) (<a href="https://lobste.rs/s/v9luyg/review_c_standard_library_practice">Lobsters</a>) (<a href="https://news.ycombinator.com/item?id=34749724">HN</a>)</li>
+<li><a href="https://github.com/Keith-Cancel/Bunki">Bunki</a> - Simple C cororoutine library.</li>
+<li><a href="https://github.com/tidwall/json.c">json.c</a> - Fast little JSON library for C.</li>
+<li><a href="https://github.com/mickjc750/str">STR</a> - C String handling library.</li>
+<li><a href="https://github.com/Barenboim/json-parser">Json Parser</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1390 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../python/python-libraries/python-libraries/">
+      
+      
+        <link rel="next" href="../zig/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Zig libraries - EWD340's Home Page</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zig-libraries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-header__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EWD340's Home Page
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Zig libraries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EWD340&#39;s Home Page" class="md-nav__button md-logo" aria-label="EWD340's Home Page" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EWD340's Home Page
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/libreoffice/" class="md-nav__link">
+        LibreOffice tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programming languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assembly/" class="md-nav__link">
+        Assembly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-server-protocol/" class="md-nav__link">
+        Language Server Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/" class="md-nav__link">
+        Lua
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perl/" class="md-nav__link">
+        Perl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-ml/" class="md-nav__link">
+        Standard ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c-libraries/" class="md-nav__link">
+        C libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+          Lisp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/carp/" class="md-nav__link">
+        Carp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/common-lisp/" class="md-nav__link">
+        Common Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/janet/" class="md-nav__link">
+        Janet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/lisp/" class="md-nav__link">
+        Lisp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/racket/" class="md-nav__link">
+        Racket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lisp/scheme/" class="md-nav__link">
+        Scheme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+          Php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Php
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../php/php/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_11_2" id="__nav_2_2_11_2_label" tabindex="0">
+          Python libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/dask/" class="md-nav__link">
+        Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/fastapi/" class="md-nav__link">
+        FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-libraries/python-libraries/" class="md-nav__link">
+        Python libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_12" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_12" id="__nav_2_2_12_label" tabindex="0">
+          Zig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_12_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          Zig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Zig libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Zig libraries
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto" class="md-nav__link">
+    Crypto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    Graphics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasm" class="md-nav__link">
+    WASM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#games" class="md-nav__link">
+    Games
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    Math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedded" class="md-nav__link">
+    Embedded
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zig/" class="md-nav__link">
+        Zig
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/hello/" class="md-nav__link">
+        Hello, world!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tests/test2/" class="md-nav__link">
+        Test 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="zig-libraries">Zig libraries</h1>
+<p>Original content by: <a href="https://wiki.nikiv.dev/">Nikita</a></p>
+<h2 id="cli">CLI</h2>
+<ul>
+<li><a href="https://github.com/jiacai2050/simargs">SimArgs</a> - Simple, opinionated, struct-based argument parser in Zig.</li>
+<li><a href="https://github.com/judofyr/parg">parg</a> - Lightweight argument parser for Zig.</li>
+<li><a href="https://github.com/Hejsil/zig-clap">zig-clap</a> - Simple command line argument parsing library.</li>
+<li><a href="https://github.com/MasterQ32/zig-args">Zig Argument Parser</a> - Simple-to-use argument parser with struct-based config.</li>
+<li><a href="https://github.com/xyaman/mibu">mibu</a> - Pure Zig library for low-level terminal manipulation.</li>
+<li><a href="https://github.com/sam701/zig-cli">zig-cli</a> - Simple package for building command line apps in Zig.</li>
+<li><a href="https://github.com/PrajwalCH/zig-arg">zig-arg</a> - clap-rs inspired arg parser library for zig that supports both subcommand, nested subcommand and flag.</li>
+<li><a href="https://github.com/ziglibs/ansi-term">ansi-term</a> - Zig library for dealing with ANSI terminals.</li>
+</ul>
+<h2 id="web">Web</h2>
+<ul>
+<li><a href="https://github.com/ducdetronquito/h11">h11</a> - HTTP/1.1 parser for Zig.</li>
+<li><a href="https://github.com/Vexu/routez">Routez</a> - HTTP server for Zig.</li>
+<li><a href="https://github.com/Luukdegram/apple_pie">Apple Pie</a> - Basic HTTP server implementation in Zig.</li>
+<li><a href="https://github.com/frmdstryr/zhp">ZHP</a> - HTTP server written in Zig.</li>
+<li><a href="https://github.com/MasterQ32/zig-network">Zig Network</a> - Small network abstraction layer around TCP &amp; UDP.</li>
+<li><a href="https://github.com/MasterQ32/zig-serve">zig-serve</a> - Server implementations for several protocols in Zig. Includes http(s), gemini and gopher.</li>
+<li><a href="https://github.com/chwayne/rem">rem</a> - HTML parsing library, written in Zig.</li>
+<li><a href="https://github.com/truemedian/zfetch">zfetch</a> - HTTP request library for Zig with HTTPS support.</li>
+<li><a href="https://github.com/ducdetronquito/http">HTTP</a> - HTTP core types for Zig.</li>
+<li><a href="https://github.com/haze/zelda">Zelda</a> - Simple HTTP client library for Zig.</li>
+<li><a href="https://github.com/marler8997/ziget">ziget</a> - Zig library/tool to request network assets.</li>
+<li><a href="https://github.com/renerocksai/zap">Zap</a> - Blazingly fast backends in zig.</li>
+<li><a href="https://github.com/maciejhirsz/kobold">Kobold</a> - Easy declarative web interfaces.</li>
+</ul>
+<h2 id="db">DB</h2>
+<ul>
+<li><a href="https://github.com/kristoff-it/zig-okredis">OkRedis</a> - Zero-allocation Client for Redis 6+.</li>
+<li><a href="https://github.com/lithdew/lmdb-zig">lmdb-zig</a> - Lightweight, fully-featured, idiomatic cross-platform Zig bindings to Lightning Memory-Mapped Database (LMDB).</li>
+<li><a href="https://github.com/vrischmann/zig-sqlite">zig-sqlite</a> - Thin wrapper around SQLite's C API. (<a href="https://rischmann.fr/blog/how-i-built-zig-sqlite">How I built zig-sqlite</a>) (<a href="https://news.ycombinator.com/item?id=31527559">HN</a>)</li>
+<li><a href="https://github.com/vrischmann/zig-prometheus">zig-prometheus</a> - Prometheus/VictoriaMetrics client library for Zig.</li>
+</ul>
+<h2 id="crypto">Crypto</h2>
+<ul>
+<li><a href="https://github.com/jedisct1/zig-charm">charm</a> - Zig version of the Charm crypto library.</li>
+</ul>
+<h2 id="graphics">Graphics</h2>
+<ul>
+<li><a href="https://github.com/zenith391/zgt">zgt</a> - Zig GUI Toolkit.</li>
+<li><a href="https://github.com/MasterQ32/tvg">tvg</a> - Tiny Vector Graphics.</li>
+<li><a href="https://github.com/jackdbd/zig-cairo">zig-cairo</a> - Thin wrapper for the cairo 2D graphics library.</li>
+<li><a href="https://github.com/ziglibs/zgl">ZGL</a> - Zig OpenGL Bindings.</li>
+<li><a href="https://github.com/hazeycode/brucelib">brucelib</a> - Monorepo of modules for programming cross-platform games, simulations, engines and editors.</li>
+<li><a href="https://github.com/silversquirl/phyz">Phyz</a> - 2D game physics for Zig.</li>
+<li><a href="https://github.com/kooparse/zgltf">glTF parser</a> - glTF 2.0 parser written in Zig, aiming to replace the use of some C/C++ libraries.</li>
+<li><a href="https://github.com/david-vanderson/gui">GUI</a> - Zig native GUI toolkit for whole applications or extra debugging windows in an existing application.</li>
+<li><a href="https://github.com/ryoppippi/zigcv">ZIGCV</a> - Zig bindings for OpenCV4.</li>
+<li><a href="https://github.com/MasterQ32/zero-graphics">Zero Graphics</a> - Minimal OpenGL ES 2.0 library for Zig.</li>
+</ul>
+<h2 id="wasm">WASM</h2>
+<ul>
+<li><a href="https://github.com/fengb/zee_alloc">zee_alloc</a> - Tiny Zig allocator primarily targeting WebAssembly.</li>
+<li><a href="https://github.com/zigwasm/wasmtime-zig">wasmtime-zig</a> - Zig embedding of Wasmtime.</li>
+<li><a href="https://github.com/zigwasm/wasmer-zig">wasmer-zig</a> - Zig bindings for the Wasmer WebAssembly runtime.</li>
+<li><a href="https://github.com/alichay/zig-wasm3">zig-wasm3</a> - Zig bindings (and build system integration) for Wasm3.</li>
+<li><a href="https://github.com/leroycep/wasm4-zig-runtime">wasm4-zig-runtime</a></li>
+</ul>
+<h2 id="games">Games</h2>
+<ul>
+<li><a href="https://github.com/bootradev/cupcake">Cupcake</a> - App framework for making small and delicious games.</li>
+<li><a href="https://github.com/foxnne/zig-flecs">zig-flecs</a> - Zig wrapper over fast entity component system library.</li>
+<li><a href="https://github.com/Jack-Ji/jok">jok</a> - Minimal 2d/3d game framework.</li>
+</ul>
+<h2 id="macos">macOS</h2>
+<ul>
+<li><a href="https://github.com/kubkon/ZigKit">ZigKit</a> - Native Zig bindings for low-level macOS frameworks.</li>
+</ul>
+<h2 id="math">Math</h2>
+<ul>
+<li><a href="https://github.com/omaraaa/VecFns">VecFns</a> - Automatic Vector Math Functions In Zig.</li>
+</ul>
+<h2 id="linux">Linux</h2>
+<ul>
+<li><a href="https://github.com/saltzm/async_io_uring">AsyncIOUring</a> - Event loop in Zig using io_uring and coroutines.</li>
+</ul>
+<h2 id="embedded">Embedded</h2>
+<ul>
+<li><a href="https://github.com/ZigEmbeddedGroup/regz">regz</a> - Zig code generator for microcontrollers.</li>
+<li><a href="https://github.com/ZigEmbeddedGroup/microzig">MicroZig</a> - Unified abstraction layer and HAL for several microcontrollers.</li>
+</ul>
+<h2 id="test">Test</h2>
+<ul>
+<li><a href="https://github.com/cryptocode/marble">Marble</a> - Metamorphic testing library for Zig.</li>
+<li><a href="https://github.com/leroycep/proptest.zig">proptest.zig</a> - Property testing library for zig.</li>
+</ul>
+<h2 id="ios">iOS</h2>
+<ul>
+<li><a href="https://github.com/kubkon/zig-deploy">Zig Deploy</a> - Deploy your iOS apps written with Zig.</li>
+</ul>
+<h2 id="other">Other</h2>
+<ul>
+<li><a href="https://github.com/prime31/zig-ecs">Zig ECS</a></li>
+<li><a href="https://github.com/prime31/zig-upaya">Upaya</a> - Zig-based framework for creating game tools and helper apps.</li>
+<li><a href="https://github.com/kooparse/zalgebra">zalgebra</a> - Linear algebra library for games and computer graphics.</li>
+<li><a href="https://github.com/kubkon/zld">zld</a> - Zig's lld drop-in replacement.</li>
+<li><a href="https://github.com/Hejsil/mecha">Mecha</a> - Parser combinator library.</li>
+<li><a href="https://github.com/jamii/dida">Dida</a> - Differential dataflow for mere mortals.</li>
+<li><a href="https://github.com/dbandstra/zang">zang</a> - Audio synthesis.</li>
+<li><a href="https://github.com/Arwalk/zig-protobuf">zig-protobuf</a> - protobuf 3 implementation.</li>
+<li><a href="https://github.com/kprotty/zap">zap</a> - Asynchronous runtime with a focus on performance and resource efficiency.</li>
+<li><a href="https://github.com/thebsv/zitertools">Zig itertools</a> - Improved rewrite of the python itertools library to Zig.</li>
+<li><a href="https://github.com/jecolon/ziglyph">ziglyph</a> - Unicode text processing.</li>
+<li><a href="https://github.com/jecolon/zigstr">Zigstr</a> - UTF-8 string type.</li>
+<li><a href="https://github.com/alexnask/interface.zig">Zig Interfaces</a> - Dynamic dispatch for zig made easy.</li>
+<li><a href="https://github.com/lithdew/hyperia">hyperia</a> - Playground of Zig async code.</li>
+<li><a href="https://github.com/zigimg/zigimg">zigimg</a> - Create, process, read and write different image formats with Zig.</li>
+<li><a href="https://github.com/travisstaloch/simdjzon">simdjzon</a> - Port of simdjson, a high performance JSON parser.</li>
+<li><a href="https://github.com/staltz/zig-nodejs-example">zig-nodejs-example</a> - Node.js Native Module written in Zig.</li>
+<li><a href="https://github.com/floooh/sokol-zig">sokol-zig</a> - Auto-generated Zig bindings for the sokol headers.</li>
+<li><a href="https://github.com/ziglibs/known-folders">known-folders</a> - Provides access to well-known folders across several operating systems.</li>
+<li><a href="https://github.com/mitchellh/zig-graph">zig-graph</a> - Directed graph data structure for Zig.</li>
+<li><a href="https://github.com/judofyr/ish">ish</a> - Sketches for Zig.</li>
+<li><a href="https://github.com/mitchellh/zig-libgc">zig-libgc</a> - Implements a Zig allocator that uses the Boehm-Demers-Weiser conservative Garbage Collector (libgc, bdwgc, boehm-gc).</li>
+<li><a href="https://github.com/fubark/cosmic">Cosmic</a> - Single binary tool for building graphical and cli apps in JavaScript/TS.</li>
+<li><a href="https://github.com/xyaman/zjson">zjson</a> - Minimal JSON library with zero allocations.</li>
+<li><a href="https://github.com/yrashk/zig-generator">Zig Generator</a> - Async generator type for Zig.</li>
+<li><a href="https://github.com/alexnask/ctregex.zig">ctregex.zig</a> - Compile time regular expressions in zig.</li>
+<li><a href="https://github.com/ranciere/zoltan">zoltan</a> - Sol-inspired minimalist Lua binding for Zig. (<a href="https://zig.news/ranciere/zoltan-a-minimalist-lua-binding-4mp4">Article</a>)</li>
+<li><a href="https://github.com/gruebite/zzz">zzz</a> - Simple and boring human readable data format for Zig.</li>
+<li><a href="https://github.com/Luukdegram/ctradix">ctradix</a> - Comptime radix tree in Zig.</li>
+<li><a href="https://github.com/kubkon/protozig">protozig</a> - Complete implementation of protobuf in Zig.</li>
+<li><a href="https://github.com/suirad/zig-header-gen">HeaderGen</a> - Automatically generate headers/bindings for other languages from Zig code.</li>
+<li><a href="https://github.com/leecannon/zig-libgit2">zig-libgit2</a> - Zig bindings to libgit2.</li>
+<li><a href="https://github.com/suirad/adma">Adma</a> - General purpose, multithreaded capable slab allocator for Zig.</li>
+<li><a href="https://github.com/getty-zig/getty">Getty</a> - Serialization framework for Zig.</li>
+<li><a href="https://github.com/getty-zig/json">json</a> - Serialization library for JSON.</li>
+<li><a href="https://github.com/ibokuri/concepts">Concepts</a> - Compile-time validation of type constraints.</li>
+<li><a href="https://github.com/truemedian/hzzp">hzzp</a> - I/O agnostic HTTP/1.1 parser and encoder for Zig.</li>
+<li><a href="https://github.com/kubkon/zig-yaml">zig-yaml</a> - YAML parser for Zig.</li>
+<li><a href="https://github.com/iddev5/inon">inon</a> - Data serialization format in Zig.</li>
+<li><a href="https://github.com/nats-io/nats.zig">nats.zig</a> - Zig Client for NATS.</li>
+<li><a href="https://github.com/ziglibs/s2s">s2s</a> - Zig binary serialization format and library.</li>
+<li><a href="https://github.com/jdknezek/uuid6-zig">uuid6-zig</a> - UUIDv6 implemented in Zig.</li>
+<li><a href="https://github.com/nektro/zig-docker">zig-docker</a> - Zig bindings for the Docker Engine API.</li>
+<li><a href="https://github.com/candrewlee14/zlog">zlog</a> - Zero-allocation log library for Zig.</li>
+<li><a href="https://github.com/batiati/mustache-zig">mustache-zig</a> - Logic-less templates for Zig.</li>
+<li><a href="https://github.com/kristoff-it/zig-cuckoofilter">Cuckoo Filter</a> - Production-ready Cuckoo Filters for any C ABI compatible target.</li>
+<li><a href="https://github.com/alichraghi/zort">Zort</a> - Implementation of 13 sorting algorithms in Zig.</li>
+<li><a href="https://github.com/squeek502/audiometa">audiometa</a> - Audio metadata/tag reading library written in Zig.</li>
+<li><a href="https://github.com/briangold/metron">Metron</a> - Zig library for writing micro-benchmarks.</li>
+<li><a href="https://github.com/briangold/vortex">Vortex</a> - Structured concurrency in Zig.</li>
+<li><a href="https://github.com/MasterQ32/any-pointer">any-pointer</a> - Type erasure library for Zig.</li>
+<li><a href="https://github.com/magurotuna/zig-deque">zig-deque</a> - Double-ended queue implementation in Zig.</li>
+<li><a href="https://github.com/aeronavery/zig-toml">Zig-TOML</a> - TOML parser written in Zig.</li>
+<li><a href="https://github.com/mov-rax/zig-validate">Zig-Validate</a> - Type validation library for writing a zero-cost, declarative, understandable, generic code.</li>
+<li><a href="https://github.com/haze/zig-libressl">Zig-LibreSSL</a> - LibreSSL stream wrappers for Zig.</li>
+<li><a href="https://github.com/vi/zigmkv">zigmkv</a> - Matroska/webm (mkv) parser in Zig.</li>
+<li><a href="https://github.com/zigtools/protobruh">protobruh</a> - Protobuf for Zig.</li>
+<li><a href="https://github.com/goto-bus-stop/ziguid">ziguid</a> - GUIDs for Zig.</li>
+<li><a href="https://github.com/hmusgrave/byol">BYOL</a> - Bring Your Own Loop -- A memory-efficient, straggler-avoiding, cache-friendly scheduler.</li>
+<li><a href="https://github.com/hmusgrave/zcirc">zcirc</a> - Dynamic circular buffer allocator for zig.</li>
+<li><a href="https://github.com/hmusgrave/poolalloc">poolalloc</a> - Arena allocator with object re-use.</li>
+<li><a href="https://github.com/mitchellh/zig-js">zig-js</a> - Access the JS host environment from Zig compiled to WebAssembly.</li>
+<li><a href="https://github.com/ConnorRigby/zble">zble</a> - Bluetooth in Zig.</li>
+<li><a href="https://github.com/DutchGhost/zorrow">Zorrow</a> - Borrowchecker in Zig.</li>
+<li><a href="https://github.com/travisstaloch/pegzi">pegzi</a> - PEG (parsing expression grammar) parser in zig.</li>
+<li><a href="https://github.com/dweiller/zig-composable-allocators">Composable allocators</a></li>
+<li><a href="https://github.com/dweiller/zubench">zubench</a> - Micro-benchmarking package for Zig.</li>
+<li><a href="https://github.com/fengb/zasp">zasp</a> - Streaming parser.</li>
+<li><a href="https://github.com/beho/zig-csv">zig-csv</a> - Low-level CSV parser library for Zig.</li>
+<li><a href="https://github.com/kivikakk/libpcre.zig">libpcre.zig</a> - Zig bindings to libpcre.</li>
+<li><a href="https://github.com/mlugg/zigpb">zigpb</a> - Simple Protobuf encoder and decoder in Zig.</li>
+<li><a href="https://github.com/speed2exe/tree-fmt">Zig Tree Formattar</a> - Colored tree-like formatter for Zig.</li>
+<li><a href="https://github.com/mitchellh/libxev">libxev</a> - Cross-platform event loop. libxev provides a unified event loop abstraction for non-blocking IO, timers, signals, events.</li>
+<li><a href="https://github.com/ziglibs/funzig">funzig</a> - Functional Zig features.</li>
+<li><a href="https://github.com/travisstaloch/protobuf-zig">protobuf-zig</a> - Protocol buffers implementation in zig.</li>
+<li><a href="https://github.com/linuxy/coyote-ecs">coyote-ecs</a> - Fast and simple zig native ECS.</li>
+<li><a href="https://github.com/nikneym/wave">wave</a> - Tiny WAV encoder/decoder for Zig.</li>
+<li><a href="https://github.com/tomhoule/zig-diff">zig-diff</a> - Text diffing in zig.</li>
+<li><a href="https://github.com/JakubSzark/zig-string">Zig String</a> - UTF-8 String Library.</li>
+<li><a href="https://github.com/dweiller/zig-wfc">zig-wfc</a> - Implementation of the wave function collapse algorithm in Zig.</li>
+<li><a href="https://github.com/ziglibs/tres">tres</a> - ValueTree-based JSON parser.</li>
+<li><a href="https://github.com/canvasxyz/okra">okra</a> - Pseudo-random deterministic merkle tree built on LMDB.</li>
+<li><a href="https://github.com/hexops/fastfilter">fastfilter</a> - Binary fuse &amp; xor filters for Zig.</li>
+<li><a href="https://github.com/Hejsil/zig-bench">zig-bench</a> - Simple benchmarking lib in Zig.</li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/nektro/zigmod">zigmod</a> - Package manager for the Zig programming language.</li>
+<li><a href="https://github.com/mattnite/gyro">gyro</a> - Zig package manager with an index, build runner, and build dependencies. (<a href="https://astrolabe.pm/">Web</a>)</li>
+<li><a href="https://github.com/joachimschmidt557/zigpkgs">zigpkgs</a> - Collection of zig packages built with Nix.</li>
+<li><a href="https://github.com/nektro/aquila">Aquila</a> - Federated package index and CI system for Zig. (<a href="https://aquila.red/">Web</a>)</li>
+<li><a href="https://github.com/silversquirl/deps.zig">Deps.zig</a> - Dependency manager for Zig.</li>
+<li><a href="https://zig.pm/">Zig Package Repository</a> - Community-maintained repository of zig packages. (<a href="https://github.com/ziglibs/repository">Code</a>)</li>
+<li><a href="https://github.com/marler8997/zig-build-repos">zig-build-repos</a> - Enables build.zig files to depend on git repositories.</li>
+<li><a href="https://github.com/andrewrk/zig-async-demo">Zig Async Demo</a> - Comparing concurrent code example programs between other languages and Zig.</li>
+<li><a href="https://github.com/meheleventyone/zig-wasm-test">Minimal Web Assembly example using Zig's build system</a> (<a href="https://observablehq.com/@yurivish/zig-wasm">Web</a>) (<a href="https://news.ycombinator.com/item?id=32083090">HN</a>)</li>
+<li><a href="https://gist.github.com/rasmusmerzin/b514e3416311c9acf4dbc3d1911e1ad3">ABI Zig \&lt;> TypeScript</a> - Passing strings between Zig and TypeScript.</li>
+<li><a href="https://www.reddit.com/r/Zig/comments/vk4o4a/whats_the_ziggy_way_to_pass_a_readable_stream_to/">What's the 'ziggy' way to pass a readable stream to a function? (2022)</a></li>
+<li><a href="https://github.com/machlibs/wasmserve">mach/wasmserve</a> - Small web server specifically for serving Zig WASM applications in development.</li>
+<li><a href="https://github.com/bootradev/zig-fetch">zig-fetch</a> - Dependency management solution for zig projects.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/ewd340"  target="_blank" rel="noopener">EWD340</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ewd340" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://reddit.com/u/ewd340" target="_blank" rel="noopener" title="reddit.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>
